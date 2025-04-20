@@ -1,0 +1,88 @@
+<section class="container my-5">
+    <h2 class="text-center fw-bold mb-4">Registro de Usuario</h2>
+  
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+  
+      <!-- Username -->
+      <div class="mb-3">
+        <label class="form-label">Nombre de usuario</label>
+        <input type="text" class="form-control" formControlName="username" />
+        @if (form.get('username')?.touched && (form.get('username')?.invalid || backendErrors?.['username'])) {
+          <small class="text-danger">
+            {{ backendErrors?.['username'] || 'Este campo es obligatorio' }}
+          </small>
+        }
+      </div>
+  
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" formControlName="email" />
+        @if (form.get('email')?.touched && (form.get('email')?.invalid || backendErrors?.['email'])) {
+          <small class="text-danger">
+            {{ backendErrors?.['email'] || 'Introduce un email válido' }}
+          </small>
+        }
+      </div>
+  
+      <!-- Contraseña -->
+    <!-- CONTRASEÑA -->
+<div class="mb-3">
+    <label class="form-label">Contraseña</label>
+    <input type="password" class="form-control" formControlName="password" />
+    @if (form.get('password')?.touched && form.get('password')?.invalid) {
+      <small class="text-danger">Mínimo 6 caracteres</small>
+    }
+    @if (form.get('password')?.touched && backendErrors?.['password']) {
+      <small class="text-danger">{{ backendErrors['password'] }}</small>
+    }
+  </div>
+  
+  <!-- CONFIRMAR CONTRASEÑA -->
+  <div class="mb-3">
+    <label class="form-label">Confirmar Contraseña</label>
+    <input type="password" class="form-control" formControlName="confirmPassword" />
+    @if (form.get('confirmPassword')?.touched && form.errors?.['passwordsMismatch']) {
+      <small class="text-danger">Las contraseñas no coinciden</small>
+    }
+  </div>
+  
+  
+      <!-- Foto -->
+      <div class="mb-3">
+        <label class="form-label">Foto de perfil</label>
+        <input type="file" class="form-control" (change)="onFileChange($event)" />
+        @if (backendErrors?.['foto']) {
+          <small class="text-danger">{{ backendErrors['foto'] }}</small>
+        }
+      </div>
+
+      <!-- ROL -->
+<div class="mb-3">
+    <label class="form-label">Rol</label>
+    <select class="form-select" formControlName="rol">
+      <option value="3">Usuario</option>
+      <option value="2">Organizador</option>
+    </select>
+    @if (form.get('rol')?.touched && form.get('rol')?.invalid) {
+      <small class="text-danger">Selecciona un rol</small>
+    }
+  </div>
+  
+  
+      <!-- Mensaje general -->
+      @if (errorMsg) {
+        <div class="alert alert-danger text-center">{{ errorMsg }}</div>
+      }
+      
+      @if (successMsg) {
+        <div class="alert alert-success text-center">{{ successMsg }}</div>
+      }
+  
+      <!-- Botón -->
+      <button class="btn btn-primary w-100" type="submit" [disabled]="form.invalid">
+        Registrarse
+      </button>
+    </form>
+  </section>
+  

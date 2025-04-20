@@ -1,0 +1,46 @@
+<!-- TÍTULO DE CARRUSEL -->
+<div class="text-center my-5">
+  <h2 class="fw-bold text-primary"> Próximos Eventos 🎉</h2>
+</div>
+
+<!-- CARRUSEL CON PRÓXIMOS -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    @for (evento of proximos; track evento.id) {
+      <div class="carousel-item" [class.active]="$index === 0">
+        <img 
+          [src]="evento.imagen" 
+          class="d-block w-100 object-fit-cover carousel-img" 
+          alt="Evento próximo"
+        />
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+          <h5 class="text-light">{{ evento.titulo }}</h5>
+        </div>
+      </div>
+    }
+  </div>
+  <button class="carousel-control-prev" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- SECCIÓN DE DESTACADOS -->
+<section class="container my-5">
+  <h2 class="text-center mb-4 text-primary fw-bold">Eventos Destacados</h2>
+  <div class="row g-4">
+    @for (evento of destacados; track evento.id) {
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0 evento-card">
+        <img [src]="evento.imagen" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ evento.titulo }}</h5>
+          <a [routerLink]="['/evento', evento.id]" class="btn btn-primary">Ver más</a>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</section>

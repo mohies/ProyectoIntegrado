@@ -1,0 +1,30 @@
+:host {
+    display: block;
+  }
+  
+  .img-carrito {
+    border: 2px dashed #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .card {
+    background-color: #f9fafb;
+    border: 1px solid #ccc;
+  }
+  
+  .btn-primary {
+    background-color: #0069d9;
+    border-color: #0069d9;
+    color: #fff;
+  
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+  
+  .btn-secondary {
+    background-color: #b0b0b0;
+    border-color: #b0b0b0;
+    color: #fff;
+  }
+  

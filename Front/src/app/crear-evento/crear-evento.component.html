@@ -1,0 +1,76 @@
+<section class="container my-5" style="max-width: 600px">
+  <h2 class="text-center mb-4 text-primary fw-bold">🎉 Crear Nuevo Evento</h2>
+
+  <form [formGroup]="eventoForm" (ngSubmit)="crearEvento()">
+    <!-- TÍTULO -->
+    <div class="mb-3">
+      <label class="form-label">Título</label>
+      <input formControlName="titulo" type="text" class="form-control" />
+      @if (eventoForm.get('titulo')?.touched && eventoForm.get('titulo')?.invalid) {
+        <small class="text-danger">El título es obligatorio.</small>
+      }
+    </div>
+
+    <!-- DESCRIPCIÓN -->
+    <div class="mb-3">
+      <label class="form-label">Descripción</label>
+      <textarea formControlName="descripcion" class="form-control"></textarea>
+    </div>
+
+    <!-- FECHA -->
+    <div class="mb-3">
+      <label class="form-label">Fecha</label>
+      <input formControlName="fecha" type="datetime-local" class="form-control" />
+      @if (eventoForm.get('fecha')?.touched && eventoForm.get('fecha')?.invalid) {
+        <small class="text-danger">Debes seleccionar una fecha válida.</small>
+      }
+    </div>
+
+    <!-- UBICACIÓN -->
+    <div class="mb-3">
+      <label class="form-label">Ubicación</label>
+      <input formControlName="ubicacion" type="text" class="form-control" />
+      @if (eventoForm.get('ubicacion')?.touched && eventoForm.get('ubicacion')?.invalid) {
+        <small class="text-danger">La ubicación es obligatoria.</small>
+      }
+    </div>
+
+    <!-- PRECIO -->
+    <div class="mb-3">
+      <label class="form-label">Precio (€)</label>
+      <input formControlName="precio" type="number" class="form-control" />
+      @if (eventoForm.get('precio')?.touched && eventoForm.get('precio')?.invalid) {
+        <small class="text-danger">Debe ser un valor mayor o igual a 0.</small>
+      }
+    </div>
+
+    <!-- CUPO -->
+    <div class="mb-3">
+      <label class="form-label">Cupo Máximo</label>
+      <input formControlName="cupo_maximo" type="number" class="form-control" />
+      @if (eventoForm.get('cupo_maximo')?.touched && eventoForm.get('cupo_maximo')?.invalid) {
+        <small class="text-danger">Debes ingresar el cupo máximo.</small>
+      }
+    </div>
+
+    <!-- IMAGEN (URL) -->
+    <div class="mb-3">
+      <label class="form-label">Imagen (URL)</label>
+      <input formControlName="imagen" type="text" class="form-control" placeholder="https://..." />
+      @if (eventoForm.get('imagen')?.touched && eventoForm.get('imagen')?.invalid) {
+        <small class="text-danger">Introduce una URL válida.</small>
+      }
+    </div>
+
+    <!-- PREVIEW -->
+    @if (eventoForm.get('imagen')?.value) {
+      <div class="text-center mb-3">
+        <img [src]="eventoForm.get('imagen')?.value" class="img-fluid rounded border" style="max-height: 200px;" />
+      </div>
+    }
+
+    <button type="submit" class="btn btn-success w-100" [disabled]="eventoForm.invalid">
+      Crear Evento
+    </button>
+  </form>
+</section>

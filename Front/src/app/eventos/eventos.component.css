@@ -1,0 +1,94 @@
+/* Colores según mockup */
+:root {
+    --nav-bg: #1E3A8A;
+    --texto-nav: #F9FAFB;
+    --card-bg: #F3F4F6;
+    --borde: #E5E7EB;
+    --titulo: #2563EB;
+    --btn-bg: #2563EB;
+    --btn-hover: #1D4ED8;
+    --btn-text: #ffffff;
+    --filtro-bg: #E0F2FE;
+    --filtro-text: #1E3A8A;
+  }
+  
+  .titulo-evento {
+    color: var(--titulo);
+  }
+  
+  /* Tarjetas */
+  .card-evento {
+    background-color: var(--card-bg);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+  }
+  
+  .img-placeholder {
+    width: 100px;
+    height: 80px;
+    background-color: #6b7280;
+    display: inline-block;
+  }
+  
+  /* Botón */
+  .btn-vermas {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+  
+  .btn-vermas:hover {
+    background-color: var(--btn-hover);
+  }
+  
+  /* Filtro */
+  .filtro-label {
+    background-color: var(--filtro-bg);
+    color: var(--filtro-text);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+
+  .card-evento {
+    border: 2px dashed #aaa; /* Wireframe estilo */
+    background-color: #fefefe;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card-evento:hover {
+    background-color: #f9f9f9;
+    border-color: #333;
+  }
+  
+  .img-placeholder,
+  .card-evento img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #eaeaea;
+  }
+  
+  .btn-vermas {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn-vermas:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  

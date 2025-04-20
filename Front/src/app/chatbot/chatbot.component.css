@@ -1,0 +1,64 @@
+.chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 9999;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Chat flotante compacto */
+  .chatbot-panel {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 330px;
+    height: 330px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Cabecera */
+  .chatbot-header {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  /* Cuerpo sin scroll */
+  .chatbot-body {
+    padding: 0.5rem;
+    flex-grow: 1;
+    overflow-y: auto; /* 👈 Esto habilita el scroll vertical */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .chatbot-body .badge {
+    display: inline-block;
+    max-width: 100%;
+    white-space: normal;       /* 👈 Permite múltiples líneas */
+    word-break: break-word;    /* 👈 Corta palabras largas si es necesario */
+    font-size: 13px;
+    line-height: 1.3;
+    padding: 8px 10px;
+  }
+  
+  
+  /* Footer */
+  .chatbot-footer {
+    border-top: 1px solid #dee2e6;
+    background: #fff;
+  }
+  

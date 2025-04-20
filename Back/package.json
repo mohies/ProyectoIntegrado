@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@abacritt/angularx-social-login": "^2.3.0",
+    "@types/gapi": "^0.0.47"
+  }
+}

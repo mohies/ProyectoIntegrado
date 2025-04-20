@@ -1,0 +1,71 @@
+<section class="container my-5">
+    <h2 class="text-center fw-bold mb-4 text-contacto">Finalizar Compra</h2>
+
+    <div class="row g-4">
+        <!-- FORMULARIO -->
+        <div class="col-md-6">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <!-- EMAIL -->
+                <div class="mb-3">
+                    <label class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" formControlName="email" placeholder="ejemplo@email.com" />
+                    @if (form.get('email')?.touched && form.get('email')?.invalid) {
+                    <small class="text-danger">Introduce un email válido</small>
+                    }
+                </div>
+
+                <!-- DIRECCIÓN -->
+                <div class="mb-3">
+                    <label class="form-label">Dirección</label>
+                    <input type="text" class="form-control" formControlName="direccion"
+                        placeholder="Calle, número..." />
+                    @if (form.get('direccion')?.touched && form.get('direccion')?.invalid) {
+                    <small class="text-danger">La dirección es obligatoria</small>
+                    }
+                </div>
+
+                <!-- CIUDAD -->
+                <div class="mb-3">
+                    <label class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" formControlName="ciudad" placeholder="Ciudad" />
+                    @if (form.get('ciudad')?.touched && form.get('ciudad')?.invalid) {
+                    <small class="text-danger">La ciudad es obligatoria</small>
+                    }
+                </div>
+
+                <!-- NOTAS -->
+                <div class="mb-3">
+                    <label class="form-label">Notas adicionales</label>
+                    <textarea class="form-control" formControlName="notas" rows="3"
+                        placeholder="Información extra..."></textarea>
+                </div>
+
+                <button class="btn w-100 border border-warning text-dark fw-semibold" type="submit"
+                    [disabled]="form.invalid">
+                    <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="Paypal" width="80"
+                        class="me-2" />
+                    Pagar con PayPal
+                </button>
+
+            </form>
+        </div>
+
+        <!-- RESUMEN DEL PEDIDO -->
+        <div class="col-md-6">
+            <div class="card p-3 shadow-sm">
+                <h5 class="text-center fw-bold mb-3">Resumen del pedido</h5>
+
+                @for (item of carrito; track item.id) {
+                <div class="d-flex align-items-center mb-3">
+                    <img [src]="item.imagen" width="50" height="50" class="rounded me-3" />
+                    <div>
+                        <div class="fw-semibold">{{ item.nombre }}</div>
+                        <small class="text-muted">{{ item.precio }}</small>
+                    </div>
+                </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+:root {
+    --azul: #1e293b;
+    --azul-input: #1f1f59;
+    --azul-boton: #3b82f6;
+    --azul-hover: #2563eb;
+    --texto-claro: #f8fafc;
+    --borde-claro: #cbd5e1;
+    --error: #dc2626;
+  }
+  
+  .text-contacto {
+    color: var(--azul);
+  }
+  
+  form {
+    background-color: #ffffff;
+    padding: 24px;
+    border: 1px solid var(--borde-claro);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  input,
+  select,
+  textarea {
+    background-color: #f1f5f9;
+    color: var(--azul);
+    border: 1px solid var(--borde-claro);
+    border-radius: 4px;
+  }
+  
+  .btn-enviar {
+    background-color: #3B82F6;       /* Azul principal */
+    color: #ffffff;
+    border: 1px solid #2563EB;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 16px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-enviar:hover {
+    background-color: #2563EB;      /* Hover azul oscuro */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  

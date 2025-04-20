@@ -1,0 +1,67 @@
+<section class="container py-5" style="max-width: 600px; margin: auto;">
+    <h2 class="mb-4 text-center">👤 Mi Perfil</h2>
+  
+    <form [formGroup]="perfilForm" (ngSubmit)="guardarCambios()">
+      <!-- Foto de perfil -->
+      @if (imagenPreview; as preview) {
+        <div class="text-center mb-3">
+          <img [src]="preview" class="rounded-circle" alt="Foto de perfil" width="120" height="120" />
+        </div>
+      }
+  
+      <!-- Cambiar foto -->
+      <div class="mb-3">
+        <label class="form-label">Cambiar foto</label>
+        <input type="file" class="form-control" (change)="onFileChange($event)" />
+      </div>
+  
+      <!-- Username -->
+      <div class="mb-3">
+        <label class="form-label">Usuario</label>
+        <input type="text" class="form-control" formControlName="username" />
+      </div>
+  
+      <!-- Email (deshabilitado) -->
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="text" class="form-control" [value]="perfilForm.get('email')?.value" disabled />
+      </div>
+
+    <!-- Rol -->
+<div class="mb-3" *ngIf="usuarioActual">
+  <label class="form-label">Rol</label>
+  <input
+    type="text"
+    class="form-control"
+    [value]="usuarioActual.rol_display || usuarioActual.rol"
+    disabled
+  />
+</div>
+
+      
+
+  
+      <!--  Errores del backend -->
+      @if (backendErrors.length > 0) {
+        <div class="alert alert-danger" role="alert">
+          <ul class="mb-0">
+            @for (msg of backendErrors; track msg) {
+              <li>{{ msg }}</li>
+            }
+          </ul>
+        </div>
+      }
+  
+      <!--  Mensaje de éxito -->
+      @if (successMsg) {
+        <div class="alert alert-success text-center" role="alert">
+          {{ successMsg }}
+        </div>
+      }
+  
+      <button class="btn btn-primary w-100 mt-3" type="submit" [disabled]="perfilForm.invalid">
+        Guardar cambios
+      </button>
+    </form>
+  </section>
+  

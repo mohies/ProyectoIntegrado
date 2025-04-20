@@ -1,0 +1,112 @@
+@if (mensaje && tipoMensaje) {
+  <div class="alert alert-dismissible fade show mt-3"
+       [class.alert-success]="tipoMensaje === 'success'"
+       [class.alert-danger]="tipoMensaje === 'danger'" 
+       role="alert">
+    {{ mensaje }}
+    <button type="button" class="btn-close" (click)="mensaje = null" aria-label="Cerrar"></button>
+  </div>
+}
+
+<section class="container my-5">
+  @if (evento) {
+    <div class="row g-5 align-items-center">
+      <!-- Imagen del evento -->
+      <div class="col-lg-6">
+        <div class="rounded overflow-hidden shadow-sm">
+          <img
+            [src]="evento.imagen || 'https://via.placeholder.com/800x500'"
+            class="w-100 object-fit-cover evento-imagen"
+            alt="Imagen del evento"
+          />
+        </div>
+      </div>
+
+      <!-- Detalles del evento -->
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-3">{{ evento.titulo }}</h2>
+        <p class="text-muted mb-2">
+          <i class="bi bi-calendar-event"></i>
+          {{ evento.fecha | date: 'fullDate' }} - {{ evento.fecha | date: 'shortTime' }}
+        </p>
+        <p class="text-muted mb-2">
+          <i class="bi bi-geo-alt-fill"></i> {{ evento.ubicacion }}
+        </p>
+        <p class="mb-4">
+          {{ evento.descripcion || 'Este evento no tiene descripción disponible.' }}
+        </p>
+
+        <div class="mb-3">
+          <i class="bi bi-star-fill text-warning"></i> {{ promedio }}/5
+          <span class="text-muted ms-2">({{ totalResenas }} reseñas)</span>
+        </div>
+
+        <h4 class="text-primary fw-semibold">Precio: {{ evento.precio }}€</h4>
+
+        <button class="btn btn-success w-100 mt-4 py-2">
+          <i class="bi bi-cart-plus"></i> Añadir al carrito
+        </button>
+      </div>
+    </div>
+
+    <!-- SECCIÓN DE AÑADIR RESEÑA -->
+    @if (usuarioPuedeResenar) {
+      <div class="mt-5">
+        <h5>Deja tu reseña</h5>
+        <form (submit)="enviarResena(); $event.preventDefault()" class="mt-3">
+          <div class="mb-3">
+            <label class="form-label">Puntuación</label>
+            <select class="form-select" [(ngModel)]="nuevaPuntuacion" name="puntuacion">
+              @for (n of [5,4,3,2,1]; track n) {
+                <option [value]="n">{{ n }}</option>
+              }
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Comentario</label>
+            <textarea
+              class="form-control"
+              rows="3"
+              [(ngModel)]="nuevoComentario"
+              name="comentario"
+            ></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Enviar reseña</button>
+        </form>
+      </div>
+    }
+  }
+
+  <!-- LISTADO DE RESEÑAS -->
+  <div class="mt-5">
+  <h5 class="mb-3">Reseñas</h5>
+  @for (r of resenas; track r.id) {
+    <div class="border p-3 rounded mb-3 d-flex align-items-start gap-3 justify-content-between">
+      <div class="d-flex gap-3">
+        <img
+          [src]="r.usuario?.foto || 'assets/default-user.png'"
+          alt="Usuario"
+          class="rounded-circle"
+          width="40"
+          height="40"
+        />
+        <div>
+          <strong>{{ r.usuario?.username || 'Usuario' }}</strong>
+          <span class="ms-2 text-warning">★ {{ r.puntuacion }}/5</span>
+          <p class="mb-0 mt-2">{{ r.comentario }}</p>
+        </div>
+      </div>
+  
+      <!-- solo el admin ve esto -->
+      @if (usuarioActual?.rol === 'Administrador') {
+        <button class="btn btn-sm btn-outline-danger" (click)="eliminarResena(r.id)">
+          <i class="bi bi-trash"></i>
+        </button>
+      }
+    </div>
+  }
+</div>
+  
+</section>

@@ -1,0 +1,58 @@
+<section class="container my-5">
+  <h2 class="text-center fw-bold text-contacto mb-4">Formulario de Contacto</h2>
+
+  <form [formGroup]="contactoForm" (ngSubmit)="enviar()">
+    <!-- EMAIL -->
+    <div class="mb-3">
+      <label class="form-label">Email address</label>
+      <input type="email" formControlName="email" class="form-control" placeholder="name@example.com" />
+      @if (contactoForm.get('email')?.touched && contactoForm.get('email')?.invalid) {
+      <small class="text-danger">Introduce un email válido</small>
+      }
+    </div>
+
+    <!-- SELECT SIMPLE -->
+    <div class="mb-3">
+      <label class="form-label">Tipo de consulta</label>
+      <select formControlName="tipo" class="form-select">
+        <option value="" disabled>Selecciona una opción</option>
+        <option value="soporte">Soporte</option>
+        <option value="evento">Evento</option>
+        <option value="otro">Otro</option>
+      </select>
+      @if (contactoForm.get('tipo')?.touched && contactoForm.get('tipo')?.invalid) {
+      <small class="text-danger">Selecciona una opción</small>
+      }
+    </div>
+
+    <!-- SELECT MULTIPLE -->
+    <div class="mb-3">
+      <label class="form-label">Temas de interés</label>
+      <select multiple formControlName="temas" class="form-select">
+        <option value="entradas">Entradas</option>
+        <option value="organizacion">Organización</option>
+        <option value="patrocinio">Patrocinio</option>
+        <option value="voluntariado">Voluntariado</option>
+      </select>
+      @if (contactoForm.get('temas')?.touched && contactoForm.get('temas')?.invalid) {
+      <small class="text-danger">Selecciona al menos un tema</small>
+      }
+    </div>
+
+    <!-- MENSAJE -->
+    <div class="mb-3">
+      <label class="form-label">Mensaje</label>
+      <textarea formControlName="mensaje" class="form-control" rows="4"></textarea>
+      @if (contactoForm.get('mensaje')?.touched && contactoForm.get('mensaje')?.invalid) {
+      <small class="text-danger">
+        El mensaje es obligatorio (mínimo 10 caracteres)
+      </small>
+      }
+    </div>
+
+    <!-- BOTÓN -->
+    <button class="btn btn-enviar w-100" type="submit" [disabled]="contactoForm.invalid">
+      Enviar
+    </button>
+  </form>
+</section>

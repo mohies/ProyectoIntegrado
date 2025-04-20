@@ -1,0 +1,50 @@
+<section class="login-container d-flex justify-content-center align-items-center">
+  <div class="login-box card shadow p-5 w-100" style="max-width: 600px">
+    <h2 class="text-center mb-4 titulo-login">INICIO SESIÓN 🔍</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <!-- USERNAME -->
+      <div class="mb-4">
+        <input
+          type="text"
+          formControlName="username"
+          class="form-control"
+          placeholder="USERNAME"
+        />
+        @if (loginForm.get('username')!.touched && loginForm.get('username')!.invalid) {
+          <p class="text-danger mt-1">El usuario es obligatorio</p>
+        }
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="mb-4">
+        <input
+          type="password"
+          formControlName="password"
+          class="form-control"
+          placeholder="PASSWORD"
+        />
+        @if (loginForm.get('password')!.touched && loginForm.get('password')!.invalid) {
+          <p class="text-danger mt-1">La contraseña es obligatoria</p>
+        }
+      </div>
+
+      <!-- 🔴 MOSTRAR ERROR DEL BACKEND -->
+      @if (errorMsg) {
+        <div class="alert alert-danger text-center" role="alert">
+          {{ errorMsg }}
+        </div>
+      }
+
+      <!-- SUBMIT -->
+      <button class="btn btn-login w-100" [disabled]="loginForm.invalid">
+        Iniciar sesión
+      </button>
+    </form>
+
+    <div class="mt-5 d-flex justify-content-center">
+      <!-- Botón de Google -->
+      <div id="google-button"></div>
+    </div>
+  </div>
+</section>

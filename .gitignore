@@ -1,0 +1,36 @@
+# Ignorar node_modules en Back y Front
+Back/node_modules/
+Front/node_modules/
+
+# Ignorar entornos virtuales de Python en Back
+Back/myvenv/
+Back/mynewvenv/
+
+# Ignorar archivos de Python generados
+Back/__pycache__/
+
+# Ignorar archivos de configuración de IDEs y editor (Visual Studio Code, JetBrains, etc.)
+Back/.vscode/
+Front/.vscode/
+
+# Ignorar archivos de entorno (variables de entorno y configuración sensible)
+Back/.env
+
+# Ignorar archivos de base de datos en Back
+Back/db.sqlite3
+
+# Ignorar archivos de dist generados por el frontend (compilación)
+Front/dist/
+
+# Ignorar carpetas y archivos temporales
+Front/.angular/cache/
+Front/tmp/
+Front/out-tsc/
+
+# Ignorar archivos de logs
+npm-debug.log
+yarn-error.log
+
+# Ignorar archivos de sistemas operativos
+.DS_Store
+Thumbs.db
