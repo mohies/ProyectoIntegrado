@@ -2,6 +2,7 @@ from django.urls import path, include
 from . import views
 from rest_framework.routers import DefaultRouter
 from .views import (
+    ContactoAPIView,
     EventoPrivadoViewSet,
     EventoPublicoViewSet,
     EventosDestacadosAPIView,
@@ -45,5 +46,7 @@ urlpatterns = [
     path('eventos-destacados/', EventosDestacadosAPIView.as_view(), name='eventos-destacados'),
     path('eventos-proximos/', EventosProximosAPIView.as_view(), name='eventos-proximos'),
     path('eventos/<int:evento_id>/reseñas-resumen/', resumen_reseñas, name='resumen-reseñas'),
+
+    path('contacto/', ContactoAPIView.as_view(), name='contacto-api'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

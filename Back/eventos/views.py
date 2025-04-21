@@ -397,3 +397,53 @@ def resumen_reseñas(request, evento_id):
         'promedio': promedio,
         'total': total
     })
+
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import AllowAny
+from django.core.mail import send_mail
+from rest_framework import status
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import AllowAny
+from django.core.mail import send_mail
+from django.conf import settings
+from rest_framework import status
+
+class ContactoAPIView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        try:
+            email = request.data.get('email')
+            tipo = request.data.get('tipo')
+            temas = request.data.get('temas', [])
+            mensaje = request.data.get('mensaje')
+
+            asunto = f"Nuevo mensaje de contacto - {tipo}"
+            cuerpo = f"""
+            📬 Nuevo mensaje de contacto:
+
+            De: {email}
+            Tipo: {tipo}
+            Temas: {', '.join(temas)}
+            Mensaje: 
+            {mensaje}
+            """
+
+            send_mail(
+                asunto,
+                cuerpo,
+                settings.DEFAULT_FROM_EMAIL,
+                [settings.DEFAULT_FROM_EMAIL],
+                fail_silently=False
+            )
+
+            return Response({"mensaje": "Correo enviado correctamente ✅"}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            print(f"❌ Error al enviar correo: {e}")
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
