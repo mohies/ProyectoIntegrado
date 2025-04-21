@@ -86,7 +86,7 @@ export class RegistroComponent {
               }
             }
           } else if (typeof errores === 'string') {
-            this.errorMsg = errores; // ⚠️ Aquí se captura el mensaje del backend tipo string
+            this.errorMsg = errores; //  Aquí se captura el mensaje del backend tipo string
           } else if (errores?.error) {
             this.errorMsg = errores.error;
           } else {

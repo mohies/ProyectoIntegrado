@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   constructor(private eventosService: EventosService) {}
 
   ngOnInit(): void {
-    // 🟡 Eventos destacados
+    // Eventos destacados
     this.eventosService.getDestacados().subscribe({
       next: (res) => {
         this.destacados = res.slice(0, 3);
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
       error: () => console.error('❌ Error al cargar eventos destacados')
     });
 
-    // 🔵 Eventos próximos (para el carrusel)
+    //  Eventos próximos (para el carrusel)
     this.eventosService.getProximos().subscribe({
       next: (res) => {
         this.proximos = res;

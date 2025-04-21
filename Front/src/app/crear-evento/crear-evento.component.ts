@@ -25,7 +25,7 @@ export class CrearEventoComponent {
       fecha: ['', Validators.required],
       ubicacion: ['', Validators.required],
       precio: [0, [Validators.required, Validators.min(0)]],
-      imagen: ['', Validators.required],  // 👈 URL, no file
+      imagen: ['', Validators.required],  //  URL, no file
       cupo_maximo: [100, Validators.required]
     });
   }

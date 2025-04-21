@@ -9,7 +9,7 @@ export interface Usuario {
   email: string;
   rol: string | null;
   foto: string | null;
-  rol_display?: string; // ✅ AÑADIDO para evitar error de tipo
+  rol_display?: string; //  AÑADIDO para evitar error de tipo
 
 }
 
@@ -55,7 +55,7 @@ export class AuthService {
   logout() {
     localStorage.removeItem('token');
     this.usuarioSubject.next(null);
-    this.router.navigate(['/']); // 👈 Redirige a la página de inicio
+    this.router.navigate(['/']); // Redirige a la página de inicio
   }
   
 
