@@ -171,7 +171,6 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID = 1
 ACCOUNT_SIGNUP_FIELDS = ['email*', 'username*', 'password1*', 'password2*']
 ACCOUNT_LOGIN_METHODS = {'email', 'username'}
-ACCOUNT_EMAIL_REQUIRED = True
 SOCIALACCOUNT_PROVIDERS = {
   'google': {
         'APP': {
@@ -193,9 +192,6 @@ CORS_ALLOWED_ORIGINS = [
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:4200",
 ]
-
-
-
 
 CORS_ALLOW_METHODS = [
     "DELETE",
