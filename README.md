@@ -10,7 +10,7 @@ El proyecto está construido con **Django** en el backend y **Angular** en el fr
 - **Backend:** Django  
 - **Frontend:** Angular  
 - **Base de Datos:** SQLite  
-- **Estilos:** Bootstrap
+- **Estilos:** Bootstrap + CSS
 
 ---
 
