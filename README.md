@@ -80,6 +80,9 @@ Para poner en marcha el frontend:
 
 4. Inicia el servidor de Angular:  
    `ng serve`
+   ![alt text](<Captura de pantalla 2025-04-21 222104.png>)
+
+   Nos saldra esta notificacion le podemos dar que si (y) como no (n)
 
 ---
 
