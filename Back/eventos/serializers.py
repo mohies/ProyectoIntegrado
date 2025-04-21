@@ -44,7 +44,7 @@ class UsuarioMiniSerializer(serializers.ModelSerializer):
         fields = ['id', 'username', 'foto']
 
 class ResenaSerializer(serializers.ModelSerializer):
-    usuario = UsuarioMiniSerializer(read_only=True)  # 👈 importante: no dejar solo el id
+    usuario = UsuarioMiniSerializer(read_only=True)  # Solo lectura, no se puede modificar desde el frontend
 
     class Meta:
         model = Resena

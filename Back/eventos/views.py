@@ -157,7 +157,7 @@ class RegisterView(APIView):
                     "error": "Ya existe un usuario con ese nombre o email."
                 }, status=status.HTTP_400_BAD_REQUEST)
 
-        # 👇 si no es válido
+        #  si no es válido
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
