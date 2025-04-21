@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contacto',
@@ -13,7 +14,7 @@ export class ContactoComponent {
   contactoForm: FormGroup;
 form: any;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private http: HttpClient) {
     this.contactoForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       tipo: ['', Validators.required],
@@ -24,11 +25,21 @@ form: any;
 
   enviar() {
     if (this.contactoForm.valid) {
-      console.log('Formulario válido:', this.contactoForm.value);
-      alert('Formulario enviado ✅');
-      this.contactoForm.reset();
+      const datos = this.contactoForm.value;
+  
+      this.http.post('http://localhost:8000/api/v1/contacto/', datos).subscribe({
+        next: () => {
+          alert('📧 Formulario enviado correctamente');
+          this.contactoForm.reset();
+        },
+        error: (err) => {
+          console.error('❌ Error al enviar el formulario', err);
+          alert('❌ Error al enviar el mensaje');
+        }
+      });
     } else {
       this.contactoForm.markAllAsTouched();
     }
-  }
+}
+
 }
