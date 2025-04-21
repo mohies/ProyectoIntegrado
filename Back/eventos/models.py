@@ -14,7 +14,7 @@ class Usuario(AbstractUser):
         (USUARIO, 'Usuario'),
     )
 
-    rol = models.PositiveSmallIntegerField(choices=ROLES, default=USUARIO)
+    rol = models.PositiveSmallIntegerField(choices=ROLES, null=True, blank=True)
     foto = models.ImageField(upload_to='perfiles/', blank=True, null=True)
 
 
