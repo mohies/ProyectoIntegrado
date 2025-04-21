@@ -4,12 +4,12 @@ from django.utils import timezone
 
 
 class Usuario(AbstractUser):
-    ADMIN = 1
+    ADMINISTRADOR = 1
     ORGANIZADOR = 2
     USUARIO = 3
 
     ROLES = (
-        (ADMIN, 'Administrador'),
+        (ADMINISTRADOR, 'Administrador'),
         (ORGANIZADOR, 'Organizador'),
         (USUARIO, 'Usuario'),
     )
