@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 
 import { EventosService } from '../services/eventbrite.service';
 import { AuthService, Usuario } from '../services/auth.service';
+import { CarritoService } from '../services/carrito.service'; // asegúrate que la ruta sea correcta
+
 
 @Component({
   selector: 'app-evento-detalle',
@@ -29,11 +31,13 @@ export class EventoDetalleComponent implements OnInit {
   // Mensajes de éxito o error
   mensaje: string | null = null;
   tipoMensaje: 'success' | 'danger' | null = null;
+a: any;
 
   constructor(
     private route: ActivatedRoute,
     private eventosService: EventosService,
-    private auth: AuthService
+    private auth: AuthService,
+    private carritoService: CarritoService
   ) {}
 
   ngOnInit(): void {
@@ -143,6 +147,20 @@ export class EventoDetalleComponent implements OnInit {
       }
     });
   }
+  agregarAlCarrito() {
+    if (!this.evento) return;
+  
+    this.carritoService.agregar(this.evento);
+    this.mensaje = '🛒 Evento añadido al carrito.';
+    this.tipoMensaje = 'success';
+  
+    setTimeout(() => {
+      this.mensaje = null;
+      this.tipoMensaje = null;
+    }, 3000);
+  }
+  
+  
   
   
   

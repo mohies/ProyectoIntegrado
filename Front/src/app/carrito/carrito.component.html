@@ -1,41 +1,64 @@
 <section class="container my-5">
-    <h2 class="text-center fw-bold mb-4">Carrito de Compras</h2>
-  
-    <div class="row">
-      <!-- Lista de ítems -->
-      <div class="col-md-8">
-        <table class="table table-bordered">
-          <thead>
+  <h2 class="text-center fw-bold mb-4">Carrito de Compras</h2>
+
+  @if (mensajeError) {
+    <div class="alert alert-danger text-center fw-semibold mb-4">
+      {{ mensajeError }}
+    </div>
+  }
+
+  <div class="row">
+    <!-- Lista de ítems -->
+    <div class="col-md-8">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Evento</th>
+            <th class="text-end">Cantidad</th>
+            <th class="text-end">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (linea of lineas; track linea.id) {
             <tr>
-              <th>Pool</th>
+              <td class="d-flex align-items-center gap-3">
+                <img [src]="linea.imagen" alt="Item" class="rounded" width="80" height="80" />
+                <span class="fw-semibold">{{ linea.titulo }}</span>
+              </td>
+              <td class="text-end">
+                <input type="number"
+                min="1"
+                [(ngModel)]="linea.cantidad"
+                (change)="recalcular(linea)"
+                class="form-control form-control-sm w-auto d-inline-block text-end me-2" />
+         
+                x {{ linea.precio }} €
+              </td>
+              <td class="text-end">
+                <button class="btn btn-outline-danger btn-sm" (click)="eliminar(linea.id)">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            @for (linea of lineas; track linea.id) {
-              <tr>
-                <td class="d-flex justify-content-between align-items-center p-3">
-                  <div class="d-flex align-items-center gap-3">
-                    <img [src]="linea.imagen" alt="Item" class="rounded" width="80" height="80" />
-                    <span class="fw-semibold">{{ linea.nombre }}</span>
-                  </div>
-                  <button class="btn btn-primary">Submit</button>
-                </td>
-              </tr>
-            }
-          </tbody>
-        </table>
-      </div>
-  
-      <!-- Resumen del pedido -->
-      <div class="col-md-4">
-        <div class="card p-3">
-          <h5 class="text-center mb-3">Resumen del pedido</h5>
-          <a routerLink="/compra" class="btn btn-primary w-100">
-          <button class="btn btn-primary w-100 mb-2">Finalizar compra</button>
-            </a>
-          <button class="btn btn-secondary w-100" disabled>Pressed</button>
-        </div>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Resumen del pedido -->
+    <div class="col-md-4">
+      <div class="card p-3 shadow-sm">
+        <h5 class="text-center mb-3">Resumen del pedido</h5>
+        <p class="text-center fs-5">Total: <strong>{{ calcularTotal() | number: '1.2-2' }} €</strong></p>
+
+        <a routerLink="/compra" class="btn btn-primary w-100 mb-2">
+          Finalizar compra
+        </a>
+
+        <button class="btn btn-outline-secondary w-100" (click)="vaciarCarrito()" [disabled]="lineas.length === 0">
+          Vaciar carrito
+        </button>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>

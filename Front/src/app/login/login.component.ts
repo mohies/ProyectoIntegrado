@@ -29,7 +29,14 @@ export class LoginComponent implements AfterViewInit {
       password: ['', Validators.required]
     });
   }
-
+  ngOnInit(): void {
+    const msg = localStorage.getItem('loginMessage');
+    if (msg) {
+      this.errorMsg = msg;
+      localStorage.removeItem('loginMessage');
+    }
+  }
+  
   ngAfterViewInit(): void {
     google.accounts.id.initialize({
       client_id: '234430080055-5ddns29uj7qkk3me3v0at4rvm2qmnhla.apps.googleusercontent.com',

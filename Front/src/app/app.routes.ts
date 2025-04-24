@@ -3,7 +3,6 @@ import { HomeComponent } from './home/home.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { LoginComponent } from './login/login.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { CarritoComponent } from './carrito/carrito.component';
 import { CompraComponent } from './compra/compra.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ElegirRolComponent } from './elegir-rol/elegir-rol.component';
@@ -11,6 +10,9 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { AdminComponent } from './admin/admin.component';
 import { CrearEventoComponent } from './crear-evento/crear-evento.component';
 import { EventoDetalleComponent } from './evento-detalle/evento-detalle.component';
+import { AuthGuard } from './guards/auth.guard';
+import { CarritoGuard } from './guards/carrito.guard';
+import { CarritoComponent } from './carrito/carrito.component';
 
 
 export const routes: Routes = [
@@ -20,7 +22,7 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'carrito', component: CarritoComponent },
-  { path: 'compra', component: CompraComponent },
+  { path: 'compra', component: CompraComponent, canActivate: [AuthGuard, CarritoGuard] },
   { path: 'registro', component: RegistroComponent },
   { path: 'elegir-rol', component: ElegirRolComponent },
   { path: 'perfil', component: PerfilComponent },
@@ -29,3 +31,4 @@ export const routes: Routes = [
   { path: 'evento/:id', component: EventoDetalleComponent },
   { path: '**', redirectTo: '' }
 ];
+

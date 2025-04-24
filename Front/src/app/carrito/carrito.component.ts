@@ -1,23 +1,54 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule,RouterOutlet } from '@angular/router';
-interface LineaCarrito {
-  id: number;
-  nombre: string;
-  imagen: string;
-}
+import { RouterModule, ActivatedRoute } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CarritoService } from '../services/carrito.service';
 
 @Component({
   selector: 'app-carrito',
   standalone: true,
-  imports: [CommonModule,RouterModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './carrito.component.html',
-  styleUrl: './carrito.component.css'
+  styleUrls: ['./carrito.component.css']
 })
-export class CarritoComponent {
-  lineas: LineaCarrito[] = [
-    { id: 1, nombre: 'Item 1', imagen: 'https://via.placeholder.com/100x100' },
-    { id: 2, nombre: 'Item 2', imagen: 'https://via.placeholder.com/100x100' },
-    { id: 3, nombre: 'Item 3', imagen: 'https://via.placeholder.com/100x100' }
-  ];
+export class CarritoComponent implements OnInit {
+  lineas: any[] = [];
+  mensajeError: string | null = null;
+
+  constructor(
+    private carritoService: CarritoService,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    this.carritoService.eventos$.subscribe((eventos) => {
+      this.lineas = eventos.map(e => ({
+        ...e,
+        cantidad: e.cantidad || 1
+      }));
+    });
+
+    this.route.queryParams.subscribe(params => {
+      if (params['error'] === 'empty') {
+        this.mensajeError = '⚠️ Tu carrito está vacío. Añade productos antes de finalizar la compra.';
+      }
+    });
+  }
+
+  eliminar(id: number) {
+    this.carritoService.eliminar(id);
+  }
+
+  vaciarCarrito() {
+    this.carritoService.vaciar();
+  }
+
+  calcularTotal(): number {
+    return this.lineas.reduce((acc, item) => acc + item.precio * (item.cantidad || 1), 0);
+  }
+
+  recalcular(linea: any) {
+    this.carritoService.actualizarCantidad(linea.id, linea.cantidad);
+  }
+  
 }
