@@ -1,0 +1,36 @@
+<section class="container my-5">
+    <h2 class="text-center mb-4">📋 Inscripciones del Evento</h2>
+  
+    @if (cargando) {
+      <p class="text-center">Cargando reservas...</p>
+    } @else if (reservas.length === 0) {
+      <div class="alert alert-warning text-center">No hay inscripciones aún para este evento.</div>
+    } @else {
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Usuario</th>
+            <th>Email</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (r of reservas; track r.id) {
+            <tr>
+              <td>{{ r.usuario.username }}</td>
+              <td>{{ r.usuario.email }}</td>
+              <td>{{ r.fecha_reserva | date: 'medium' }}</td>
+              <td>
+                <span [ngClass]="{
+                  'text-success': r.estado === 'activa',
+                  'text-danger': r.estado === 'cancelada'
+                }">{{ r.estado }}</span>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </section>
+  

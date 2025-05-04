@@ -1,0 +1,42 @@
+<section class="container my-5">
+    <h2 class="text-center mb-4">🏦 Pagos a mi cuenta (Payouts)</h2>
+  
+    @if (cargando) {
+      <p class="text-center">Cargando pagos...</p>
+    } @else if (error) {
+      <div class="alert alert-danger text-center">{{ error }}</div>
+    } @else if (payouts.length === 0) {
+      <div class="alert alert-info text-center">Aún no se han generado pagos.</div>
+    } @else {
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Cantidad</th>
+            <th>Estado</th>
+            <th>Fecha</th>
+            <th>Nota</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (p of payouts; track p.id) {
+            <tr>
+              <td>{{ p.id }}</td>
+              <td>{{ p.cantidad }} €</td>
+              <td>
+                <span [ngClass]="{
+                  'badge bg-warning text-dark': p.estado === 'pendiente',
+                  'badge bg-success': p.estado === 'pagado'
+                }">
+                  {{ p.estado }}
+                </span>
+              </td>
+              <td>{{ p.fecha | date:'medium' }}</td>
+              <td>{{ p.nota || '—' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </section>
+  

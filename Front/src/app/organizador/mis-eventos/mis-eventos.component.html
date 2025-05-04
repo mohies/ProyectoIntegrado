@@ -1,0 +1,29 @@
+<section class="container my-5">
+    <h2 class="text-center mb-4">🎤 Mis Eventos</h2>
+  
+    @if (cargando) {
+      <p class="text-center">Cargando...</p>
+    } @else if (eventos.length === 0) {
+      <div class="alert alert-info text-center">No has creado ningún evento aún.</div>
+    } @else {
+      <div class="row g-3">
+        @for (e of eventos; track e.id) {
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">{{ e.titulo }}</h5>
+                <p>{{ e.descripcion }}</p>
+                <p><strong>Fecha:</strong> {{ e.fecha | date: 'fullDate' }}</p>
+                <p><strong>Inscripciones:</strong> {{ e.cupo_maximo - e.cupo }} / {{ e.cupo_maximo }}</p>
+  
+                <a [routerLink]="['/organizador/reservas', e.id]" class="btn btn-outline-primary btn-sm">
+                  Ver inscripciones
+                </a>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </section>
+  

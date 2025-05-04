@@ -1,13 +1,31 @@
 from rest_framework import serializers
-from .models import Evento, Reserva, Pago, Resena, Usuario,Organizador
+from .models import Evento, Reserva, Pago, Resena, Usuario,Organizador,Reembolso
 
+
+class OrganizadorMiniSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Organizador
+        fields = ['id', 'usuario']
+
+class ReembolsoSerializer(serializers.ModelSerializer):
+    usuario = serializers.StringRelatedField()  # Muestra el nombre de usuario
+    estado = serializers.CharField()  # Asegura que el estado se incluya en el JSON
+
+    class Meta:
+        model = Reembolso
+        fields = ['id', 'usuario', 'cantidad', 'motivo', 'fecha', 'estado']
 
 # --- Serializers de modelos principales ---
 class EventoSerializer(serializers.ModelSerializer):
+    organizador = OrganizadorMiniSerializer(read_only=True)
+    cupo = serializers.SerializerMethodField()
+    oferta_activa = serializers.SerializerMethodField()
+    precio_final = serializers.SerializerMethodField()
+
     class Meta:
         model = Evento
         fields = '__all__'
-        read_only_fields = ['organizador']  #  para no pedirlo desde el frontend
+        read_only_fields = ['organizador']
 
     def create(self, validated_data):
         request = self.context['request']
@@ -20,17 +38,49 @@ class EventoSerializer(serializers.ModelSerializer):
 
         validated_data['organizador'] = organizador
         return super().create(validated_data)
-    
-    def get_promedio_reseñas(self, obj):
-        promedio = obj.resena_set.aggregate(avg=Avg('puntuacion'))['avg']
-        return round(promedio, 1) if promedio else 0
+
+    def get_cupo(self, obj):
+        reservas_activas = Reserva.objects.filter(evento=obj, estado='activa').count()
+        return max(obj.cupo_maximo - reservas_activas, 0)
+
+    def get_oferta_activa(self, obj):
+        return obj.oferta_activa
+
+    def get_precio_final(self, obj):
+        return str(round(obj.precio_con_descuento, 2))  # evita problemas de tipo en el JSON
 
 
 
 class ReservaSerializer(serializers.ModelSerializer):
+    evento = EventoSerializer()
+    reembolso = serializers.SerializerMethodField()
+    reembolso_estado = serializers.SerializerMethodField()
+    reembolso_cantidad = serializers.SerializerMethodField()
+
     class Meta:
         model = Reserva
-        fields = '__all__'
+        fields = '__all__'  
+
+    def get_reembolso(self, obj):
+        try:
+            reembolso = obj.pago.reembolso
+            return ReembolsoSerializer(reembolso).data
+        except:
+            return None
+
+    def get_reembolso_estado(self, obj):
+        try:
+            return obj.pago.reembolso.estado
+        except:
+            return None
+
+    def get_reembolso_cantidad(self, obj):
+        try:
+            return str(obj.pago.reembolso.cantidad)
+        except:
+            return None
+
+
 
 class PagoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -42,9 +92,14 @@ class UsuarioMiniSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario
         fields = ['id', 'username', 'foto']
+class EventoMiniSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Evento
+        fields = ['id', 'titulo']
 
 class ResenaSerializer(serializers.ModelSerializer):
     usuario = UsuarioMiniSerializer(read_only=True)  # Solo lectura, no se puede modificar desde el frontend
+    evento = EventoMiniSerializer(read_only=True)  
 
     class Meta:
         model = Resena
@@ -119,3 +174,23 @@ class RegisterSerializer(serializers.ModelSerializer):
 
 
 
+from rest_framework import serializers
+from .models import Payout
+
+class PayoutSerializer(serializers.ModelSerializer):
+    organizador = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Payout
+        fields = ['id', 'organizador', 'email', 'cantidad', 'estado', 'fecha_creacion', 'nota']
+
+    def get_organizador(self, obj):
+        if obj.organizador and obj.organizador.usuario:
+            return {
+                'id': obj.organizador.id,
+                'usuario': {
+                    'id': obj.organizador.usuario.id,
+                    'username': obj.organizador.usuario.username
+                }
+            }
+        return None

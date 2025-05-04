@@ -1,0 +1,45 @@
+<section class="container my-5">
+  <h2 class="text-center mb-4">🎟️ Mis Reservas</h2>
+
+  @if (mensaje) {
+    <div class="alert alert-info text-center">{{ mensaje }}</div>
+  }
+
+  @for (r of reservas; track r.id) {
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5>{{ r.evento?.titulo }}</h5>
+        <p>📍 {{ r.evento?.ubicacion }}</p>
+        <p>📅 {{ r.evento?.fecha | date:'fullDate' }} - {{ r.evento?.fecha | date:'shortTime' }}</p>
+        <p [ngClass]="{ 'text-success': r.estado === 'activa', 'text-danger': r.estado === 'cancelada' }">
+          Estado: {{ r.estado }}
+        </p>
+
+        @if (r.estado === 'activa' && !eventoPasado(r.evento?.fecha)) {
+          <button class="btn btn-outline-danger btn-sm" (click)="seleccionarReserva(r.id)">
+            Cancelar reserva
+          </button>
+
+          @if (reservaSeleccionada === r.id) {
+            <div class="mt-3">
+              <textarea [(ngModel)]="motivoCancelacion" class="form-control" rows="2"
+                        placeholder="Motivo de cancelación..."></textarea>
+              <button class="btn btn-danger mt-2 btn-sm" (click)="cancelarReserva()">Confirmar cancelación</button>
+            </div>
+          }
+        }
+
+        @if (r.estado === 'cancelada') {
+          <p class="text-muted mt-2">
+            💸 Reembolso:
+            @if (r.reembolso_estado) {
+              <strong>{{ r.reembolso_estado }}</strong> — {{ r.reembolso_cantidad }} €
+            } @else {
+              <em>No registrado aún</em>
+            }
+          </p>
+        }
+      </div>
+    </div>
+  }
+</section>

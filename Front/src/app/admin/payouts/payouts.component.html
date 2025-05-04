@@ -1,0 +1,64 @@
+<section class="container my-5">
+    <h2 class="text-center mb-4">💸 Gestión de Payouts</h2>
+  
+    @if (loading) {
+      <div class="text-center">
+        <div class="spinner-border text-primary" role="status"></div>
+        <p class="mt-2">Cargando payouts...</p>
+      </div>
+    }
+  
+    @if (errorMsg) {
+      <div class="alert alert-danger text-center">{{ errorMsg }}</div>
+    }
+  
+    @if (!loading && payouts.length === 0) {
+      <div class="alert alert-info text-center">
+        No hay payouts pendientes ni pagados aún.
+      </div>
+    }
+  
+    @if (!loading && payouts.length > 0) {
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead class="table-dark">
+            <tr>
+              <th>ID</th>
+              <th>Organizador</th>
+              <th>Email</th>
+              <th>Cantidad (€)</th>
+              <th>Estado</th>
+              <th>Fecha</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (payout of payouts; track payout.id) {
+              <tr>
+                <td>{{ payout.id }}</td>
+                <td>{{ payout.organizador?.usuario?.username }}</td>
+                <td>{{ payout.email }}</td>
+                <td>{{ payout.cantidad }}</td>
+                <td>
+                  <span [class]="payout.estado === 'pendiente' ? 'badge bg-warning' : 'badge bg-success'">
+                    {{ payout.estado }}
+                  </span>
+                </td>
+                <td>{{ payout.fecha_creacion | date:'short' }}</td>
+                <td>
+                  @if (payout.estado === 'pendiente') {
+                    <button class="btn btn-sm btn-success" (click)="marcarComoPagado(payout.id)">
+                      Marcar como pagado
+                    </button>
+                  } @else {
+                    <span class="text-muted">✔️ Ya pagado</span>
+                  }
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  </section>
+  

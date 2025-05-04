@@ -38,7 +38,19 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" routerLink="/perfil">Mi perfil</a></li>
-            <li><a class="dropdown-item" routerLink="/crear-evento">Crear Evento</a></li>
+
+            @if (usuario.rol === 'Usuario') {
+              <li><a class="dropdown-item" routerLink="/mis-reservas">Mis reservas</a></li>
+            }
+            
+            @if (usuario.rol === 'Organizador') {
+              <li><a class="dropdown-item" routerLink="/crear-evento">Crear Evento</a></li>
+              <li><a class="dropdown-item" routerLink="/organizador/mis-eventos">Mis Eventos</a></li>
+              <li><a class="dropdown-item" routerLink="/organizador/resumen">Resumen</a></li>
+              <li><a class="dropdown-item" routerLink="/organizador/pagos">Mis pagos</a></li>
+
+
+            }
 
             @if (usuario.rol === 'Administrador') {
             <li><a class="dropdown-item" routerLink="/admin">Panel de Admin</a></li>
@@ -59,9 +71,46 @@
   </div>
 </nav>
 
-<div class="container mt-4">
-  <router-outlet></router-outlet>
+
+
+@if (mostrarOferta && eventosOferta.length > 0) {
+  <div class="alert alert-info text-center fw-semibold m-3">
+    🎉 ¡Hay ofertas disponibles en {{ eventosOferta.length }} evento(s)! Aprovecha antes de que acaben.
+  </div>
+}
+@if (mensajeExito) {
+  <div class="alert alert-success text-center m-3" role="alert">
+    {{ mensajeExito }}
+  </div>
+}
+<!-- MODAL OFERTA -->
+<div class="modal fade show d-block" tabindex="-1" *ngIf="mostrarModalOfertas" style="background-color: rgba(0,0,0,0.5)">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-success">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🎉 ¡Eventos en oferta!</h5>
+        <button type="button" class="btn-close" (click)="cerrarModal()" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>¡Estos eventos tienen descuentos activos!</p>
+        <ul>
+          <li *ngFor="let evento of eventosEnOferta">
+            <strong>{{ evento.titulo }}</strong> – <span class="text-success">-{{ evento.descuento }}%</span>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" (click)="cerrarModal()">Cerrar</button>
+        <a routerLink="/eventos" class="btn btn-outline-primary">Ver eventos</a>
+      </div>
+    </div>
+  </div>
 </div>
+
+<main class="container mt-4 flex-grow-1">
+  <router-outlet></router-outlet>
+</main>
+
 <app-chatbot />
 
 <footer class="bg-dark text-light py-4 mt-5">

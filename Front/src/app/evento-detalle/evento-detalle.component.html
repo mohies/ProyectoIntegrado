@@ -41,7 +41,21 @@
           <span class="text-muted ms-2">({{ totalResenas }} reseñas)</span>
         </div>
 
-        <h4 class="text-primary fw-semibold">Precio: {{ evento.precio }}€</h4>
+        <div class="mb-3">
+          @if (evento.oferta_activa) {
+            <h4>
+              <span class="text-muted text-decoration-line-through me-2">{{ evento.precio }}€</span>
+              <span class="text-success fw-bold">{{ evento.precio_final }}€</span>
+              <span class="badge bg-success ms-2">Oferta</span>
+            </h4>
+          } @else {
+            <h4 class="text-primary fw-semibold">Precio: {{ evento.precio }}€</h4>
+          }
+        </div>
+        
+        <p class="text-success mt-2">
+          🎟️ Cupos disponibles: <strong>{{ evento.cupo }}</strong>
+        </p>
 
         <button class="btn btn-success w-100 mt-4 py-2" (click)="agregarAlCarrito()">
           <i class="bi bi-cart-plus"></i> Añadir al carrito
@@ -83,6 +97,12 @@
   <!-- LISTADO DE RESEÑAS -->
   <div class="mt-5">
   <h5 class="mb-3">Reseñas</h5>
+  @if (resenas.length === 0) {
+    <div class="alert alert-secondary">
+      Aún no hay reseñas para este evento. ¡Sé el primero en dejar tu opinión!
+    </div>
+  }
+
   @for (r of resenas; track r.id) {
     <div class="border p-3 rounded mb-3 d-flex align-items-start gap-3 justify-content-between">
       <div class="d-flex gap-3">

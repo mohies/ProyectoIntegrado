@@ -7,9 +7,9 @@
       <div class="mb-3">
         <label class="form-label">Nombre de usuario</label>
         <input type="text" class="form-control" formControlName="username" />
-        @if (form.get('username')?.touched && (form.get('username')?.invalid || backendErrors?.['username'])) {
+        @if (form.get('username')?.touched && (form.get('username')?.invalid || backendErrors['username'])) {
           <small class="text-danger">
-            {{ backendErrors?.['username'] || 'Este campo es obligatorio' }}
+            {{ backendErrors['username'] || 'Este campo es obligatorio' }}
           </small>
         }
       </div>
@@ -18,9 +18,9 @@
       <div class="mb-3">
         <label class="form-label">Correo electrónico</label>
         <input type="email" class="form-control" formControlName="email" />
-        @if (form.get('email')?.touched && (form.get('email')?.invalid || backendErrors?.['email'])) {
+        @if (form.get('email')?.touched && (form.get('email')?.invalid || backendErrors['email'])) {
           <small class="text-danger">
-            {{ backendErrors?.['email'] || 'Introduce un email válido' }}
+            {{ backendErrors['email'] || 'Introduce un email válido' }}
           </small>
         }
       </div>
@@ -33,7 +33,7 @@
     @if (form.get('password')?.touched && form.get('password')?.invalid) {
       <small class="text-danger">Mínimo 6 caracteres</small>
     }
-    @if (form.get('password')?.touched && backendErrors?.['password']) {
+    @if (form.get('password')?.touched && backendErrors['password']) {
       <small class="text-danger">{{ backendErrors['password'] }}</small>
     }
   </div>
@@ -52,7 +52,7 @@
       <div class="mb-3">
         <label class="form-label">Foto de perfil</label>
         <input type="file" class="form-control" (change)="onFileChange($event)" />
-        @if (backendErrors?.['foto']) {
+        @if (backendErrors['foto']) {
           <small class="text-danger">{{ backendErrors['foto'] }}</small>
         }
       </div>

@@ -212,3 +212,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')  # tu correo
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # tu contraseña o App Password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+

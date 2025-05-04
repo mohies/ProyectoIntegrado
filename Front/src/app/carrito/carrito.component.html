@@ -26,14 +26,28 @@
                 <span class="fw-semibold">{{ linea.titulo }}</span>
               </td>
               <td class="text-end">
-                <input type="number"
-                min="1"
-                [(ngModel)]="linea.cantidad"
-                (change)="recalcular(linea)"
-                class="form-control form-control-sm w-auto d-inline-block text-end me-2" />
-         
-                x {{ linea.precio }} €
+                <div class="d-flex flex-column align-items-end">
+                  <div class="mb-1">
+                    <input type="number"
+                      min="1"
+                      [(ngModel)]="linea.cantidad"
+                      (change)="recalcular(linea)"
+                      class="form-control form-control-sm w-auto d-inline-block text-end me-2" />
+                  </div>
+                  
+                  <div>
+                    @if (linea.precio_original && linea.precio_original !== linea.precio) {
+                      <small class="text-muted text-decoration-line-through me-2">
+                        {{ linea.precio_original }} €
+                      </small>
+                      <span class="fw-bold text-success">{{ linea.precio }} €</span>
+                    } @else {
+                      <span class="fw-bold">{{ linea.precio }} €</span>
+                    }
+                  </div>
+                </div>
               </td>
+              
               <td class="text-end">
                 <button class="btn btn-outline-danger btn-sm" (click)="eliminar(linea.id)">
                   <i class="bi bi-trash"></i>
@@ -49,11 +63,13 @@
     <div class="col-md-4">
       <div class="card p-3 shadow-sm">
         <h5 class="text-center mb-3">Resumen del pedido</h5>
-        <p class="text-center fs-5">Total: <strong>{{ calcularTotal() | number: '1.2-2' }} €</strong></p>
+        <p class="text-center fs-5">
+          Total: <strong>{{ calcularTotal() | number: '1.2-2' }} €</strong>
+        </p>
 
-        <a routerLink="/compra" class="btn btn-primary w-100 mb-2">
+        <button class="btn btn-primary w-100 mb-2" (click)="finalizarCompra()">
           Finalizar compra
-        </a>
+        </button>
 
         <button class="btn btn-outline-secondary w-100" (click)="vaciarCarrito()" [disabled]="lineas.length === 0">
           Vaciar carrito

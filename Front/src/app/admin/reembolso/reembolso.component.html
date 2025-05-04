@@ -1,0 +1,41 @@
+<section class="container my-5">
+    <h2 class="text-center mb-4">💸 Reembolsos Registrados</h2>
+  
+    @if (cargando) {
+      <p class="text-center">Cargando...</p>
+    } @else if (error) {
+      <div class="alert alert-danger text-center">{{ error }}</div>
+    } @else if (reembolsos.length === 0) {
+      <div class="alert alert-info text-center">No hay reembolsos registrados.</div>
+    } @else {
+      <table class="table table-bordered table-striped align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Usuario</th>
+            <th>Cantidad</th>
+            <th>Motivo</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (r of reembolsos; track r.id) {
+            <tr>
+              <td>{{ r.id }}</td>
+              <td>{{ r.usuario }}</td>
+              <td>{{ r.cantidad }} €</td>
+              <td>{{ r.motivo || '—' }}</td>
+              <td>{{ r.fecha | date: 'short' }}</td>
+              <td>
+                <button class="btn btn-success btn-sm me-1" (click)="actualizarEstado(r.id, 'aprobado')">Aprobar</button>
+                <button class="btn btn-warning btn-sm me-1" (click)="actualizarEstado(r.id, 'parcial')">Parcial</button>
+                <button class="btn btn-danger btn-sm" (click)="actualizarEstado(r.id, 'rechazado')">Rechazar</button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </section>
+  

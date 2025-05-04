@@ -62,4 +62,33 @@ export class AuthService {
   get usuarioActual() {
     return this.usuarioSubject.value;
   }
+
+// auth.service.ts
+chequearOfertas() {
+  const token = localStorage.getItem('token');
+  const headers = new HttpHeaders({
+    Authorization: `Token ${token}`
+  });
+
+  return this.http.get<any[]>('http://localhost:8000/api/v1/eventos-con-oferta/', { headers });
 }
+
+getMisReservas(token: string) {
+  return this.http.get<any[]>('http://localhost:8000/api/v1/mis-reservas/', {
+    headers: new HttpHeaders({ Authorization: `Token ${token}` })
+  });
+}
+
+cancelarReserva(reservaId: number, motivo: string, token: string) {
+  return this.http.post(`http://localhost:8000/api/v1/cancelar-reserva/${reservaId}/`, 
+    { motivo }, 
+    {
+      headers: new HttpHeaders({ Authorization: `Token ${token}` })
+    }
+  );
+}
+
+
+}
+
+

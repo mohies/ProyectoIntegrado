@@ -9,13 +9,15 @@ from .views import (
     EventosProximosAPIView,
     GoogleLoginAPIView,
     LoginConTokenAPIView,
+    PayoutViewSet,
     ReservaViewSet,
     PagoViewSet,
     ResenaViewSet,
     SessionView,
     UsuarioViewSet,
     RegisterView,
-    resumen_reseñas
+    resumen_reseñas,
+    procesar_compra
 )
 from django.conf import settings
 from django.conf.urls.static import static
@@ -31,6 +33,7 @@ router_privado.register(r'reservas', ReservaViewSet)
 router_privado.register(r'pagos', PagoViewSet)
 router_privado.register(r'resenas', ResenaViewSet)
 router_privado.register(r'usuarios', UsuarioViewSet)
+router_privado.register(r'payouts', PayoutViewSet, basename='payouts')  # 👈 registra payouts
 
 urlpatterns = [
     path('', include(router_publico.urls)),      # Público (ver eventos)
@@ -48,5 +51,18 @@ urlpatterns = [
     path('eventos/<int:evento_id>/reseñas-resumen/', resumen_reseñas, name='resumen-reseñas'),
 
     path('contacto/', ContactoAPIView.as_view(), name='contacto-api'),
+    path('procesar-compra/', procesar_compra, name='procesar-compra'),
+    path('eventos-con-oferta/', views.eventos_con_oferta, name='eventos-con-oferta'),
+
+    path('mis-reservas/', views.mis_reservas, name='mis-reservas'),
+    path('cancelar-reserva/<int:reserva_id>/', views.cancelar_reserva, name='cancelar-reserva'),
+    path('admin/reembolsos/', views.listar_reembolsos, name='listar-reembolsos'),
+    path('admin/reembolsos/<int:reembolso_id>/estado/', views.actualizar_estado_reembolso),
+
+    path('mis-eventos/', views.mis_eventos, name='mis-eventos'),
+    path('reservas-por-evento/<int:evento_id>/', views.reservas_por_evento, name='reservas-por-evento'),
+    path('organizador/resumen/', views.resumen_organizador, name='resumen-organizador'),
+    path('organizador/payouts/', views.mis_payouts, name='mis-payouts'),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

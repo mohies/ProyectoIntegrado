@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, ActivatedRoute } from '@angular/router';
+import { RouterModule, ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CarritoService } from '../services/carrito.service';
 
@@ -17,7 +17,8 @@ export class CarritoComponent implements OnInit {
 
   constructor(
     private carritoService: CarritoService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -50,5 +51,15 @@ export class CarritoComponent implements OnInit {
   recalcular(linea: any) {
     this.carritoService.actualizarCantidad(linea.id, linea.cantidad);
   }
-  
+
+  finalizarCompra() {
+    const total = this.calcularTotal();
+
+    if (total <= 0) {
+      this.mensajeError = '⚠️ No puedes finalizar la compra con un total de 0 €. Por favor, añade productos.';
+      return;
+    }
+
+    this.router.navigate(['/compra']);
+  }
 }

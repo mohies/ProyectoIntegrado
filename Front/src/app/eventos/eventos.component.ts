@@ -14,6 +14,8 @@ interface Evento {
   ubicacion: string;
   precio: number;
   tipo?: string;
+  cupo?: number; 
+
 }
 
 @Component({

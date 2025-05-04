@@ -1,0 +1,29 @@
+<section class="container my-5">
+    <h2 class="mb-4 text-center">📋 Gestión de Eventos</h2>
+  
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Fecha</th>
+          <th>Organizador</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (evento of eventos; track evento.id) {
+          <tr>
+            <td>{{ evento.id }}</td>
+            <td>{{ evento.titulo }}</td>
+            <td>{{ evento.fecha | date: 'short' }}</td>
+            <td>{{ evento.organizador?.usuario }}</td>
+            <td>
+              <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+  

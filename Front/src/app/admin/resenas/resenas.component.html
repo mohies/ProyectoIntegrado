@@ -1,0 +1,33 @@
+<section class="container my-5">
+    <h2 class="text-center mb-4">⭐ Reseñas</h2>
+  
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Usuario</th>
+          <th>Evento</th>
+          <th>Puntuación</th>
+          <th>Comentario</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (r of resenas; track r.id) {
+          <tr>
+            <td>{{ r.id }}</td>
+            <td>{{ r.usuario?.username || 'Desconocido' }}</td>
+            <td>{{ r.evento?.titulo || 'Evento no disponible' }}</td>
+            <td>{{ r.puntuacion }}/5</td>
+            <td>{{ r.comentario }}</td>
+            <td>
+              <button class="btn btn-sm btn-outline-danger" (click)="eliminarResena(r.id)">
+                <i class="bi bi-trash"></i> Eliminar
+              </button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+  

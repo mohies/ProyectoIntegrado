@@ -150,7 +150,14 @@ a: any;
   agregarAlCarrito() {
     if (!this.evento) return;
   
-    this.carritoService.agregar(this.evento);
+    const item = {
+      ...this.evento,
+      precio: this.evento.precio_final || this.evento.precio, // precio que se usará en total
+      precio_original: this.evento.precio                      // precio original para mostrar
+    };
+  
+    this.carritoService.agregar(item);
+  
     this.mensaje = '🛒 Evento añadido al carrito.';
     this.tipoMensaje = 'success';
   
@@ -159,6 +166,8 @@ a: any;
       this.tipoMensaje = null;
     }, 3000);
   }
+  
+  
   
   
   
