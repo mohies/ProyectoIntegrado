@@ -6,43 +6,52 @@ from .serializers import EventoSerializer, PayoutSerializer, ReservaSerializer, 
 from .permissions import EsOrganizador, EsUsuario,EsAdministrador,EsOrganizadorOAdministrador
 from rest_framework.permissions import IsAuthenticated,AllowAny
 from rest_framework import generics
+from django.utils.timezone import now
+
 
 # Vista para la página de inicio
 def index(request):
     return render(request, 'index.html')
-
+# Vista privada para CRUD completo de eventos, accesible solo por organizadores autenticados.
 class EventoPrivadoViewSet(viewsets.ModelViewSet):
     queryset = Evento.objects.all()
     serializer_class = EventoSerializer
     permission_classes = [IsAuthenticated, EsOrganizador]
-
+# Vista pública para listar eventos accesibles sin autenticación; solo permite lectura de eventos futuros.
 class EventoPublicoViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Evento.objects.all()
     serializer_class = EventoSerializer
     permission_classes = [AllowAny]
     def get_queryset(self):
         return Evento.objects.filter(fecha__gte=datetime.now()).order_by('fecha')
-    
+ # API para obtener los tres eventos futuros más populares según el número de reservas.   
 class EventosDestacadosAPIView(generics.ListAPIView):
-    queryset = Evento.objects.filter(destacado=True).order_by('-fecha')[:3]
     serializer_class = EventoSerializer
     permission_classes = [AllowAny]
 
+    def get_queryset(self):
+        return (
+            Evento.objects
+            .filter(fecha__gte=now())  # Solo eventos futuros
+            .annotate(num_reservas=Count('reserva'))  # Añade cantidad de reservas
+            .order_by('-num_reservas', 'fecha')[:3]   # Ordena por popularidad y fecha
+        )
+# API para listar los próximos cinco eventos en orden cronológico.
 class EventosProximosAPIView(generics.ListAPIView):
     queryset = Evento.objects.filter(fecha__gte=datetime.now()).order_by('fecha')[:5]
     serializer_class = EventoSerializer
     permission_classes = [AllowAny]
 
-
+# Vista para gestionar las reservas del usuario autenticado. Permite crear, ver, editar y borrar reservas propias.
 class ReservaViewSet(viewsets.ModelViewSet):
     queryset = Reserva.objects.all()
     serializer_class = ReservaSerializer
     permission_classes = [IsAuthenticated, EsUsuario]
-
+# Vista para gestionar los pagos realizados por los usuarios (no tiene restricciones de permisos en esta versión).
 class PagoViewSet(viewsets.ModelViewSet):
     queryset = Pago.objects.all()
     serializer_class = PagoSerializer
-
+# Vista para CRUD de reseñas de eventos. Los permisos varían según la acción (crear, borrar, listar).
 class ResenaViewSet(viewsets.ModelViewSet):
     queryset = Resena.objects.all()
     serializer_class = ResenaSerializer
@@ -65,14 +74,20 @@ class ResenaViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save(usuario=request.user)
+
+        evento_id = request.data.get('evento')
+        if not evento_id:
+            return Response({'error': 'El campo "evento" es obligatorio.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        serializer.save(usuario=request.user, evento_id=evento_id)
 
         return Response({
             'mensaje': '✅ ¡Gracias por tu reseña!',
             'resena': serializer.data
         }, status=status.HTTP_201_CREATED)
+
         
-        
+# Vista para ver y actualizar payouts desde el panel administrativo. Restringida solo a administradores.
 class PayoutViewSet(viewsets.ModelViewSet):
     queryset = Payout.objects.all().order_by('-fecha_creacion')
     serializer_class = PayoutSerializer
@@ -97,7 +112,7 @@ from .serializers import UsuarioSerializer
 from rest_framework.permissions import IsAuthenticated
 
 from .permissions import EsAdministrador
-
+# Vista para gestión CRUD de usuarios, accesible solo por administradores autenticados.
 class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
@@ -129,7 +144,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.core.mail import send_mail  
 from django.conf import settings  # para settings.DEFAULT_FROM_EMAIL
 
-
+# API para registro de nuevos usuarios, creación de tokens, asignación de roles y envío de email de bienvenida.
 class RegisterView(APIView):
     permission_classes = [AllowAny]
 
@@ -209,7 +224,7 @@ from rest_framework.authtoken.models import Token
 import requests
 import jwt
 from jwt import algorithms
-
+# API que gestiona la autenticación vía Google Login, validando el token JWT proporcionado por Google.
 class GoogleLoginAPIView(APIView):
     permission_classes = [AllowAny]
 
@@ -297,7 +312,7 @@ class GoogleLoginAPIView(APIView):
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
-
+# API que verifica si el usuario está autenticado y devuelve su información actual.
 class SessionView(APIView):
     def get(self, request):
         user = request.user
@@ -326,7 +341,7 @@ from .serializers import UsuarioSerializer
 from rest_framework.parsers import MultiPartParser, FormParser
 
 from django.contrib.auth.models import Group
-
+# API para gestionar actualizaciones parciales de un usuario. Permite cambio de rol y reasignación de grupo.
 class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
@@ -377,7 +392,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.permissions import AllowAny
-
+# API que permite a usuarios autenticados iniciar sesión con usuario y contraseña, retornando su token de autenticación.
 class LoginConTokenAPIView(APIView):
     permission_classes = [AllowAny]
 
@@ -411,7 +426,7 @@ from rest_framework.decorators import api_view,permission_classes
 from rest_framework.response import Response
 from django.db.models import Avg, Count
 from .models import Resena
-
+# Endpoint para devolver estadísticas de reseñas de un evento: promedio y total de reseñas.
 @api_view(['GET'])
 @permission_classes([AllowAny])  
 def resumen_reseñas(request, evento_id):
@@ -442,7 +457,7 @@ from rest_framework.permissions import AllowAny
 from django.core.mail import send_mail
 from django.conf import settings
 from rest_framework import status
-
+# API que recibe datos del formulario de contacto y envía un correo al email de administración.
 class ContactoAPIView(APIView):
     permission_classes = [AllowAny]
 
@@ -489,7 +504,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from .models import Evento, Reserva, Pago, Payout
-
+# Procesa la compra completa de uno o varios eventos: crea reservas, pagos y payouts. Transacción atómica.
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def procesar_compra(request):
@@ -498,6 +513,9 @@ def procesar_compra(request):
     items = data.get('items', [])
     metodo = data.get('metodo_pago', 'PayPal')
     total = data.get('total_pago', 0)
+    direccion = data.get('direccion')
+    ciudad = data.get('ciudad')
+    notas = data.get('notas')
 
     if not items or float(total) <= 0:
         return Response({'error': 'Compra inválida. Debes incluir eventos y total mayor a 0.'}, status=status.HTTP_400_BAD_REQUEST)
@@ -519,10 +537,13 @@ def procesar_compra(request):
 
                 # Crear reserva
                 reserva = Reserva.objects.create(
-                    usuario=usuario,
-                    evento=evento,
-                    estado='activa',
-                    fecha_reserva=timezone.now()
+                usuario=usuario,
+                evento=evento,
+                estado='activa',
+                fecha_reserva=timezone.now(),
+                direccion=direccion,
+                ciudad=ciudad,
+                notas=notas
                 )
 
                 # Precio con descuento si aplica
@@ -559,7 +580,7 @@ def procesar_compra(request):
 
 
 
-
+# Devuelve todos los eventos con ofertas activas disponibles para el usuario autenticado.
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def eventos_con_oferta(request):
@@ -568,7 +589,7 @@ def eventos_con_oferta(request):
     serializer = EventoSerializer(eventos_en_oferta, many=True)
     return Response(serializer.data)
 
-
+# Devuelve todas las reservas del usuario autenticado, con detalles del evento incluido.
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def mis_reservas(request):
@@ -577,7 +598,7 @@ def mis_reservas(request):
     serializer = ReservaSerializer(reservas, many=True, context={'request': request})
     return Response(serializer.data)
 
-
+# Permite al usuario cancelar una reserva activa y genera una solicitud de reembolso si corresponde.
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def cancelar_reserva(request, reserva_id):
@@ -622,7 +643,7 @@ def cancelar_reserva(request, reserva_id):
     except Reserva.DoesNotExist:
         return Response({'error': 'Reserva no encontrada'}, status=404)
 
-
+# Devuelve todos los reembolsos existentes para su gestión por parte del administrador.
 @api_view(['GET'])
 @permission_classes([IsAuthenticated, EsAdministrador])
 def listar_reembolsos(request):
@@ -640,7 +661,7 @@ def listar_reembolsos(request):
     return Response(data)
 
 
-
+# Permite al administrador actualizar el estado de un reembolso a aprobado, rechazado o parcial.
 @api_view(['PATCH'])
 @permission_classes([IsAuthenticated, EsAdministrador])
 def actualizar_estado_reembolso(request, reembolso_id):
@@ -663,7 +684,7 @@ def actualizar_estado_reembolso(request, reembolso_id):
         return Response({'error': 'Reembolso no encontrado'}, status=404)
 
 
-
+# Devuelve todos los eventos creados por el organizador autenticado.
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def mis_eventos(request):
@@ -675,7 +696,7 @@ def mis_eventos(request):
     except Organizador.DoesNotExist:
         return Response({'error': 'No eres un organizador válido'}, status=403)
     
-    
+# Lista todas las reservas realizadas para un evento específico, validando que el evento sea del organizador.   
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def reservas_por_evento(request, evento_id):
@@ -707,7 +728,7 @@ def reservas_por_evento(request, evento_id):
     
 from django.db.models import Sum
 
-    
+# Devuelve estadísticas resumidas del organizador: eventos totales, reservas, cancelaciones e ingresos.    
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def resumen_organizador(request):
@@ -731,7 +752,7 @@ def resumen_organizador(request):
         return Response({'error': 'No eres un organizador válido'}, status=403)
     
 
-
+# Lista todos los payouts generados para el organizador autenticado.
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def mis_payouts(request):
@@ -753,3 +774,44 @@ def mis_payouts(request):
 
     except Organizador.DoesNotExist:
         return Response({'error': 'No eres un organizador válido'}, status=403)
+
+
+
+
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import A4
+from eventos.models import Reserva
+
+# Genera un PDF de entrada para una reserva específica. El archivo incluye detalles del evento y usuario.
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def generar_pdf_reserva(request, reserva_id):
+    reserva = get_object_or_404(Reserva, pk=reserva_id, usuario=request.user)
+    evento = reserva.evento
+
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = f'attachment; filename="entrada_{reserva.id}.pdf"'
+
+    p = canvas.Canvas(response, pagesize=A4)
+    width, height = A4
+
+    p.setFont("Helvetica-Bold", 18)
+    p.drawString(50, height - 50, "🎟️ ENTRADA AL EVENTO")
+
+    p.setFont("Helvetica", 12)
+    p.drawString(50, height - 100, f"Evento: {evento.titulo}")
+    p.drawString(50, height - 120, f"Fecha: {evento.fecha.strftime('%d/%m/%Y %H:%M')}")
+    p.drawString(50, height - 140, f"Ubicación: {evento.ubicacion}")
+    p.drawString(50, height - 160, f"Usuario: {reserva.usuario.email}")
+    p.drawString(50, height - 180, f"Dirección: {reserva.direccion or 'No registrada'}")
+    p.drawString(50, height - 200, f"Ciudad: {reserva.ciudad or 'No registrada'}")
+    p.drawString(50, height - 220, f"Notas: {reserva.notas or 'Ninguna'}")
+    p.drawString(50, height - 240, f"Estado: {reserva.estado}")
+    p.drawString(50, height - 260, f"Reserva ID: {reserva.id}")
+
+    p.showPage()
+    p.save()
+    return response
+

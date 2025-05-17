@@ -1,0 +1,5610 @@
+[
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Organizadores",
+    "permissions": [
+      33,
+      34,
+      35,
+      36,
+      29,
+      30,
+      31,
+      32,
+      45,
+      46,
+      47,
+      48,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      21,
+      22,
+      23,
+      24
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "Administradores",
+    "permissions": [
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      11,
+      12,
+      5,
+      6,
+      7,
+      8,
+      13,
+      14,
+      15,
+      16,
+      25,
+      26,
+      27,
+      28,
+      33,
+      34,
+      35,
+      36,
+      29,
+      30,
+      31,
+      32,
+      45,
+      46,
+      47,
+      48,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      21,
+      22,
+      23,
+      24,
+      17,
+      18,
+      19,
+      20
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 3,
+  "fields": {
+    "name": "Usuarios",
+    "permissions": [
+      36,
+      37,
+      40,
+      41,
+      44
+    ]
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$OrEExX9LcwtPriMNnY7XcX$aWIty0vl6e57YxrnbETMpV0Tn0Nk8vbuUg4kZBqnUno=",
+    "last_login": "2025-05-04T12:42:42.098",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-03-28T23:39:07",
+    "rol": 1,
+    "foto": "perfiles/Captura_de_pantalla_2025-04-20_012516_7IGMgNk.png",
+    "groups": [
+      2
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$DwtBHnDxLcqSYd6aIhbvuJ$dN7m7O6gGjyOLbU5p0i9+0KGWw3qwJvbrgnmJ85iDig=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "organizador1",
+    "first_name": "",
+    "last_name": "",
+    "email": "org1@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-29T18:15:04",
+    "rol": 2,
+    "foto": "",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$xQyhy7g28874AzjqH2HTxe$x7SylcGapH2Qletle4HvcWAs3zuo7ybVFvULS5YEkKw=",
+    "last_login": "2025-03-30T23:32:06.528",
+    "is_superuser": false,
+    "username": "pepe",
+    "first_name": "",
+    "last_name": "",
+    "email": "pepe@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-29T23:48:40.083",
+    "rol": 3,
+    "foto": "perfiles/Compra.drawio.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$e9aTbRJTrq13IDCWhqxaYf$K0h3sAgyK6a8SZILJcjHxFe74P02Zm47TcNRUZKIGMY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "fofo",
+    "first_name": "",
+    "last_name": "",
+    "email": "cacas@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-29T23:49:36.646",
+    "rol": 2,
+    "foto": "perfiles/Compra_IlVe91U.drawio.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$qxZpsVXhDHELPfTjbvJVYJ$o5pQ7YgL13FIHFA4YHbZcohPLWfLfJ4xPHifnyShlOc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "fo9fofof",
+    "first_name": "",
+    "last_name": "",
+    "email": "fofofoofof@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-30T11:43:45.959",
+    "rol": 3,
+    "foto": "perfiles/Compra_TcbG1n0.drawio.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$sgMTdVY3Cp1QVPu4PyfKoe$Cwu94zZ5tYZ5wnjLi3+EtAIcie1o2sF4YWclzFIQwgw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "abdallah",
+    "first_name": "",
+    "last_name": "",
+    "email": "abdallah@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-30T11:49:42",
+    "rol": 2,
+    "foto": "perfiles/Compra_HIvP3Wa.drawio.png",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$cYOIa6CaXFulibh711csts$6RxcdpBar5ZvgVQGNDuJv7nM3tQebCLn908GpLQF4n0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mohcen",
+    "first_name": "",
+    "last_name": "",
+    "email": "mohcen@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-30T11:50:22.463",
+    "rol": 3,
+    "foto": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 12,
+  "fields": {
+    "password": "!ToMhRQ1hZr4EUAttaE0mE9YC89jiB99HjzONJE6B",
+    "last_login": "2025-04-27T20:07:36.210",
+    "is_superuser": false,
+    "username": "dasads",
+    "first_name": "dasads",
+    "last_name": "dasdas",
+    "email": "raftex13@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-30T16:21:07.747",
+    "rol": 2,
+    "foto": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$OrEExX9LcwtPriMNnY7XcX$aWIty0vl6e57YxrnbETMpV0Tn0Nk8vbuUg4kZBqnUno=",
+    "last_login": "2025-04-27T20:07:16.091",
+    "is_superuser": false,
+    "username": "kaluke34",
+    "first_name": "",
+    "last_name": "",
+    "email": "kaluke34@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-30T20:49:00",
+    "rol": 3,
+    "foto": "",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$ImmhNqOfsHwHv8WfTycIKL$YFsDuAzjptYX5p3oQHnj3FsCKUGaY4dQ4BTz2KYGis4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "lolo",
+    "first_name": "",
+    "last_name": "",
+    "email": "lolo@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-30T20:57:28.550",
+    "rol": 3,
+    "foto": "perfiles/Compra_UeeVKVY.drawio.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$OrEExX9LcwtPriMNnY7XcX$aWIty0vl6e57YxrnbETMpV0Tn0Nk8vbuUg4kZBqnUno=",
+    "last_login": "2025-04-21T00:37:14.952",
+    "is_superuser": false,
+    "username": "m-ben",
+    "first_name": "",
+    "last_name": "",
+    "email": "critlex13@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-03T22:12:51",
+    "rol": 3,
+    "foto": "",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 23,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$XiKMKuJFzWZmocBIjURmlP$ycBNurczdPkXQvCrxB75gi9plDeo9d2W9BpA4ieQsd0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Houda",
+    "first_name": "",
+    "last_name": "",
+    "email": "houda@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-06T19:46:59.248",
+    "rol": 2,
+    "foto": "perfiles/A-100752-1405652286-5625_ly88MrO.jpg",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 24,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$EiliyuXcaIhIRWCsIxEwGA$Kp/O+VM5AEYG1m8VWfGRu3RPK5OKDgJ49A7YqRU3Gqo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "yassine",
+    "first_name": "",
+    "last_name": "",
+    "email": "yassine@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-06T19:55:24.604",
+    "rol": 2,
+    "foto": "perfiles/A-100752-1405652286-5625_Z9eADja.jpg",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 25,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$ZgZzkLsLbs5Vutvk7sFDHc$jyXAb5mVac0wFUVpiBoLxZVt+/q4Ce6SE7AjUnIVaYM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jorge",
+    "first_name": "",
+    "last_name": "",
+    "email": "jorge@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-12T00:36:11.488",
+    "rol": 3,
+    "foto": "perfiles/default-user.png",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 27,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$OBadRaXAaalgTnem80koZz$MutIoFJO3Y2M/HQv6Z4ZiZYoHxvP6HpPk7kNtgnHuCI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Carlos",
+    "first_name": "",
+    "last_name": "",
+    "email": "carlos@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-21T00:53:01",
+    "rol": 2,
+    "foto": "perfiles/Captura_de_pantalla_2025-04-20_012516.png",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 28,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$N6l6V5AZaUEUXyJ9PGP6DG$em+mONLS3Xgb4Cz9MqsI5J4Gomppruhol56+rN0Mldo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ana",
+    "first_name": "",
+    "last_name": "",
+    "email": "ana@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-21T01:07:51.844",
+    "rol": 2,
+    "foto": "perfiles/default-user.png",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 30,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$WCcn6MJuvo3npgmhq8WNCT$o40vrSHdrdKx6z+w+Qrk58xqfrwP3rSdLgWw1KENXTw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alejandro",
+    "first_name": "",
+    "last_name": "",
+    "email": "alejandro@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-21T23:14:46.940",
+    "rol": 3,
+    "foto": "perfiles/default-user.png",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 32,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$CXWxM05zB3M4UP9aJXw52S$8f64SD2EiVxJsyiMrKCmx6HFtodXcR5/pvGWwXmgk4I=",
+    "last_login": "2025-05-03T01:18:42.317",
+    "is_superuser": false,
+    "username": "pepiito",
+    "first_name": "",
+    "last_name": "",
+    "email": "elpepiito34@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-26T20:51:04.787",
+    "rol": 3,
+    "foto": "perfiles/default-user.png",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 33,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$Nlk18SwVFvlUv8vg7D8TXM$wPeSCNrWDxhCi7kjH+poYrtBSjUeD8k/MXBf+vv8vYA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Coral",
+    "first_name": "",
+    "last_name": "",
+    "email": "coral@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-04T13:21:02.110",
+    "rol": 3,
+    "foto": "perfiles/default-user.png",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.organizador",
+  "pk": 1,
+  "fields": {
+    "usuario": 2,
+    "datos_adicionales": null,
+    "paypal_email": null
+  }
+},
+{
+  "model": "eventos.organizador",
+  "pk": 2,
+  "fields": {
+    "usuario": 24,
+    "datos_adicionales": null,
+    "paypal_email": null
+  }
+},
+{
+  "model": "eventos.organizador",
+  "pk": 3,
+  "fields": {
+    "usuario": 27,
+    "datos_adicionales": "",
+    "paypal_email": null
+  }
+},
+{
+  "model": "eventos.organizador",
+  "pk": 4,
+  "fields": {
+    "usuario": 28,
+    "datos_adicionales": null,
+    "paypal_email": null
+  }
+},
+{
+  "model": "eventos.administrador",
+  "pk": 1,
+  "fields": {
+    "usuario": 1
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 1,
+  "fields": {
+    "titulo": "Imagine Dragons: LOOM World Tour | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-28T21:30:00",
+    "ubicacion": "Estadio Riyadh Air Metropolitano - Madrid",
+    "precio": "297.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/0e3/dae353c1-d877-4eb7-baf6-7ddf501310e3_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 2,
+  "fields": {
+    "titulo": "Imagine Dragons: LOOM World Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-28T21:30:00",
+    "ubicacion": "Estadio Riyadh Air Metropolitano - Madrid",
+    "precio": "65.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/0e3/dae353c1-d877-4eb7-baf6-7ddf501310e3_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 3,
+  "fields": {
+    "titulo": "Imagine Dragons: LOOM World Tour | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-01T21:30:00",
+    "ubicacion": "Estadi Olímpic Lluis Companys - Barcelona",
+    "precio": "297.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/0e3/dae353c1-d877-4eb7-baf6-7ddf501310e3_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 4,
+  "fields": {
+    "titulo": "Imagine Dragons: LOOM World Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-01T21:30:00",
+    "ubicacion": "Estadi Olímpic Lluis Companys - Barcelona",
+    "precio": "65.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/0e3/dae353c1-d877-4eb7-baf6-7ddf501310e3_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 5,
+  "fields": {
+    "titulo": " Vida Club Goes To – La Paloma",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-03-29T00:00:00",
+    "ubicacion": "La Paloma - Barcelona",
+    "precio": "19.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/a10/5cc0d039-8f6f-4be2-aec2-f9d5ee849a10_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 6,
+  "fields": {
+    "titulo": "Gavin James",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-03-29T20:30:00",
+    "ubicacion": "Sala Upload - Poble Espanyol - Barcelona",
+    "precio": "23.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/457/1f420b94-038f-4b88-8ced-60ec12878457_RETINA_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 7,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-03-29T20:30:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 8,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-03-30T16:30:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 9,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-03-29T16:30:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "26.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 10,
+  "fields": {
+    "titulo": "Gavin James",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-03-30T20:30:00",
+    "ubicacion": "Sala Nazca - Madrid",
+    "precio": "23.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/457/1f420b94-038f-4b88-8ced-60ec12878457_RETINA_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 11,
+  "fields": {
+    "titulo": "FINAL FANTASY VII REBIRTH Orchestra World Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-03-30T19:45:00",
+    "ubicacion": "Auditorio Forum CCIB - Barcelona",
+    "precio": "3.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/679/04db144c-e379-4b16-8f82-86cd5a3b5679_TABLET_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 12,
+  "fields": {
+    "titulo": "Hannah Bahng",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-03-31T20:30:00",
+    "ubicacion": "Sala Razzmatazz 2 - Barcelona",
+    "precio": "42.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/fbc/5c5b2431-50bf-4651-aefc-9e5f29b38fbc_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 13,
+  "fields": {
+    "titulo": "Dei V",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-01T00:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/585/9772c787-1d0f-43c3-97d0-1fab56bf0585_RETINA_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 14,
+  "fields": {
+    "titulo": "Dei V",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-03T00:00:00",
+    "ubicacion": "Sant Jordi Club - Barcelona",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/585/9772c787-1d0f-43c3-97d0-1fab56bf0585_RETINA_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 15,
+  "fields": {
+    "titulo": "Dei V",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-03T00:00:00",
+    "ubicacion": "Sant Jordi Club - Barcelona",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/585/9772c787-1d0f-43c3-97d0-1fab56bf0585_RETINA_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 16,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-03T20:30:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 17,
+  "fields": {
+    "titulo": "Dei V",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-04T00:00:00",
+    "ubicacion": "Sant Jordi Club - Barcelona",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/585/9772c787-1d0f-43c3-97d0-1fab56bf0585_RETINA_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 18,
+  "fields": {
+    "titulo": "Dei V",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-04T00:00:00",
+    "ubicacion": "Sant Jordi Club - Barcelona",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/585/9772c787-1d0f-43c3-97d0-1fab56bf0585_RETINA_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 19,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-04T20:30:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 20,
+  "fields": {
+    "titulo": "Hoke: Tres Creus Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-05T21:00:00",
+    "ubicacion": "Plaza de Toros de Valencia - Valencia",
+    "precio": "34.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/01a/918434c8-5624-44ab-afa2-eb9b8ddec01a_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 21,
+  "fields": {
+    "titulo": "Morad",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-05T21:00:00",
+    "ubicacion": "Live Sur Stadium - Sevilla",
+    "precio": "37.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/dcc/ccca517d-d8be-417d-818d-1fea46973dcc_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 22,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-05T20:30:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 23,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-05T16:30:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 24,
+  "fields": {
+    "titulo": "Baby Lasagna - Meow Back Tour Spring 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-06T20:30:00",
+    "ubicacion": "Moby Dick Club - Madrid",
+    "precio": "32.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/620/8dff4b7c-408b-49a6-a455-50fc945e0620_RETINA_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 25,
+  "fields": {
+    "titulo": "Lenny Kravitz - Blue Electric Light Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-06T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "51.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/314/2e871aa5-bff6-4266-8bd3-58cbf0347314_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 26,
+  "fields": {
+    "titulo": "Lenny Kravitz - Blue Electric Light Tour 2025 | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-06T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "220.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/314/2e871aa5-bff6-4266-8bd3-58cbf0347314_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 27,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-06T16:30:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 28,
+  "fields": {
+    "titulo": "Baby Lasagna - Meow Back Tour Spring 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-07T20:30:00",
+    "ubicacion": "Sala Razzmatazz 3 - Barcelona",
+    "precio": "2.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/620/8dff4b7c-408b-49a6-a455-50fc945e0620_RETINA_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 29,
+  "fields": {
+    "titulo": "Queen Extravaganza: Celebrating 50 years of Bohemian Rhapsody | VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-10T20:30:00",
+    "ubicacion": "Sala Razzmatazz 1 - Barcelona",
+    "precio": "106.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/7f9/b26a4eee-dd5a-4706-afd1-903d323f97f9_TABLET_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 30,
+  "fields": {
+    "titulo": "Queen Extravaganza: Celebrating 50 years of Bohemian Rhapsody",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-10T20:30:00",
+    "ubicacion": "Sala Razzmatazz 1 - Barcelona",
+    "precio": "38.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/7f9/b26a4eee-dd5a-4706-afd1-903d323f97f9_TABLET_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 31,
+  "fields": {
+    "titulo": "Lenny Kravitz - Blue Electric Light Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-10T21:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "79.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/314/2e871aa5-bff6-4266-8bd3-58cbf0347314_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 32,
+  "fields": {
+    "titulo": "Lenny Kravitz - Blue Electric Light Tour 2025 | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-10T21:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "220.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/314/2e871aa5-bff6-4266-8bd3-58cbf0347314_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 33,
+  "fields": {
+    "titulo": "Elefante",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-10T20:00:00",
+    "ubicacion": "Salamandra - Barcelona",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 34,
+  "fields": {
+    "titulo": "Los40 Primavera Pop",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-11T20:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "25.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8a5/9d39b5be-1612-4adb-9828-99183ce9e8a5_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 35,
+  "fields": {
+    "titulo": "Los40 Primavera Pop | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-11T20:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "53.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8a5/9d39b5be-1612-4adb-9828-99183ce9e8a5_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 36,
+  "fields": {
+    "titulo": "Queen Extravaganza: Celebrating 50 years of Bohemian Rhapsody",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-11T21:00:00",
+    "ubicacion": "Bizkaia Arena Bec! - Barakaldo",
+    "precio": "32.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/7f9/b26a4eee-dd5a-4706-afd1-903d323f97f9_TABLET_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 37,
+  "fields": {
+    "titulo": "Queen Extravaganza: Celebrating 50 years of Bohemian Rhapsody | VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-11T21:00:00",
+    "ubicacion": "Bizkaia Arena Bec! - Barakaldo",
+    "precio": "100.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/7f9/b26a4eee-dd5a-4706-afd1-903d323f97f9_TABLET_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 38,
+  "fields": {
+    "titulo": "Los40 Primavera Pop | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-12T20:00:00",
+    "ubicacion": "Olimpic Arena Badalona - Badalona",
+    "precio": "27.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8a5/9d39b5be-1612-4adb-9828-99183ce9e8a5_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 39,
+  "fields": {
+    "titulo": "Los40 Primavera Pop",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-12T20:00:00",
+    "ubicacion": "Olimpic Arena Badalona - Badalona",
+    "precio": "25.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8a5/9d39b5be-1612-4adb-9828-99183ce9e8a5_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 40,
+  "fields": {
+    "titulo": "Diego Torres - Mejor que ayer Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-12T21:00:00",
+    "ubicacion": "Sala París 15 - Málaga",
+    "precio": "38.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 41,
+  "fields": {
+    "titulo": "Diego Torres - Mejor que ayer Tour | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-12T21:00:00",
+    "ubicacion": "Sala París 15 - Málaga",
+    "precio": "53.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 42,
+  "fields": {
+    "titulo": "Lenny Kravitz - Blue Electric Light Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-12T21:00:00",
+    "ubicacion": "Navarra Arena - Pamplona/Iruña",
+    "precio": "65.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/314/2e871aa5-bff6-4266-8bd3-58cbf0347314_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 43,
+  "fields": {
+    "titulo": "Morad",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-12T20:00:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "3.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/dcc/ccca517d-d8be-417d-818d-1fea46973dcc_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 44,
+  "fields": {
+    "titulo": "Lenny Kravitz - Blue Electric Light Tour 2025 | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-12T21:00:00",
+    "ubicacion": "Navarra Arena - Pamplona/Iruña",
+    "precio": "238.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/314/2e871aa5-bff6-4266-8bd3-58cbf0347314_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 45,
+  "fields": {
+    "titulo": "Elefante",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-12T21:30:00",
+    "ubicacion": "Rock City - Spain - Valencia",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 46,
+  "fields": {
+    "titulo": "Jack & Jack",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-13T20:30:00",
+    "ubicacion": "Sala Razzmatazz 2 - Barcelona",
+    "precio": "27.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/528/24f15e59-ec51-4745-86d6-d2d6afbcb528_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 47,
+  "fields": {
+    "titulo": "Elefante",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-13T20:00:00",
+    "ubicacion": "C. Parauta - Malaga",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 48,
+  "fields": {
+    "titulo": "Jack & Jack",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-14T21:00:00",
+    "ubicacion": "Sala Changó - Madrid",
+    "precio": "27.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/528/24f15e59-ec51-4745-86d6-d2d6afbcb528_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 49,
+  "fields": {
+    "titulo": "Diego Torres - Mejor que ayer Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-14T21:00:00",
+    "ubicacion": "Sala Razzmatazz 2 - Barcelona",
+    "precio": "40.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 50,
+  "fields": {
+    "titulo": "Diego Torres - Mejor que ayer Tour | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-14T21:00:00",
+    "ubicacion": "Sala Razzmatazz 2 - Barcelona",
+    "precio": "55.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 51,
+  "fields": {
+    "titulo": "Diego Torres - Mejor que ayer Tour | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-15T21:00:00",
+    "ubicacion": "Teatro Eslava - Madrid",
+    "precio": "55.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 52,
+  "fields": {
+    "titulo": "Diego Torres - Mejor que ayer Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-15T21:00:00",
+    "ubicacion": "Teatro Eslava - Madrid",
+    "precio": "4.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 53,
+  "fields": {
+    "titulo": "Diego Torres - Mejor que ayer Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-15T21:00:00",
+    "ubicacion": "La Riviera - Madrid",
+    "precio": "40.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 54,
+  "fields": {
+    "titulo": "Diego Torres - Mejor que ayer Tour | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-15T21:00:00",
+    "ubicacion": "La Riviera - Madrid",
+    "precio": "55.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 55,
+  "fields": {
+    "titulo": "Luka Sulic | Life Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-17T21:00:00",
+    "ubicacion": "Paral·lel 62 - Barcelona",
+    "precio": "40.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/0ca/e6d130d9-50f1-4e8d-9bb2-2c4ebf76a0ca_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 56,
+  "fields": {
+    "titulo": "Twenty One Pilots - Fan Premier Exhibit",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-21T00:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "123.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/154/63ab28e5-7134-4287-a99e-c54ebdac3154_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 57,
+  "fields": {
+    "titulo": "Inhaler",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-21T21:00:00",
+    "ubicacion": "La Riviera - Madrid",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/eef/4e3ea7f2-fdfd-4088-90e6-9ff7ed623eef_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 58,
+  "fields": {
+    "titulo": "Twenty One Pilots - The Clancy World Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-21T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "51.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/154/63ab28e5-7134-4287-a99e-c54ebdac3154_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 59,
+  "fields": {
+    "titulo": "Twenty One Pilots - Fan Premier Exhibit",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-22T00:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "123.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/154/63ab28e5-7134-4287-a99e-c54ebdac3154_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 60,
+  "fields": {
+    "titulo": "Inhaler",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-22T20:30:00",
+    "ubicacion": "Sala Razzmatazz 1 - Barcelona",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/eef/4e3ea7f2-fdfd-4088-90e6-9ff7ed623eef_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 61,
+  "fields": {
+    "titulo": "Twenty One Pilots - The Clancy World Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-22T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "51.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/154/63ab28e5-7134-4287-a99e-c54ebdac3154_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 62,
+  "fields": {
+    "titulo": "Julia Sabaté",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-23T21:00:00",
+    "ubicacion": "Sala B - Madrid",
+    "precio": "18.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/769/9c57ca80-cc48-41b3-8867-b5646bba0769_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 63,
+  "fields": {
+    "titulo": "Julia Sabaté",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-24T21:00:00",
+    "ubicacion": "Sala Razzmatazz 3 - Barcelona",
+    "precio": "18.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/769/9c57ca80-cc48-41b3-8867-b5646bba0769_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 64,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-24T20:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 65,
+  "fields": {
+    "titulo": "Paulo Londra | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-25T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "136.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/ab3/9cad932d-51d0-4f14-8c95-a091e973fab3_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 66,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-25T17:00:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 67,
+  "fields": {
+    "titulo": "Gloosito - EUROSLiME Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-25T22:00:00",
+    "ubicacion": "Sala Spook - Valencia",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 68,
+  "fields": {
+    "titulo": "Paulo Londra",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-25T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/ab3/9cad932d-51d0-4f14-8c95-a091e973fab3_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 69,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-25T20:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 70,
+  "fields": {
+    "titulo": "26.4.Fugepesis Pöytyän Urheilijat – Fera, Rauma",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-26T14:00:00",
+    "ubicacion": "Comp. Polideportivo Mpal. Elola - Fuengirola",
+    "precio": "15.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/885/357ef920-d25c-4b9c-9d7e-96aaab958885_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 71,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-26T16:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 72,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-26T20:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 73,
+  "fields": {
+    "titulo": "Paulo Londra | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-27T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "136.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/ab3/9cad932d-51d0-4f14-8c95-a091e973fab3_CUSTOM.jpg",
+    "destacado": true,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 74,
+  "fields": {
+    "titulo": "Paulo Londra",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-27T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "39.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/ab3/9cad932d-51d0-4f14-8c95-a091e973fab3_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 75,
+  "fields": {
+    "titulo": "27.4.Fugepesis Sotkamon Jymy – Imatran Pallo-Veikot",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-27T14:00:00",
+    "ubicacion": "Comp. Polideportivo Mpal. Elola - Fuengirola",
+    "precio": "15.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/885/357ef920-d25c-4b9c-9d7e-96aaab958885_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 76,
+  "fields": {
+    "titulo": "LUN8",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-27T19:00:00",
+    "ubicacion": "Independance Club - Madrid",
+    "precio": "51.80",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4de/c4160736-7e00-4394-99c5-79fa7bf524de_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 77,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-27T16:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 78,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-27T20:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 79,
+  "fields": {
+    "titulo": "Energy Fest: Nicky Jam, Luis Fonsi & Arcangel",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-29T17:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "89.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/ed1/a587e834-1c5a-4b7c-9dbf-0683fc1b1ed1_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 80,
+  "fields": {
+    "titulo": "Warhaus",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-29T20:30:00",
+    "ubicacion": "Sala Mon Live - Madrid",
+    "precio": "3.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/099/20b93555-3fc8-417f-bd79-724fdf9ca099_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 81,
+  "fields": {
+    "titulo": "Matinée Gold Festival",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-30T23:59:00",
+    "ubicacion": "Safari Disco Club - Barcelona",
+    "precio": "15.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/abc/11952a79-901b-4fa8-8698-afef3c469abc_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 82,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-30T20:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 83,
+  "fields": {
+    "titulo": "The Lumineers",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-30T21:00:00",
+    "ubicacion": "Bilbao Arena Miribilla - Bilbao",
+    "precio": "36.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/6bb/9990dcf9-146e-42cc-abe7-d3d4784736bb_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 84,
+  "fields": {
+    "titulo": "Warhaus",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-30T20:30:00",
+    "ubicacion": "La 2 de Apolo - Barcelona",
+    "precio": "3.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/099/20b93555-3fc8-417f-bd79-724fdf9ca099_ARTIST_PAGE_3_2.jpg",
+    "destacado": true,
+    "descuento": "20.00"
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 85,
+  "fields": {
+    "titulo": "GHOST: Skeletour World Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-04-30T21:00:00",
+    "ubicacion": "Palacio Vistalegre - Madrid",
+    "precio": "62.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/f35/f01e1007-7024-44d6-a2fb-bd0e1e1b6f35_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 86,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-01T20:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 87,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-02T17:00:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 88,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-02T20:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 89,
+  "fields": {
+    "titulo": "Morgan Jay - The Goofy Guy Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-02T21:15:00",
+    "ubicacion": "Teatros Luchana (Sala 2) - Madrid",
+    "precio": "34.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 90,
+  "fields": {
+    "titulo": "Morgan Jay - The Goofy Guy Tour | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-02T21:15:00",
+    "ubicacion": "Teatros Luchana (Sala 2) - Madrid",
+    "precio": "121.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 91,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-03T20:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 92,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-03T16:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 93,
+  "fields": {
+    "titulo": "The Lumineers",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-03T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "41.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/6bb/9990dcf9-146e-42cc-abe7-d3d4784736bb_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 94,
+  "fields": {
+    "titulo": "Morgan Jay - The Goofy Guy Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-03T18:15:00",
+    "ubicacion": "Teatros Luchana (Sala 2) - Madrid",
+    "precio": "34.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 95,
+  "fields": {
+    "titulo": "Morgan Jay - The Goofy Guy Tour | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-03T21:15:00",
+    "ubicacion": "Teatros Luchana (Sala 2) - Madrid",
+    "precio": "121.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 96,
+  "fields": {
+    "titulo": "Morgan Jay - The Goofy Guy Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-03T21:15:00",
+    "ubicacion": "Teatros Luchana (Sala 2) - Madrid",
+    "precio": "34.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 97,
+  "fields": {
+    "titulo": "Only The Poets",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-04T20:00:00",
+    "ubicacion": "Teatro Barceló - Madrid",
+    "precio": "26.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/c18/cd5e4b22-5706-4730-86c5-4422c93f6c18_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 98,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-04T16:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 99,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-04T12:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 100,
+  "fields": {
+    "titulo": "Only The Poets",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-05T20:00:00",
+    "ubicacion": "La 2 de Apolo - Barcelona",
+    "precio": "26.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/c18/cd5e4b22-5706-4730-86c5-4422c93f6c18_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 101,
+  "fields": {
+    "titulo": "wave to earth - 0.03 tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-07T20:00:00",
+    "ubicacion": "La Riviera - Madrid",
+    "precio": "59.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/973/fd9e5d80-e1ef-4c64-bea6-14fa05752973_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 102,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-07T20:30:00",
+    "ubicacion": "Navarra Arena - Pamplona/Iruña",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 103,
+  "fields": {
+    "titulo": "AURORA - What Happened To The Earth? Part 5",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-07T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "45.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/ab0/1943940a-752c-4c96-ad5e-57b02f7dcab0_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 104,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-08T20:30:00",
+    "ubicacion": "Navarra Arena - Pamplona/Iruña",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 105,
+  "fields": {
+    "titulo": "Tate McRae: Miss Possessive Tour | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-09T21:00:00",
+    "ubicacion": "Palacio Vistalegre - Madrid",
+    "precio": "340.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/a72/bfdde761-6c9e-494a-8c7f-1fd858c9da72_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 106,
+  "fields": {
+    "titulo": "Gloosito - EUROSLiME Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-09T21:45:00",
+    "ubicacion": "Sala Industrial Copera - Granada",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 107,
+  "fields": {
+    "titulo": "Tate McRae: Miss Possessive Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-09T21:00:00",
+    "ubicacion": "Palacio Vistalegre - Madrid",
+    "precio": "51.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/a72/bfdde761-6c9e-494a-8c7f-1fd858c9da72_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 108,
+  "fields": {
+    "titulo": "Hans Zimmer III Sinfónico",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-09T21:30:00",
+    "ubicacion": "Teatro Capitol Gran Vía - Madrid",
+    "precio": "25.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8b3/f2aad0bc-c3f2-462f-841d-ece2d74f68b3_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 109,
+  "fields": {
+    "titulo": "Morad",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-09T21:00:00",
+    "ubicacion": "Plaza de Toros de Granada - Granada",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/dcc/ccca517d-d8be-417d-818d-1fea46973dcc_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 110,
+  "fields": {
+    "titulo": "Pixies",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-09T21:00:00",
+    "ubicacion": "Palacio Municipal de Deportes - Granada",
+    "precio": "40.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/f21/f1c3ed13-448a-4920-b3f9-f00006663f21_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 111,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-09T20:30:00",
+    "ubicacion": "Navarra Arena - Pamplona/Iruña",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 112,
+  "fields": {
+    "titulo": "VIDA BBQ: Mishima + Ferran Palau + roserona",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-10T00:00:00",
+    "ubicacion": "Masia d'En Cabanyes - Vilanova i la Geltrú",
+    "precio": "23.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/d9b/c1a37be9-bcfd-4bdf-9aeb-70b2ca70bd9b_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 113,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-10T12:30:00",
+    "ubicacion": "Navarra Arena - Pamplona/Iruña",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 114,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-10T16:30:00",
+    "ubicacion": "Navarra Arena - Pamplona/Iruña",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 115,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-10T20:30:00",
+    "ubicacion": "Navarra Arena - Pamplona/Iruña",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 116,
+  "fields": {
+    "titulo": "Dua Lipa - Radical Optimism Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-11T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "68.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/406/f47ba94f-f9d1-4a10-842b-30f4b6883406_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 117,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-11T16:30:00",
+    "ubicacion": "Navarra Arena - Pamplona/Iruña",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 118,
+  "fields": {
+    "titulo": "Cirque du Soleil: Corteo",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-11T12:30:00",
+    "ubicacion": "Navarra Arena - Pamplona/Iruña",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 119,
+  "fields": {
+    "titulo": "Dua Lipa - Radical Optimism Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-12T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "68.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/406/f47ba94f-f9d1-4a10-842b-30f4b6883406_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 120,
+  "fields": {
+    "titulo": "The Brian Jonestown Massacre - UK/EU Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-13T20:30:00",
+    "ubicacion": "Sala Razzmatazz 1 - Barcelona",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/e79/3d23d630-0a28-4b3a-aa86-259f86a56e79_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 121,
+  "fields": {
+    "titulo": "Tedua - EURO TOUR",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-13T20:30:00",
+    "ubicacion": "Sala Razzmatazz 2 - Barcelona",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/97a/ebe36202-b74e-496a-b552-9322d720f97a_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 122,
+  "fields": {
+    "titulo": "The Brian Jonestown Massacre - UK/EU Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-14T21:00:00",
+    "ubicacion": "La Riviera - Madrid",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/e79/3d23d630-0a28-4b3a-aa86-259f86a56e79_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 123,
+  "fields": {
+    "titulo": "Sematary",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-18T18:30:00",
+    "ubicacion": "Sala Razzmatazz 2 - Barcelona",
+    "precio": "28.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/b4e/2757cd79-08e8-4187-be1e-40d357cddb4e_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 124,
+  "fields": {
+    "titulo": "La Femme - Rock Machine Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-20T20:30:00",
+    "ubicacion": "Sala Razzmatazz 1 - Barcelona",
+    "precio": "27.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/fba/7a8e6ca8-4622-4fde-ae22-6503cb11bfba_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 125,
+  "fields": {
+    "titulo": "Sematary",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-21T18:30:00",
+    "ubicacion": "Teatro Barceló - Madrid",
+    "precio": "28.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/b4e/2757cd79-08e8-4187-be1e-40d357cddb4e_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 126,
+  "fields": {
+    "titulo": "La Femme - Rock Machine Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-21T21:00:00",
+    "ubicacion": "La Riviera - Madrid",
+    "precio": "27.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/fba/7a8e6ca8-4622-4fde-ae22-6503cb11bfba_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 127,
+  "fields": {
+    "titulo": "Gloosito - EUROSLiME Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-23T21:45:00",
+    "ubicacion": "Sala Santana 27 - Bilbao",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 128,
+  "fields": {
+    "titulo": "Boris Brejcha - Reflections Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-24T00:00:00",
+    "ubicacion": "La Nueva Cubierta De Leganés - Leganés",
+    "precio": "50.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/bfd/eb96bfaa-e199-414e-9165-410e7beccbfd_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 129,
+  "fields": {
+    "titulo": "Gloosito - EUROSLiME Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-24T21:45:00",
+    "ubicacion": "Sala Queen - Vigo",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 130,
+  "fields": {
+    "titulo": "Boris Brejcha - Reflections Tour 2025 | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-24T00:00:00",
+    "ubicacion": "La Nueva Cubierta De Leganés - Leganés",
+    "precio": "140.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/bfd/eb96bfaa-e199-414e-9165-410e7beccbfd_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 131,
+  "fields": {
+    "titulo": "Toquinho",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-26T20:00:00",
+    "ubicacion": "Teatro Capitol Gran Vía - Madrid",
+    "precio": "20.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/7af/cd85d480-3bf5-4857-bf08-e56c7cb8e7af_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 132,
+  "fields": {
+    "titulo": "CA7RIEL & PACO AMOROSO - BAÑO MARIA TOUR 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-27T21:00:00",
+    "ubicacion": "Sant Jordi Club - Barcelona",
+    "precio": "40.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/f9a/89e09ace-ab1d-4333-b6a2-59a7b062bf9a_RETINA_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 133,
+  "fields": {
+    "titulo": "CA7RIEL & PACO AMOROSO - BAÑO MARIA TOUR 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-28T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "45.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/f9a/89e09ace-ab1d-4333-b6a2-59a7b062bf9a_RETINA_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 134,
+  "fields": {
+    "titulo": "Gloosito - EUROSLiME Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-30T21:45:00",
+    "ubicacion": "Sala Custom - Sevilla",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 135,
+  "fields": {
+    "titulo": "Ed Sheeran +-=÷x EUROPEAN TOUR 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-30T21:00:00",
+    "ubicacion": "Estadio Riyadh Air Metropolitano - Madrid",
+    "precio": "28.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/33e/f2572649-e60f-45bb-961f-4df93aad933e_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 136,
+  "fields": {
+    "titulo": "Ed Sheeran +-=÷x EUROPEAN TOUR 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-05-31T21:00:00",
+    "ubicacion": "Estadio Riyadh Air Metropolitano - Madrid",
+    "precio": "28.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/33e/f2572649-e60f-45bb-961f-4df93aad933e_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 137,
+  "fields": {
+    "titulo": "Erreway - Juntos Otra Vez Tour 2025 | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-06T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "113.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4a9/01789263-50d6-4cac-93eb-271390bf74a9_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 138,
+  "fields": {
+    "titulo": "Erreway - Juntos Otra Vez Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-06T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "45.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4a9/01789263-50d6-4cac-93eb-271390bf74a9_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 139,
+  "fields": {
+    "titulo": "Gloosito - EUROSLiME Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-07T22:00:00",
+    "ubicacion": "Mamba - Murcia",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 140,
+  "fields": {
+    "titulo": "Erreway - Juntos Otra Vez Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-07T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "40.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4a9/01789263-50d6-4cac-93eb-271390bf74a9_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 141,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-07T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 142,
+  "fields": {
+    "titulo": "Erreway - Juntos Otra Vez Tour 2025 | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-07T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "113.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4a9/01789263-50d6-4cac-93eb-271390bf74a9_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 143,
+  "fields": {
+    "titulo": "Guns N’ Roses: 2025 | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-09T20:30:00",
+    "ubicacion": "Estadi Olímpic Lluis Companys - Barcelona",
+    "precio": "283.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/bf7/38fae77e-3031-4d60-b470-fa931f34ebf7_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 144,
+  "fields": {
+    "titulo": "Guns N’ Roses: 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-09T20:30:00",
+    "ubicacion": "Estadi Olímpic Lluis Companys - Barcelona",
+    "precio": "73.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/bf7/38fae77e-3031-4d60-b470-fa931f34ebf7_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 145,
+  "fields": {
+    "titulo": "Gloosito - EUROSLiME Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-13T22:00:00",
+    "ubicacion": "Sala París 15 - Málaga",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 146,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-14T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 147,
+  "fields": {
+    "titulo": "BILLIE EILISH: HIT ME HARD AND SOFT: THE TOUR",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-14T20:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "75.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/78c/9e66e641-5e9a-4a7e-ad5b-06cb92cdb78c_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 148,
+  "fields": {
+    "titulo": "BILLIE EILISH: HIT ME HARD AND SOFT: THE TOUR",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-15T20:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "75.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/78c/9e66e641-5e9a-4a7e-ad5b-06cb92cdb78c_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 149,
+  "fields": {
+    "titulo": "Morgan Jay - The Goofy Guy Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-20T20:30:00",
+    "ubicacion": "Sala Apolo - Barcelona",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 150,
+  "fields": {
+    "titulo": "Morgan Jay - The Goofy Guy Tour | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-20T20:30:00",
+    "ubicacion": "Sala Apolo - Barcelona",
+    "precio": "121.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 151,
+  "fields": {
+    "titulo": "Basshall - Euro Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-20T00:00:00",
+    "ubicacion": "Paral·lel 62 - Barcelona",
+    "precio": "28.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/048/e949a18f-1f21-40d6-b077-836c8e31b048_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 152,
+  "fields": {
+    "titulo": "Camila Cabello",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-21T22:00:00",
+    "ubicacion": "Auditorio Starlite - Marbella",
+    "precio": "84.82",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/c44/43c00528-3e83-4a38-a54f-6fe42c386c44_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 153,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-21T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 154,
+  "fields": {
+    "titulo": "Maná + artistas invitados - Icónica Santalucia Sevilla Fest",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-22T00:00:00",
+    "ubicacion": "Plaza de España - Sevilla",
+    "precio": "65.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/eaa/e59c0220-f6d9-4bb9-81ed-b6f9eb292eaa_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 155,
+  "fields": {
+    "titulo": "Morgan Jay - The Goofy Guy Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-23T21:00:00",
+    "ubicacion": "Sala Apolo - Barcelona",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 156,
+  "fields": {
+    "titulo": "Morgan Jay - The Goofy Guy Tour | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-23T21:00:00",
+    "ubicacion": "Sala Apolo - Barcelona",
+    "precio": "121.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 157,
+  "fields": {
+    "titulo": "Camila Cabello - Festival alma Occident Barcelona 25",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-24T22:00:00",
+    "ubicacion": "Poble Espanyol - Barcelona",
+    "precio": "60.85",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/c44/43c00528-3e83-4a38-a54f-6fe42c386c44_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 158,
+  "fields": {
+    "titulo": "Alan Parsons Live Project - Festival alma Occident Barcelona 25",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-28T22:00:00",
+    "ubicacion": "Poble Espanyol - Barcelona",
+    "precio": "42.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/e99/c9c22310-f17d-42e6-ac20-39685ba2de99_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 159,
+  "fields": {
+    "titulo": "Maná + artistas invitados - Gira Festivales: Area 12",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-28T00:00:00",
+    "ubicacion": "Área 12 - Alicante",
+    "precio": "65.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/eaa/e59c0220-f6d9-4bb9-81ed-b6f9eb292eaa_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 160,
+  "fields": {
+    "titulo": "Rels B - A New Star World Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-28T22:00:00",
+    "ubicacion": "Estadi Mallorca Son Moix - Palma de Mallorca",
+    "precio": "51.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/572/e0d2396e-a082-4921-9da4-f21a8ed81572_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 161,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-28T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 162,
+  "fields": {
+    "titulo": "The Corrs - Festival alma Occident Barcelona 25",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-29T22:00:00",
+    "ubicacion": "Poble Espanyol - Barcelona",
+    "precio": "74.80",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/84d/d9230c39-f4c7-4bb2-b23d-95223b43784d_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 163,
+  "fields": {
+    "titulo": "ADO World Tour 2025: Hibana in Barcelona",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-06-29T20:30:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "65.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/797/e47e5261-48bf-4d59-8d95-23d63ca8f797_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 164,
+  "fields": {
+    "titulo": "Los Tigres del Norte - Festival alma Occident Barcelona 25",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-01T22:00:00",
+    "ubicacion": "Poble Espanyol - Barcelona",
+    "precio": "42.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/0b9/549bb46f-60af-46d0-a1bf-7a484b7cf0b9_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 165,
+  "fields": {
+    "titulo": "Maná + artistas invitados - O Gozo Festival 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-05T00:00:00",
+    "ubicacion": " - Santiago de Compostela",
+    "precio": "55.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/eaa/e59c0220-f6d9-4bb9-81ed-b6f9eb292eaa_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 166,
+  "fields": {
+    "titulo": "Rauw Alejandro - Cosa Nuestra World Tour | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-05T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "270.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 167,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-05T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 168,
+  "fields": {
+    "titulo": "Rauw Alejandro - Cosa Nuestra World Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-05T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "60.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 169,
+  "fields": {
+    "titulo": "O GOZO FESTIVAL presenta DAVID GUETTA + GUESTS",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-06T00:00:00",
+    "ubicacion": " - Santiago de Compostela",
+    "precio": "51.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/ef2/0941884e-7cb2-4046-9b1b-5903bef44ef2_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 170,
+  "fields": {
+    "titulo": "Rauw Alejandro - Cosa Nuestra World Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-06T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "60.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 171,
+  "fields": {
+    "titulo": "Rauw Alejandro - Cosa Nuestra World Tour | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-06T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "270.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": true,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 172,
+  "fields": {
+    "titulo": "Antonio Orozco",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-06T22:30:00",
+    "ubicacion": "Recinto Ferial de Úbeda - Úbeda",
+    "precio": "41.80",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/118/c39e1b47-ddf2-434e-a621-29862e8fd118_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 173,
+  "fields": {
+    "titulo": "Rauw Alejandro - Cosa Nuestra World Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-07T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "60.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 174,
+  "fields": {
+    "titulo": "Dead Poet Society",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-08T21:00:00",
+    "ubicacion": "Sala Azkena - Bilbao",
+    "precio": "23.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/6d3/f5e6ba7a-0b14-46bc-82b8-bf80e49656d3_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 175,
+  "fields": {
+    "titulo": "Fangoria - Festival alma Occident Barcelona 25",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-08T22:00:00",
+    "ubicacion": "Poble Espanyol - Barcelona",
+    "precio": "37.40",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/08c/9e5ad49f-d643-4628-a9a0-3fdc3c77f08c_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 176,
+  "fields": {
+    "titulo": "Europe",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-08T22:00:00",
+    "ubicacion": "Auditorio Starlite - Marbella",
+    "precio": "88.39",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/c4c/1a87aac4-8474-4d55-a56a-6c7db7d0ac4c_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 177,
+  "fields": {
+    "titulo": "Maya Hawke - The Chaos Angel Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-08T20:30:00",
+    "ubicacion": "Sala Razzmatazz 2 - Barcelona",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/a69/922ec8ef-99d6-4a3d-9797-b1ae64951a69_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 178,
+  "fields": {
+    "titulo": "Bright Eyes",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-09T20:30:00",
+    "ubicacion": "Sala Apolo - Barcelona",
+    "precio": "36.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/9b2/dda47b49-c2d0-49a9-8a84-62bd3689d9b2_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 179,
+  "fields": {
+    "titulo": "Weezer",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-09T20:30:00",
+    "ubicacion": "Sala Razzmatazz 1 - Barcelona",
+    "precio": "60.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/d81/a2f8758b-3d00-4dbc-93b8-ab1d64ce7d81_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 180,
+  "fields": {
+    "titulo": "Alanis Morissette - 2025 World Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-09T21:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "45.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/aad/75092028-7b55-4ee4-b877-2d58d0f6faad_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 181,
+  "fields": {
+    "titulo": "Mad Cool 2025 | Thursday Ticket",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-10T00:00:00",
+    "ubicacion": "Iberdrola Music - Madrid",
+    "precio": "98.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/1b5/13311803-e4c2-46a8-9db5-4d3ca0ae41b5_TABLET_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 182,
+  "fields": {
+    "titulo": "Mad Cool 2025 | Friday Ticket",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-11T00:00:00",
+    "ubicacion": "Iberdrola Music - Madrid",
+    "precio": "98.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/1b5/13311803-e4c2-46a8-9db5-4d3ca0ae41b5_TABLET_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 183,
+  "fields": {
+    "titulo": "Rauw Alejandro - Cosa Nuestra World Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-11T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "62.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 184,
+  "fields": {
+    "titulo": "Bright Eyes",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-11T21:00:00",
+    "ubicacion": "Sala Capitol - Santiago de Compostela",
+    "precio": "27.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/9b2/dda47b49-c2d0-49a9-8a84-62bd3689d9b2_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 185,
+  "fields": {
+    "titulo": "Rauw Alejandro - Cosa Nuestra World Tour | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-11T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "270.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 186,
+  "fields": {
+    "titulo": "Raule - Festival alma Occident Barcelona 25",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-12T22:00:00",
+    "ubicacion": "Poble Espanyol - Barcelona",
+    "precio": "21.25",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/a25/1ed6296b-90cf-4957-9523-3938db372a25_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 187,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-12T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 188,
+  "fields": {
+    "titulo": "AC/DC - Power Up Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-12T21:30:00",
+    "ubicacion": "Estadio Riyadh Air Metropolitano - Madrid",
+    "precio": "100.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/5b0/350abd01-1ecd-4987-8801-975f86f605b0_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 189,
+  "fields": {
+    "titulo": "Rauw Alejandro - Cosa Nuestra World Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-12T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "62.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 190,
+  "fields": {
+    "titulo": "Mad Cool 2025 | Saturday Ticket",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-12T00:00:00",
+    "ubicacion": "Iberdrola Music - Madrid",
+    "precio": "98.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/1b5/13311803-e4c2-46a8-9db5-4d3ca0ae41b5_TABLET_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 191,
+  "fields": {
+    "titulo": "Rauw Alejandro - Cosa Nuestra World Tour | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-12T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "270.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 192,
+  "fields": {
+    "titulo": "Brunch Electronik x Mad Cool",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-13T00:00:00",
+    "ubicacion": "Iberdrola Music - Madrid",
+    "precio": "34.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/1b5/13311803-e4c2-46a8-9db5-4d3ca0ae41b5_TABLET_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 193,
+  "fields": {
+    "titulo": "Residente - Festival alma Occident Barcelona 25",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-14T22:00:00",
+    "ubicacion": "Poble Espanyol - Barcelona",
+    "precio": "46.75",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/be6/6ac54bf5-cc97-4f6d-b22c-4352a3ac6be6_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 194,
+  "fields": {
+    "titulo": "Fito Paez",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-14T22:00:00",
+    "ubicacion": "Auditorio Starlite - Marbella",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/185/4f1c288a-3215-4f5a-9bd8-e9a8a1684185_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 195,
+  "fields": {
+    "titulo": "AC/DC - Power Up Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-16T21:30:00",
+    "ubicacion": "Estadio Riyadh Air Metropolitano - Madrid",
+    "precio": "100.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/5b0/350abd01-1ecd-4987-8801-975f86f605b0_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 196,
+  "fields": {
+    "titulo": "Jhayco",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-18T22:00:00",
+    "ubicacion": "Auditorio Starlite - Marbella",
+    "precio": "43.75",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/a9b/9c7fbe7d-df0d-487f-823d-f5849e3bfa9b_RETINA_LANDSCAPE_16_9.jpg",
+    "destacado": true,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 197,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-19T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 198,
+  "fields": {
+    "titulo": "Erreway - Juntos Otra Vez Tour 2025 | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-20T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "113.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4a9/01789263-50d6-4cac-93eb-271390bf74a9_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 199,
+  "fields": {
+    "titulo": "Erreway - Juntos Otra Vez Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-20T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "45.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4a9/01789263-50d6-4cac-93eb-271390bf74a9_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 200,
+  "fields": {
+    "titulo": "Stray Kids World Tour [dominATE MADRID] | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-22T20:30:00",
+    "ubicacion": "Estadio Riyadh Air Metropolitano - Madrid",
+    "precio": "400.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/144/8cec2ae7-d743-46a7-ab3d-b15ef9bbb144_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 201,
+  "fields": {
+    "titulo": "Stray Kids World Tour [dominATE MADRID]",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-22T20:30:00",
+    "ubicacion": "Estadio Riyadh Air Metropolitano - Madrid",
+    "precio": "85.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/144/8cec2ae7-d743-46a7-ab3d-b15ef9bbb144_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 202,
+  "fields": {
+    "titulo": "Stray Kids World Tour [dominATE MADRID]",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-23T20:30:00",
+    "ubicacion": "Estadio Riyadh Air Metropolitano - Madrid",
+    "precio": "85.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/144/8cec2ae7-d743-46a7-ab3d-b15ef9bbb144_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 203,
+  "fields": {
+    "titulo": "Stray Kids World Tour [dominATE MADRID] | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-23T20:30:00",
+    "ubicacion": "Estadio Riyadh Air Metropolitano - Madrid",
+    "precio": "430.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/144/8cec2ae7-d743-46a7-ab3d-b15ef9bbb144_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 204,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-26T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 205,
+  "fields": {
+    "titulo": "Will Smith",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-26T22:00:00",
+    "ubicacion": "Auditorio Starlite - Marbella",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/b81/f1520fe6-3e82-4fb4-952e-038d58e79b81_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 206,
+  "fields": {
+    "titulo": "Grand National Tour: Kendrick Lamar and SZA",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-30T21:00:00",
+    "ubicacion": "Estadi Olímpic Lluis Companys - Barcelona",
+    "precio": "73.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/84d/74619327-6dbc-40f7-b4ea-9d61a81a584d_TABLET_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 207,
+  "fields": {
+    "titulo": "Robert Plant presents Saving Grace feat. Suzi Dian",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-30T21:30:00",
+    "ubicacion": "Gran Teatre del Liceu - Barcelona",
+    "precio": "68.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/ea0/f0c3f8b4-268c-4365-95b8-b816d791eea0_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 208,
+  "fields": {
+    "titulo": "Grand National Tour: Kendrick Lamar and SZA | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-30T21:00:00",
+    "ubicacion": "Estadi Olímpic Lluis Companys - Barcelona",
+    "precio": "476.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/84d/74619327-6dbc-40f7-b4ea-9d61a81a584d_TABLET_LANDSCAPE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 209,
+  "fields": {
+    "titulo": "Lionel Richie - Say Hello To The Hits",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-31T21:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "55.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/d5e/42461c06-31dc-4cf6-9ef8-0dd8f5e69d5e_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 210,
+  "fields": {
+    "titulo": "Lionel Richie - Say Hello To The Hits | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-07-31T21:30:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "375.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/d5e/42461c06-31dc-4cf6-9ef8-0dd8f5e69d5e_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 211,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-08-02T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 212,
+  "fields": {
+    "titulo": "Lionel Richie - Say Hello To The Hits",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-08-02T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "62.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/d5e/42461c06-31dc-4cf6-9ef8-0dd8f5e69d5e_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 213,
+  "fields": {
+    "titulo": "Lionel Richie - Say Hello To The Hits | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-08-02T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "426.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/d5e/42461c06-31dc-4cf6-9ef8-0dd8f5e69d5e_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 214,
+  "fields": {
+    "titulo": "God Save the Queen - FESTMUVE 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-08-08T22:00:00",
+    "ubicacion": "Plaza de Toros de Úbeda - Úbeda",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/5de/ded2e220-eb4c-417f-8588-ad90e4f445de_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 215,
+  "fields": {
+    "titulo": "BLACKPINK 2025 World Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-08-09T21:00:00",
+    "ubicacion": "Estadi Olímpic Lluis Companys - Barcelona",
+    "precio": "70.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/d64/b23ec3fb-ce92-42f6-9eb9-1b00b001ad64_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 216,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-08-09T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 217,
+  "fields": {
+    "titulo": "BLACKPINK 2025 World Tour | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-08-09T21:00:00",
+    "ubicacion": "Estadi Olímpic Lluis Companys - Barcelona",
+    "precio": "645.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/d64/b23ec3fb-ce92-42f6-9eb9-1b00b001ad64_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 218,
+  "fields": {
+    "titulo": "Los Secretos",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-08-14T22:00:00",
+    "ubicacion": "Auditorio Starlite - Marbella",
+    "precio": "43.75",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/5c2/f4163891-fc14-498c-9c32-42b49aa945c2_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 219,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-08-16T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 220,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-08-23T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 221,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-08-30T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 222,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-09-06T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 223,
+  "fields": {
+    "titulo": "Dano - Gira Nuevos Trapos",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-09-11T21:00:00",
+    "ubicacion": "La Riviera - Madrid",
+    "precio": "22.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/eae/45bddbcc-4635-4f4b-8947-af39feff9eae_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 224,
+  "fields": {
+    "titulo": "Post Malone Presents: The BIG ASS World Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-09-12T21:00:00",
+    "ubicacion": "Estadi Olímpic Lluis Companys - Barcelona",
+    "precio": "73.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/ef6/6d8164b7-b7a4-43b1-8b2e-3e5857becef6_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 225,
+  "fields": {
+    "titulo": "Post Malone Presents: The BIG ASS World Tour | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-09-12T21:00:00",
+    "ubicacion": "Estadi Olímpic Lluis Companys - Barcelona",
+    "precio": "260.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/ef6/6d8164b7-b7a4-43b1-8b2e-3e5857becef6_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": true,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 226,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-09-13T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 227,
+  "fields": {
+    "titulo": "BUS Málaga Centro - Marbella Arena (Nik & Jay Malaga)",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-09-13T00:00:00",
+    "ubicacion": " - Marbella",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/bfb/decaea87-e268-4ef6-83d7-ca8c7b4c2bfb_1302951_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 228,
+  "fields": {
+    "titulo": "BUS Fuengirola - Marbella Arena (Nik & Jay d. 13/09-25)",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-09-13T00:00:00",
+    "ubicacion": " - Marbella",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/bfb/decaea87-e268-4ef6-83d7-ca8c7b4c2bfb_1302951_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 229,
+  "fields": {
+    "titulo": "Nik & Jay Malaga",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-09-13T21:30:00",
+    "ubicacion": " - Marbella",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/bfb/decaea87-e268-4ef6-83d7-ca8c7b4c2bfb_1302951_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 230,
+  "fields": {
+    "titulo": "BUS Torremolinos - Marbella Arena",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-09-13T00:00:00",
+    "ubicacion": " - Marbella",
+    "precio": "0.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/bfb/decaea87-e268-4ef6-83d7-ca8c7b4c2bfb_1302951_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 231,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-09-20T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 232,
+  "fields": {
+    "titulo": "Tamino",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-09-22T20:30:00",
+    "ubicacion": "Sala Razzmatazz 1 - Barcelona",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/f5d/ed7145b8-24ea-4898-ae47-a668f27d3f5d_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 233,
+  "fields": {
+    "titulo": "Tamino",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-09-23T20:30:00",
+    "ubicacion": "La Riviera - Madrid",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/f5d/ed7145b8-24ea-4898-ae47-a668f27d3f5d_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 234,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-09-27T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 235,
+  "fields": {
+    "titulo": "The Midnight",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-02T20:30:00",
+    "ubicacion": "La Riviera - Madrid",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/2d3/62d3766d-3e10-4ea4-b88b-2b83016b42d3_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 236,
+  "fields": {
+    "titulo": "The Midnight",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-03T20:30:00",
+    "ubicacion": "Sala Apolo - Barcelona",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/2d3/62d3766d-3e10-4ea4-b88b-2b83016b42d3_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 237,
+  "fields": {
+    "titulo": "Elrow Ibiza",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-04T23:30:00",
+    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
+    "precio": "80.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 238,
+  "fields": {
+    "titulo": "DUKI WORLD TOUR",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-10T21:00:00",
+    "ubicacion": "Live Sur Stadium - Sevilla",
+    "precio": "59.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/557/131f90ab-38b2-4743-a159-b14122899557_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 239,
+  "fields": {
+    "titulo": "Mónica Naranjo - Greatest Hits Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-11T21:00:00",
+    "ubicacion": "Live Sur Stadium - Sevilla",
+    "precio": "45.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/1f4/7f4809bd-a940-41a5-8e20-95252f92d1f4_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 240,
+  "fields": {
+    "titulo": "DUKI WORLD TOUR",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-12T21:00:00",
+    "ubicacion": "Coliseum - A Coruña",
+    "precio": "53.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/557/131f90ab-38b2-4743-a159-b14122899557_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": true,
+    "descuento": "20.00"
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 241,
+  "fields": {
+    "titulo": "Counting Crows - The Complete Sweets! Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-14T20:30:00",
+    "ubicacion": "Sala Razzmatazz 1 - Barcelona",
+    "precio": "43.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/e3a/8008674e-9f0e-4f5c-b42b-2e0ca95c9e3a_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 242,
+  "fields": {
+    "titulo": "Counting Crows - The Complete Sweets! Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-15T21:00:00",
+    "ubicacion": "La Riviera - Madrid",
+    "precio": "46.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/e3a/8008674e-9f0e-4f5c-b42b-2e0ca95c9e3a_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 243,
+  "fields": {
+    "titulo": "Mónica Naranjo - Greatest Hits Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-18T21:00:00",
+    "ubicacion": "Plaza de Toros de Murcia - Murcia",
+    "precio": "45.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/1f4/7f4809bd-a940-41a5-8e20-95252f92d1f4_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 244,
+  "fields": {
+    "titulo": "Gloosito - EUROSLiME Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-23T21:15:00",
+    "ubicacion": "Sala Razzmatazz 1 - Barcelona",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 245,
+  "fields": {
+    "titulo": "Rei - CDM Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-24T21:00:00",
+    "ubicacion": "Independance Club - Madrid",
+    "precio": "20.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/957/d2bd3a65-3193-43c1-b323-11affa11c957_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 246,
+  "fields": {
+    "titulo": "DUKI WORLD TOUR",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-24T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "42.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/557/131f90ab-38b2-4743-a159-b14122899557_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 247,
+  "fields": {
+    "titulo": "Rei - CDM Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-26T20:30:00",
+    "ubicacion": "Sala Razzmatazz 2 - Barcelona",
+    "precio": "20.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/957/d2bd3a65-3193-43c1-b323-11affa11c957_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 248,
+  "fields": {
+    "titulo": "DUKI WORLD TOUR",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-27T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "42.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/557/131f90ab-38b2-4743-a159-b14122899557_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": true,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 249,
+  "fields": {
+    "titulo": "DUKI WORLD TOUR",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-28T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "47.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/557/131f90ab-38b2-4743-a159-b14122899557_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 250,
+  "fields": {
+    "titulo": "Lady Gaga: The MAYHEM Ball | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-28T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "280.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/68a/ef926035-fa82-48fc-b0b0-de5b619bc68a_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 251,
+  "fields": {
+    "titulo": "Lady Gaga: The MAYHEM Ball",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-28T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "62.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/68a/ef926035-fa82-48fc-b0b0-de5b619bc68a_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 252,
+  "fields": {
+    "titulo": "Lady Gaga: The MAYHEM Ball | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-29T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "280.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/68a/ef926035-fa82-48fc-b0b0-de5b619bc68a_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 253,
+  "fields": {
+    "titulo": "Lady Gaga: The MAYHEM Ball",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-29T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "62.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/68a/ef926035-fa82-48fc-b0b0-de5b619bc68a_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 254,
+  "fields": {
+    "titulo": "DUKI WORLD TOUR",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-10-29T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "47.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/557/131f90ab-38b2-4743-a159-b14122899557_TABLET_LANDSCAPE_3_2.jpg",
+    "destacado": true,
+    "descuento": "5.00"
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 255,
+  "fields": {
+    "titulo": "Gloosito - EUROSLiME Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-01T21:45:00",
+    "ubicacion": "Live Las Ventas - Madrid",
+    "precio": "30.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 256,
+  "fields": {
+    "titulo": "Mónica Naranjo - Greatest Hits Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-01T21:00:00",
+    "ubicacion": "Auditorio Mpal Cortijo de Torres - Málaga",
+    "precio": "45.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/1f4/7f4809bd-a940-41a5-8e20-95252f92d1f4_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 257,
+  "fields": {
+    "titulo": "Nemo - «Break The Code» Europe Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-02T21:00:00",
+    "ubicacion": "Sala Changó - Madrid",
+    "precio": "31.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/b64/25a63c7b-e094-479c-a20a-105d8b9bab64_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 258,
+  "fields": {
+    "titulo": "Nemo - «Break The Code» Europe Tour 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-03T20:30:00",
+    "ubicacion": "Sala Razzmatazz 2 - Barcelona",
+    "precio": "31.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/b64/25a63c7b-e094-479c-a20a-105d8b9bab64_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 259,
+  "fields": {
+    "titulo": "Jamiroquai - The Heels Of Steel Tour | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-06T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "205.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4f6/d1ce9beb-1096-4bd7-9f95-50655f0a74f6_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 260,
+  "fields": {
+    "titulo": "Jamiroquai - The Heels Of Steel Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-06T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "60.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/4f6/d1ce9beb-1096-4bd7-9f95-50655f0a74f6_RECOMENDATION_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 261,
+  "fields": {
+    "titulo": "OneRepublic - Escape to Europe 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-14T21:00:00",
+    "ubicacion": "Palacio Vistalegre - Madrid",
+    "precio": "60.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/f6e/59ccf555-3d07-4f68-9669-c198b4820f6e_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 262,
+  "fields": {
+    "titulo": "OneRepublic - Escape to Europe 2025 | Paquetes VIP",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-14T21:00:00",
+    "ubicacion": "Palacio Vistalegre - Madrid",
+    "precio": "198.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/f6e/59ccf555-3d07-4f68-9669-c198b4820f6e_RETINA_PORTRAIT_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 263,
+  "fields": {
+    "titulo": "JAMES ARTHUR: the pisces world tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-18T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "51.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/d94/be39dcd5-8e78-4f8a-a351-68d4db8ead94_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 264,
+  "fields": {
+    "titulo": "Hauser",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-21T20:30:00",
+    "ubicacion": "Bilbao Arena Miribilla - Bilbao",
+    "precio": "51.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/2eb/bfd88bd8-4315-468d-8bb2-1df532dbe2eb_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 265,
+  "fields": {
+    "titulo": "DELAPORTE - Déjate querer",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-21T21:00:00",
+    "ubicacion": "La Riviera - Madrid",
+    "precio": "31.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/377/bafc9f48-a6c5-4ff1-ac32-26923d0f0377_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 266,
+  "fields": {
+    "titulo": "Mónica Naranjo - Greatest Hits Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-22T21:00:00",
+    "ubicacion": "Roig Arena - Valencia",
+    "precio": "56.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/1f4/7f4809bd-a940-41a5-8e20-95252f92d1f4_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 267,
+  "fields": {
+    "titulo": "Hauser",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-22T20:30:00",
+    "ubicacion": "Palacio Vistalegre - Madrid",
+    "precio": "45.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/2eb/bfd88bd8-4315-468d-8bb2-1df532dbe2eb_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 268,
+  "fields": {
+    "titulo": "Mumford & Sons",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-23T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "63.60",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/30f/242ec525-6641-4364-bb7e-59e539d7f30f_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 269,
+  "fields": {
+    "titulo": "Mumford & Sons | VIP Packages",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-23T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "250.60",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/30f/242ec525-6641-4364-bb7e-59e539d7f30f_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 270,
+  "fields": {
+    "titulo": "BIG TIME RUSH - IN REAL LIFE WORLDWIDE",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-29T21:00:00",
+    "ubicacion": "Sant Jordi Club - Barcelona",
+    "precio": "62.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/11e/830785d3-cbda-41f0-8d6c-b1483266911e_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 271,
+  "fields": {
+    "titulo": "BIG TIME RUSH - IN REAL LIFE WORLDWIDE",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-11-30T21:00:00",
+    "ubicacion": "Palacio Vistalegre - Madrid",
+    "precio": "51.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/11e/830785d3-cbda-41f0-8d6c-b1483266911e_SOURCE",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 272,
+  "fields": {
+    "titulo": "Marco Mengoni - Live in Europe 2025",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-12-10T21:00:00",
+    "ubicacion": "Palacio Vistalegre - Madrid",
+    "precio": "55.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/94c/cb2779dc-c30c-41da-8abb-e4aa010f494c_CUSTOM.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 273,
+  "fields": {
+    "titulo": "Mónica Naranjo - Greatest Hits Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-12-15T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "68.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/1f4/7f4809bd-a940-41a5-8e20-95252f92d1f4_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 274,
+  "fields": {
+    "titulo": "Mónica Naranjo - Greatest Hits Tour",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-12-19T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "40.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/1f4/7f4809bd-a940-41a5-8e20-95252f92d1f4_EVENT_DETAIL_PAGE_16_9.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 275,
+  "fields": {
+    "titulo": "FLEX PRUEBAS IMPRESION ENTRADAS.",
+    "descripcion": "Sin descripción",
+    "fecha": "2025-12-31T21:00:00",
+    "ubicacion": "Palau Sant Jordi - Barcelona",
+    "precio": "0.50",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_ARTIST_PAGE_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 276,
+  "fields": {
+    "titulo": "Walls",
+    "descripcion": "Sin descripción",
+    "fecha": "2026-02-21T21:00:00",
+    "ubicacion": "Movistar Arena - Madrid",
+    "precio": "35.00",
+    "cupo_maximo": 100,
+    "organizador": 1,
+    "imagen": "https://s1.ticketm.net/dam/a/15c/c948a618-23a4-4975-8d66-55a61edb215c_RETINA_PORTRAIT_3_2.jpg",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 277,
+  "fields": {
+    "titulo": "2PAC",
+    "descripcion": "DSAJKDSAHJDDSJA",
+    "fecha": "2025-04-27T19:55:00",
+    "ubicacion": "SEVILLA",
+    "precio": "1000.00",
+    "cupo_maximo": 100,
+    "organizador": 2,
+    "imagen": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLPM-M-dD7X35tvyL5yS4GOc8RlRA9I8dnUBiMC45pRe4ik672HV3Zr9iB6XhtYoIv_TOFZKYF3TBO39RE3lo_vQ",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 278,
+  "fields": {
+    "titulo": "adsadsadsa",
+    "descripcion": "dsdsadasdsadsa",
+    "fecha": "2025-04-22T01:05:00",
+    "ubicacion": "SEVILLA",
+    "precio": "100.00",
+    "cupo_maximo": 100,
+    "organizador": 3,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQpOAoWgPGznBCLIrf9jc3WrS1wCT_QHbG1bkn0TmofqlBGqUi_PF1nfP-MwgWjoMplweDiIIJ8Cs9mAFLlrmsMZw",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 279,
+  "fields": {
+    "titulo": "2pac falso",
+    "descripcion": "2pac falos",
+    "fecha": "2025-04-24T01:30:00",
+    "ubicacion": "SEVILLA",
+    "precio": "1000.00",
+    "cupo_maximo": 100,
+    "organizador": 3,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQpOAoWgPGznBCLIrf9jc3WrS1wCT_QHbG1bkn0TmofqlBGqUi_PF1nfP-MwgWjoMplweDiIIJ8Cs9mAFLlrmsMZw",
+    "destacado": true,
+    "descuento": "20.00"
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 280,
+  "fields": {
+    "titulo": "sdkfdsjasddsadshhasd",
+    "descripcion": "ddasjdsadsajdsaj",
+    "fecha": "2025-05-10T01:17:00",
+    "ubicacion": "Sevilla",
+    "precio": "1000.00",
+    "cupo_maximo": 100,
+    "organizador": 2,
+    "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTa5lFnMx8z6c2-GGfPjIe07_Dyd-QYvcjhfKGXD_oPKwWS7tOKPYNuLhBp1CTF3pF4PtL7Om_rerwxO2s3R3GLLw",
+    "destacado": false,
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 14,
+  "fields": {
+    "usuario": 12,
+    "evento": 79,
+    "fecha_reserva": "2025-04-27T21:47:57.879",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 15,
+  "fields": {
+    "usuario": 32,
+    "evento": 84,
+    "fecha_reserva": "2025-04-30T01:12:39.498",
+    "estado": "cancelada",
+    "motivo_cancelacion": "Debido a que no puedo acudir ",
+    "fecha_cancelacion": "2025-05-01T18:56:42.569"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 16,
+  "fields": {
+    "usuario": 32,
+    "evento": 93,
+    "fecha_reserva": "2025-05-01T18:59:25.097",
+    "estado": "cancelada",
+    "motivo_cancelacion": "no puedo acudir",
+    "fecha_cancelacion": "2025-05-01T18:59:46.388"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 17,
+  "fields": {
+    "usuario": 32,
+    "evento": 93,
+    "fecha_reserva": "2025-05-01T19:22:43.397",
+    "estado": "cancelada",
+    "motivo_cancelacion": "dasdsadsadsasda",
+    "fecha_cancelacion": "2025-05-01T19:22:48.716"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 18,
+  "fields": {
+    "usuario": 32,
+    "evento": 280,
+    "fecha_reserva": "2025-05-03T01:19:26.953",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 19,
+  "fields": {
+    "usuario": 25,
+    "evento": 92,
+    "fecha_reserva": "2025-05-03T11:58:49.151",
+    "estado": "cancelada",
+    "motivo_cancelacion": "dsadsadsasda",
+    "fecha_cancelacion": "2025-05-03T12:06:27.543"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 20,
+  "fields": {
+    "usuario": 33,
+    "evento": 280,
+    "fecha_reserva": "2025-05-04T13:37:32.945",
+    "estado": "cancelada",
+    "motivo_cancelacion": "No puedo acudir",
+    "fecha_cancelacion": "2025-05-04T13:37:50.644"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 13,
+  "fields": {
+    "reserva": 14,
+    "fecha_pago": "2025-04-27T21:47:57.883",
+    "total_pago": "267.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 14,
+  "fields": {
+    "reserva": 15,
+    "fecha_pago": "2025-04-30T01:12:39.501",
+    "total_pago": "14.40",
+    "metodo_pago": "PayPal",
+    "estado": "reembolsado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 15,
+  "fields": {
+    "reserva": 16,
+    "fecha_pago": "2025-05-01T18:59:25.099",
+    "total_pago": "41.00",
+    "metodo_pago": "PayPal",
+    "estado": "reembolsado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 16,
+  "fields": {
+    "reserva": 17,
+    "fecha_pago": "2025-05-01T19:22:43.400",
+    "total_pago": "41.00",
+    "metodo_pago": "PayPal",
+    "estado": "reembolsado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 17,
+  "fields": {
+    "reserva": 18,
+    "fecha_pago": "2025-05-03T01:19:26.955",
+    "total_pago": "1000.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 18,
+  "fields": {
+    "reserva": 19,
+    "fecha_pago": "2025-05-03T11:58:49.154",
+    "total_pago": "35.00",
+    "metodo_pago": "PayPal",
+    "estado": "pendiente_reembolso"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 19,
+  "fields": {
+    "reserva": 20,
+    "fecha_pago": "2025-05-04T13:37:32.951",
+    "total_pago": "1000.00",
+    "metodo_pago": "PayPal",
+    "estado": "pendiente_reembolso"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 1,
+  "fields": {
+    "usuario": 16,
+    "evento": 225,
+    "puntuacion": 5,
+    "comentario": "Bua no veas el postmalone flipas",
+    "fecha": "2025-04-10T00:37:50.730"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 3,
+  "fields": {
+    "usuario": 16,
+    "evento": 75,
+    "puntuacion": 5,
+    "comentario": "sdd",
+    "fecha": "2025-04-12T00:24:11.718"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 4,
+  "fields": {
+    "usuario": 16,
+    "evento": 225,
+    "puntuacion": 5,
+    "comentario": "dsadsadsa",
+    "fecha": "2025-04-12T00:26:31.311"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 10,
+  "fields": {
+    "usuario": 25,
+    "evento": 196,
+    "puntuacion": 5,
+    "comentario": "asdsa",
+    "fecha": "2025-04-12T00:58:08.985"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 11,
+  "fields": {
+    "usuario": 25,
+    "evento": 248,
+    "puntuacion": 3,
+    "comentario": "poco duki tio n ome gusta nada",
+    "fecha": "2025-04-12T01:00:52.952"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 12,
+  "fields": {
+    "usuario": 25,
+    "evento": 39,
+    "puntuacion": 5,
+    "comentario": "basura de canal sur",
+    "fecha": "2025-04-12T01:05:20.536"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 13,
+  "fields": {
+    "usuario": 25,
+    "evento": 47,
+    "puntuacion": 5,
+    "comentario": "dasdsds",
+    "fecha": "2025-04-12T01:08:13.945"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 14,
+  "fields": {
+    "usuario": 25,
+    "evento": 41,
+    "puntuacion": 5,
+    "comentario": "feo",
+    "fecha": "2025-04-12T01:10:39.795"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 15,
+  "fields": {
+    "usuario": 16,
+    "evento": 196,
+    "puntuacion": 3,
+    "comentario": "vaya tela de tio",
+    "fecha": "2025-04-20T23:34:26.613"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 16,
+  "fields": {
+    "usuario": 27,
+    "evento": 225,
+    "puntuacion": 5,
+    "comentario": "feisima",
+    "fecha": "2025-04-21T00:54:06.594"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 17,
+  "fields": {
+    "usuario": 25,
+    "evento": 279,
+    "puntuacion": 2,
+    "comentario": "vaya feka",
+    "fecha": "2025-04-21T01:31:30.697"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 18,
+  "fields": {
+    "usuario": 14,
+    "evento": 225,
+    "puntuacion": 5,
+    "comentario": "houda feka",
+    "fecha": "2025-04-21T01:56:27.829"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 19,
+  "fields": {
+    "usuario": 30,
+    "evento": 196,
+    "puntuacion": 3,
+    "comentario": "No me gusta",
+    "fecha": "2025-04-21T23:15:42.843"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 23,
+  "fields": {
+    "usuario": 33,
+    "evento": 280,
+    "puntuacion": 5,
+    "comentario": "toma ya la taylor",
+    "fecha": "2025-05-04T13:37:04.346"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 4,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "240.30",
+    "estado": "pagado",
+    "fecha_creacion": "2025-04-27T21:47:57.887",
+    "nota": "Pago manual por evento Energy Fest: Nicky Jam, Luis Fonsi & Arcangel"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 5,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "12.96",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-04-30T01:12:39.506",
+    "nota": "Pago manual por evento Warhaus"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 6,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "36.90",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-01T18:59:25.100",
+    "nota": "Pago manual por evento The Lumineers"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 7,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "36.90",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-01T19:22:43.401",
+    "nota": "Pago manual por evento The Lumineers"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 8,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "900.00",
+    "estado": "pagado",
+    "fecha_creacion": "2025-05-03T01:19:26.956",
+    "nota": "Pago manual por evento sdkfdsjasddsadshhasd"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 9,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "31.50",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-03T11:58:49.155",
+    "nota": "Pago manual por evento Cirque du Soleil: Corteo"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 10,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "900.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-04T13:37:32.954",
+    "nota": "Pago manual por evento sdkfdsjasddsadshhasd"
+  }
+},
+{
+  "model": "eventos.reembolso",
+  "pk": 1,
+  "fields": {
+    "pago": 16,
+    "usuario": 32,
+    "cantidad": "41.00",
+    "fecha": "2025-05-01T19:22:48.724",
+    "motivo": "dasdsadsadsasda",
+    "estado": "rechazado"
+  }
+},
+{
+  "model": "eventos.reembolso",
+  "pk": 2,
+  "fields": {
+    "pago": 18,
+    "usuario": 25,
+    "cantidad": "35.00",
+    "fecha": "2025-05-03T12:06:27.551",
+    "motivo": "dsadsadsasda",
+    "estado": "rechazado"
+  }
+},
+{
+  "model": "eventos.reembolso",
+  "pk": 3,
+  "fields": {
+    "pago": 19,
+    "usuario": 33,
+    "cantidad": "1000.00",
+    "fecha": "2025-05-04T13:37:50.665",
+    "motivo": "No puedo acudir",
+    "estado": "rechazado"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "03003aa5c43b97e8464aca01587ff11b3c73ffb3",
+  "fields": {
+    "user": 32,
+    "created": "2025-04-26T20:51:05.153"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "161574ccea4d6b6d619723b04ee6228bbae1a40a",
+  "fields": {
+    "user": 24,
+    "created": "2025-04-06T19:55:24.979"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "37b4ec6b3182c2fbba50274307a5b77d9a432fc0",
+  "fields": {
+    "user": 28,
+    "created": "2025-04-21T01:07:52.218"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "4090ed8aec41b521883a3013dff350bf71de604d",
+  "fields": {
+    "user": 23,
+    "created": "2025-04-06T19:46:59.623"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "55253172de1e24a39f3c35e14c326f69930dcf97",
+  "fields": {
+    "user": 14,
+    "created": "2025-04-03T22:11:53.230"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "6e68ead7cfa15486a6fe5225cc606bc4d3a991dc",
+  "fields": {
+    "user": 30,
+    "created": "2025-04-21T23:14:47.316"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "77640f9691f2b6c5c4a50f7a32b383f5ffb49462",
+  "fields": {
+    "user": 12,
+    "created": "2025-04-27T20:07:36.213"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "9b972b593ee2641a6b40cf2d2e1a8633b10f7478",
+  "fields": {
+    "user": 25,
+    "created": "2025-04-12T00:36:11.853"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "b197b30bc6ad86c5a9913866953b2508b611132e",
+  "fields": {
+    "user": 33,
+    "created": "2025-05-04T13:21:02.363"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "ba435cad1cdb66c70e9121525c7ec97f727067f4",
+  "fields": {
+    "user": 15,
+    "created": "2025-04-03T21:37:33.048"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "ce2a636a62ca7793340db2ec56a2ce2c183fae27",
+  "fields": {
+    "user": 1,
+    "created": "2025-04-03T22:18:57.160"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "e3ea21793b42693840c3fe4dde10c9078355e714",
+  "fields": {
+    "user": 16,
+    "created": "2025-04-03T22:12:51.934"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "f92b1c1a90ad99eb1cd80a688c7289e896f024be",
+  "fields": {
+    "user": 27,
+    "created": "2025-04-21T00:53:02.317"
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 5,
+  "fields": {
+    "user": 12,
+    "email": "raftex13@gmail.com",
+    "verified": true,
+    "primary": true
+  }
+},
+{
+  "model": "socialaccount.socialaccount",
+  "pk": 5,
+  "fields": {
+    "user": 12,
+    "provider": "google",
+    "uid": "106987780537792922783",
+    "last_login": "2025-03-30T16:21:07.768",
+    "date_joined": "2025-03-30T16:21:07.768",
+    "extra_data": {
+      "iss": "https://accounts.google.com",
+      "azp": "234430080055-5ddns29uj7qkk3me3v0at4rvm2qmnhla.apps.googleusercontent.com",
+      "aud": "234430080055-5ddns29uj7qkk3me3v0at4rvm2qmnhla.apps.googleusercontent.com",
+      "sub": "106987780537792922783",
+      "email": "raftex13@gmail.com",
+      "email_verified": true,
+      "at_hash": "DwbrAWXr7fUuN_A8ocXibQ",
+      "name": "dasads dasdas",
+      "picture": "https://lh3.googleusercontent.com/a/ACg8ocJkWpUY4G69Fevz8fnb7kU6Y78KWdeRNp3mG9tu1b3KH4MbaQ=s96-c",
+      "given_name": "dasads",
+      "family_name": "dasdas",
+      "iat": 1743344467,
+      "exp": 1743348067
+    }
+  }
+}
+]

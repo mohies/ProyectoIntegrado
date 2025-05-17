@@ -39,7 +39,7 @@
   .chatbot-body {
     padding: 0.5rem;
     flex-grow: 1;
-    overflow-y: auto; /* 👈 Esto habilita el scroll vertical */
+    overflow-y: auto; /*  Esto habilita el scroll vertical */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -48,8 +48,8 @@
   .chatbot-body .badge {
     display: inline-block;
     max-width: 100%;
-    white-space: normal;       /* 👈 Permite múltiples líneas */
-    word-break: break-word;    /* 👈 Corta palabras largas si es necesario */
+    white-space: normal;       /*  Permite múltiples líneas */
+    word-break: break-word;    /*  Corta palabras largas si es necesario */
     font-size: 13px;
     line-height: 1.3;
     padding: 8px 10px;

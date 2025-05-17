@@ -2,6 +2,10 @@ import requests
 from datetime import datetime
 from .models import Evento, Organizador
 
+
+# Función para importar eventos desde la API pública de Ticketmaster.
+# Recorre las páginas de resultados, extrae los datos necesarios (título, fecha, imagen, precio, etc.)
+# y los guarda como nuevos objetos de modelo Evento asociados al primer organizador encontrado.
 def importar_eventos_ticketmaster():
     base_url = "https://app.ticketmaster.com/discovery/v2/events"
     params = {
@@ -60,24 +64,3 @@ def importar_eventos_ticketmaster():
         print(f"✅ Página {page + 1} importada ({len(eventos)} eventos).")
         page += 1
 
-
-
-from django.contrib.auth.models import Group
-from .models import Usuario
-
-def asignar_grupo_por_rol(usuario: Usuario):
-    rol = usuario.rol
-
-    grupo_nombre = None
-    if rol == Usuario.ADMIN:
-        grupo_nombre = 'Administradores'
-    elif rol == Usuario.ORGANIZADOR:
-        grupo_nombre = 'Organizadores'
-    elif rol == Usuario.USUARIO:
-        grupo_nombre = 'Usuarios'
-
-    if grupo_nombre:
-        grupo, creado = Group.objects.get_or_create(name=grupo_nombre)
-        usuario.groups.clear()  #  Solo estará en un grupo
-        usuario.groups.add(grupo)
-        print(f"✅ Usuario '{usuario.username}' asignado al grupo '{grupo_nombre}'")

@@ -87,7 +87,7 @@ class PagoSerializer(serializers.ModelSerializer):
         model = Pago
         fields = '__all__'
 
-# serializers.py
+
 class UsuarioMiniSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario

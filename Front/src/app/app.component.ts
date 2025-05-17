@@ -20,7 +20,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule  
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   usuario$!: Observable<any>;
@@ -37,7 +37,9 @@ export class AppComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) {}
-
+// Método que se ejecuta al inicializar el componente.
+// Carga el usuario desde el servicio de autenticación.
+// Muestra un mensaje si el pago fue exitoso (o simulado) y verifica si hay eventos en oferta.
   ngOnInit(): void {
     this.auth.cargarUsuario();
     this.usuario$ = this.auth.usuario$;
@@ -67,12 +69,14 @@ export class AppComponent implements OnInit {
       }
     });
   }
-
+// Realiza una búsqueda si hay texto ingresado.
+// Redirige a la ruta de eventos con el término de búsqueda como parámetro de consulta.
   buscar() {
     if (this.terminoBusqueda.trim()) {
       this.router.navigate(['/eventos'], { queryParams: { q: this.terminoBusqueda } });
     }
   }
+// Cierra el modal de eventos en oferta.
 
   cerrarModal() {
     this.mostrarModalOfertas = false;

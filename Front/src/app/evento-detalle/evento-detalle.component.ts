@@ -39,7 +39,8 @@ a: any;
     private auth: AuthService,
     private carritoService: CarritoService
   ) {}
-
+// Al inicializar, obtiene el ID del evento desde la URL.
+// Carga los datos del evento, sus reseñas, el resumen (promedio y total) y evalúa si el usuario puede reseñar.
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
@@ -78,7 +79,9 @@ a: any;
       });
     }
   }
-
+// Envía una nueva reseña del usuario actual al backend.
+// Si es exitosa, la agrega al listado y muestra un mensaje.
+// Si falla, muestra el error recibido.
   enviarResena() {
     const token = localStorage.getItem('token');
     if (!token || !this.evento || !this.usuarioActual) return;
@@ -91,7 +94,7 @@ a: any;
   
     this.eventosService.crearResena(datos, token).subscribe({
       next: (res) => {
-        this.resenas.push(res.resena); // Ya viene completo con usuario y foto
+        this.resenas.push(res.resena); // viene completo con usuario y foto
   
         this.usuarioPuedeResenar = false;
         this.nuevaPuntuacion = 5;
@@ -118,7 +121,8 @@ a: any;
     });
   }
 
-
+// Elimina una reseña por su ID tras confirmación del usuario.
+// Si es exitosa, actualiza la lista local y muestra un mensaje.
   eliminarResena(id: number) {
     const token = localStorage.getItem('token');
     if (!token) return;
@@ -147,6 +151,8 @@ a: any;
       }
     });
   }
+  // Agrega el evento actual al carrito de compras, calculando el precio final o con oferta.
+// Muestra un mensaje de confirmación temporal.
   agregarAlCarrito() {
     if (!this.evento) return;
   

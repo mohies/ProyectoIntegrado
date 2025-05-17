@@ -4,7 +4,7 @@ import { CarritoService } from '../services/carrito.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from '../../enviroments/enviroments';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-compra',
@@ -33,7 +33,7 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
       notas: ['']
     });
   }
-
+// Inicializa el formulario, escucha los productos del carrito y arranca el temporizador de expiración.
   ngOnInit(): void {
     this.carritoService.eventos$.subscribe((items) => {
       this.carrito = items;
@@ -41,9 +41,9 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
 
     this.iniciarTemporizador();
   }
-
+// Carga el script de PayPal dinámicamente después de que la vista esté renderizada.
   ngAfterViewInit(): void {
-    this.cargarScriptPaypal(); 
+    this.cargarScriptPaypal();
   }
 
   cargarScriptPaypal() {
@@ -52,6 +52,7 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
     script.onload = () => this.renderizarBotonPayPal();
     document.body.appendChild(script);
   }
+// Limpia el intervalo del temporizador y vacía el carrito si no se completó la compra.
 
   ngOnDestroy(): void {
     clearInterval(this.timerInterval);
@@ -59,6 +60,7 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
       this.carritoService.vaciar();
     }
   }
+// Inicia un temporizador de 5 minutos. Si se agota, vacía el carrito y redirige al inicio.
 
   iniciarTemporizador() {
     this.timerInterval = setInterval(() => {
@@ -73,6 +75,7 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
       }
     }, 1000);
   }
+// Valida el formulario y estructura los datos necesarios para enviar la compra al backend.
 
   getDatosCompra(): any | null {
     if (this.form.valid) {
@@ -94,10 +97,12 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
       return null;
     }
   }
+// Calcula el total del carrito sumando precio × cantidad de cada producto.
 
   calcularTotal(): number {
     return this.carrito.reduce((acc, item) => acc + item.precio * (item.cantidad || 1), 0);
   }
+// Renderiza el botón de PayPal y configura su comportamiento (orden, aprobación, errores).
 
   renderizarBotonPayPal() {
     const total = this.calcularTotal();
@@ -119,7 +124,6 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
         onApprove: async (data: any, actions: any) => {
           const detalles = await actions.order.capture();
           console.log('✅ Pago completado:', detalles);
-
           const compra = this.getDatosCompra();
           if (compra) {
             const token = localStorage.getItem('token');
@@ -129,12 +133,12 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
             });
 
             const payload = {
-              items: compra.items,
+              ...compra,
               metodo_pago: 'PayPal',
               total_pago: total
             };
 
-            this.http.post('http://localhost:8000/api/v1/procesar-compra/', payload, { headers }).subscribe({
+            this.http.post(environment.apiUrl + 'procesar-compra/', payload, { headers }).subscribe({
               next: (res) => {
                 console.log('📦 Compra registrada en backend:', res);
                 this.compraFinalizada = true;
@@ -147,6 +151,7 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
               }
             });
           }
+
         },
         onError: (err: any) => {
           console.error('❌ Error en PayPal:', err);
@@ -156,7 +161,8 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
       console.warn('⚠️ No se encontró el contenedor o PayPal no está disponible');
     }
   }
-
+// Simula una compra sin usar PayPal, útil para pruebas manuales.
+// Valida el carrito, construye el payload y hace POST al backend para registrar la compra.
   simularCompra() {
     const compra = this.getDatosCompra();
     console.log('🧾 Datos de compra:', compra);
@@ -179,12 +185,12 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
     });
 
     const payload = {
-      items: compra.items,
+      ...compra,
       metodo_pago: 'PayPal',
       total_pago: total
     };
 
-    this.http.post('http://localhost:8000/api/v1/procesar-compra/', payload, { headers }).subscribe({
+    this.http.post(environment.apiUrl + 'procesar-compra/', payload, { headers }).subscribe({
       next: (res) => {
         console.log('🧪 Compra simulada registrada en backend:', res);
         this.compraFinalizada = true;

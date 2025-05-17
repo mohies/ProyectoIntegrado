@@ -12,6 +12,9 @@ from rest_framework.authtoken.models import Token
 #     user.rol = None  # o Usuario.USUARIO como valor por defecto
 #     user.save()
     
+# Crea automáticamente un token de autenticación para cada usuario nuevo.
+# Este token se utiliza para autenticación basada en token en la API (DRF TokenAuthentication).
+# Se ejecuta justo después de que un nuevo usuario haya sido guardado en la base de datos.
     
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def crear_token_usuario(sender, instance=None, created=False, **kwargs):

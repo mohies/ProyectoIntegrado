@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-pagos',
   imports: [],
   templateUrl: './pagos.component.html',
-  styleUrl: './pagos.component.scss'
+  styleUrl: './pagos.component.css'
 })
 export class PagosAdminComponent  {
 

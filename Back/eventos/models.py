@@ -50,7 +50,6 @@ class Evento(models.Model):
     cupo_maximo = models.PositiveIntegerField()
     organizador = models.ForeignKey(Organizador, on_delete=models.CASCADE)
     imagen = models.URLField(blank=True, null=True)
-    destacado = models.BooleanField(default=False)
     descuento = models.DecimalField(
         max_digits=5, decimal_places=2, blank=True, null=True,
         help_text="Porcentaje de descuento, ejemplo 20 para 20%")
@@ -83,6 +82,9 @@ class Reserva(models.Model):
     estado = models.CharField(max_length=20, choices=[('activa', 'Activa'), ('cancelada', 'Cancelada')], default='activa')
     motivo_cancelacion = models.TextField(blank=True, null=True)
     fecha_cancelacion = models.DateTimeField(blank=True, null=True)
+    direccion = models.CharField(max_length=255, blank=True, null=True)
+    ciudad = models.CharField(max_length=100, blank=True, null=True)
+    notas = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return f"{self.usuario.email} → {self.evento.titulo}"
@@ -94,6 +96,7 @@ class Pago(models.Model):
     total_pago = models.DecimalField(max_digits=6, decimal_places=2)
     metodo_pago = models.CharField(max_length=30, default="PayPal")
     estado = models.CharField(max_length=20, choices=[('completado', 'Completado'), ('pendiente', 'Pendiente'), ('fallido', 'Fallido')])
+
 
     def __str__(self):
         return f"Pago de {self.reserva.usuario.email} - {self.total_pago}€"

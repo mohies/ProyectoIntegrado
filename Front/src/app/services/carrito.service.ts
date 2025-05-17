@@ -18,7 +18,8 @@ export class CarritoService {
   private temporizadorSub: Subscription | null = null;
   private tiempoMaximo = 300; // 5 minutos en segundos
   private segundosRestantes = this.tiempoMaximo;
-
+  // Agrega un evento al carrito si aún no está presente.
+  // También inicia el temporizador para expiración automática.
   agregar(evento: EventoCarrito) {
     const actual = this.eventos.getValue();
     if (!actual.some(e => e.id === evento.id)) {
@@ -26,21 +27,25 @@ export class CarritoService {
       this.iniciarTemporizador(); // iniciar cuando se agrega
     }
   }
-
+  // Elimina un evento del carrito según su ID.
+  // Si el carrito queda vacío, detiene el temporizador.
   eliminar(id: number) {
     const actualizado = this.eventos.getValue().filter(e => e.id !== id);
     this.eventos.next(actualizado);
     if (actualizado.length === 0) this.detenerTemporizador();
   }
+  // Vacía completamente el carrito y detiene el temporizador.
 
   vaciar() {
     this.eventos.next([]);
     this.detenerTemporizador();
   }
+  // Devuelve el estado actual del carrito como un array de eventos.
 
   obtenerCarrito(): EventoCarrito[] {
     return this.eventos.getValue();
   }
+  // Actualiza la cantidad de un evento específico en el carrito.
 
   actualizarCantidad(id: number, cantidad: number) {
     const actual = this.eventos.getValue();
@@ -49,7 +54,8 @@ export class CarritoService {
     );
     this.eventos.next(actualizado);
   }
-
+  // Inicia el temporizador de expiración del carrito (5 minutos).
+  // Cada segundo decrementa y si llega a cero, vacía el carrito.
   private iniciarTemporizador() {
     if (this.temporizadorSub) return;
 
@@ -62,6 +68,7 @@ export class CarritoService {
       }
     });
   }
+  // Detiene el temporizador activo y reinicia el contador de segundos.
 
   private detenerTemporizador() {
     if (this.temporizadorSub) {

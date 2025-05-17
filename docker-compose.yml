@@ -1,0 +1,28 @@
+services:
+  backend:
+    build: ./Back
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./Back:/app
+      - ./Back/db.sqlite3:/app/db.sqlite3
+      - ./staticfiles:/app/staticfiles
+      - ./Back/media:/app/media
+    env_file:
+      - ./Back/.env
+    networks:
+      - redapp
+
+  frontend:
+    build: ./Front
+    ports:
+    - "4200:80"
+    depends_on:
+      - backend
+    extra_hosts:
+      - "localhost:host-gateway"
+    networks:
+      - redapp
+
+networks:
+  redapp:

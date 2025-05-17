@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-crear-evento',
@@ -13,7 +14,8 @@ import { Router } from '@angular/router';
 })
 export class CrearEventoComponent {
   eventoForm: FormGroup;
-
+// Inicializa el formulario de creación de evento con validaciones básicas.
+// Incluye campos como título, descripción, fecha, ubicación, precio, imagen y cupo máximo.
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
@@ -25,11 +27,13 @@ export class CrearEventoComponent {
       fecha: ['', Validators.required],
       ubicacion: ['', Validators.required],
       precio: [0, [Validators.required, Validators.min(0)]],
-      imagen: ['', Validators.required],  //  URL, no file
+      imagen: ['', Validators.required],  
       cupo_maximo: [100, Validators.required]
     });
   }
-
+// Envía los datos del formulario al backend mediante una petición POST autenticada.
+// Si la creación es exitosa, muestra un mensaje y redirige al listado de eventos.
+// Si ocurre un error, lo muestra en consola y alerta al usuario.
   crearEvento() {
     const token = localStorage.getItem('token');
     if (!token) return;
@@ -39,7 +43,7 @@ export class CrearEventoComponent {
       'Content-Type': 'application/json'
     });
 
-    this.http.post('http://localhost:8000/api/v1/gestion-eventos/', this.eventoForm.value, { headers }).subscribe({
+    this.http.post(environment.apiUrl + 'gestion-eventos/', this.eventoForm.value, { headers }).subscribe({
       next: () => {
         alert('✅ Evento creado con éxito');
         this.router.navigate(['/eventos']);

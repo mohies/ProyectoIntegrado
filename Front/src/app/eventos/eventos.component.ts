@@ -33,7 +33,9 @@ export class EventosComponent implements OnInit {
   
 
   constructor(private eventosService: EventosService,   private route: ActivatedRoute) {}
-
+// Al iniciar el componente:
+// 1. Obtiene todos los eventos desde el servicio.
+// 2. Luego lee el parámetro de búsqueda "q" desde la URL (si existe) para aplicarlo como filtro.
   ngOnInit(): void {
     // Cargar eventos
     this.eventosService.getEventos().subscribe({
@@ -50,7 +52,8 @@ export class EventosComponent implements OnInit {
       }
     });
   }
-  
+  // Devuelve la lista de eventos filtrados por nombre (si hay búsqueda activa)
+// y ordenados por fecha o título, según lo que se haya seleccionado en `orden`.
 
   eventosFiltrados() {
     return this.eventos

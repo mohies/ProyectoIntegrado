@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class FaqService {
+  // Mapea preguntas frecuentes a respuestas automáticas.
+// Se usa en el chatbot para responder preguntas básicas
   private respuestas: { [key: string]: string } = {
     'cómo reservo un evento': '📌 Ve al detalle del evento y pulsa "Reservar entrada".',
     'cómo pago': '💳 Puedes pagar usando PayPal al finalizar tu reserva.',
@@ -11,7 +13,8 @@ export class FaqService {
     'hola': '¡Hola! ¿En qué puedo ayudarte? 😊',
     'gracias': '¡De nada! 😄'
   };
-
+// Busca una respuesta basada en la coincidencia parcial del texto de la pregunta.
+// Normaliza el texto ingresado y lo compara contra las claves predefinidas.
   buscarRespuesta(pregunta: string): string {
     const normalizada = this.normalizarTexto(pregunta);
 
@@ -24,7 +27,8 @@ export class FaqService {
 
     return '❓ Lo siento, no entendí la pregunta. Intenta con otra o contacta soporte.';
   }
-
+// Convierte el texto a minúsculas y elimina acentos para facilitar la comparación.
+// Esto permite coincidencias más flexibles entre la entrada del usuario y las claves.
   private normalizarTexto(texto: string): string {
     return texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   }

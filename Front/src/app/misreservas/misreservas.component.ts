@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, computed, signal } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-misreservas',
@@ -11,52 +12,98 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./misreservas.component.css']
 })
 export class MisreservasComponent implements OnInit {
-  reservas: any[] = [];
-  mensaje: string | null = null;
-  reservaSeleccionada: number | null = null;
-  motivoCancelacion: string = '';
+  reservas = signal<any[]>([]);
+  mensaje = signal<string | null>(null);
+  reservaSeleccionada = signal<number | null>(null);
+  motivoCancelacion = signal<string>('');
   today = new Date();
 
+  // Computadas para próximas e historial
+  proximas = computed(() =>
+    this.reservas().filter(r => r.estado === 'activa' && !this.eventoPasado(r.evento?.fecha))
+  );
+
+  historial = computed(() =>
+    this.reservas().filter(r => this.eventoPasado(r.evento?.fecha) || r.estado === 'cancelada')
+  );
+
   constructor(private http: HttpClient) {}
+// Se ejecuta al inicializar el componente. Llama a la función para obtener las reservas del usuario.
 
   ngOnInit(): void {
     this.cargarReservas();
   }
-
+// Realiza una petición GET para obtener todas las reservas del usuario autenticado
+// y actualiza el estado reactivo `reservas`. En caso de error, muestra un mensaje.
   cargarReservas() {
     const token = localStorage.getItem('token');
     if (!token) return;
 
     const headers = new HttpHeaders({ Authorization: `Token ${token}` });
-    this.http.get<any[]>('http://localhost:8000/api/v1/mis-reservas/', { headers }).subscribe({
-      next: (res) => this.reservas = res,
-      error: () => this.mensaje = '❌ Error al cargar tus reservas.'
+    this.http.get<any[]>(environment.apiUrl + 'mis-reservas/', { headers }).subscribe({
+      next: res => this.reservas.set(res),
+      error: () => this.mensaje.set('❌ Error al cargar tus reservas.')
     });
   }
+// Establece qué reserva ha sido seleccionada para cancelar, y limpia el motivo previo si lo había.
 
   seleccionarReserva(id: number) {
-    this.reservaSeleccionada = id;
-    this.motivoCancelacion = '';
+    this.reservaSeleccionada.set(id);
+    this.motivoCancelacion.set('');
   }
-
+// Realiza una petición POST al backend para cancelar una reserva específica,
+// enviando el motivo de cancelación. Tras éxito, recarga las reservas y limpia el estado.
   cancelarReserva() {
     const token = localStorage.getItem('token');
-    if (!token || !this.reservaSeleccionada) return;
+    if (!token || this.reservaSeleccionada() === null) return;
 
     const headers = new HttpHeaders({ Authorization: `Token ${token}` });
-    const body = { motivo: this.motivoCancelacion };
+    const body = { motivo: this.motivoCancelacion() };
 
-    this.http.post(`http://localhost:8000/api/v1/cancelar-reserva/${this.reservaSeleccionada}/`, body, { headers }).subscribe({
+    this.http.post(environment.apiUrl + 'cancelar-reserva/' + this.reservaSeleccionada() + '/', body, { headers }).subscribe({
       next: () => {
-        this.mensaje = '✅ Reserva cancelada correctamente.';
+        this.mensaje.set('✅ Reserva cancelada correctamente.');
         this.cargarReservas();
-        this.reservaSeleccionada = null;
+        this.reservaSeleccionada.set(null);
       },
-      error: () => this.mensaje = '❌ No se pudo cancelar la reserva.'
+      error: () => this.mensaje.set('❌ No se pudo cancelar la reserva.')
     });
   }
+// Función auxiliar que determina si una fecha de evento ya pasó comparándola con la fecha actual.
 
   eventoPasado(fecha: string): boolean {
     return new Date(fecha) < this.today;
   }
+// Realiza una petición GET para descargar el PDF de la entrada de una reserva específica.
+// Usa `responseType: 'blob'` y genera un enlace temporal para descargar el archivo.
+descargarEntradaPDF(reservaId: number) {
+  const token = localStorage.getItem('token');
+  const headers = new HttpHeaders({ Authorization: `Token ${token}` });
+
+  this.http.get(environment.apiUrl + 'descargar-entrada/' + reservaId + '/', {
+    headers,
+    responseType: 'blob' //este parametro es una peticion httpcliente le indica a angular que larespuesta esperada no es un json ni texto sino un archivo binario
+  }).subscribe(blob => {
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `entrada_reserva_${reservaId}.pdf`;
+    a.click();
+    window.URL.revokeObjectURL(url);
+  });
+}
+
+// Getter reactivo que expone el valor del motivo de cancelación desde la señal correspondiente.
+
+  get motivo(): string {
+  return this.motivoCancelacion();
+}
+// Setter que actualiza la señal `motivoCancelacion` con un nuevo valor.
+
+set motivo(value: string) {
+  this.motivoCancelacion.set(value);
+}
+
+
+  
 }

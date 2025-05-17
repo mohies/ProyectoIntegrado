@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-reembolso',
@@ -16,11 +17,13 @@ export class ReembolsoComponent implements OnInit {
   error: string | null = null;
 
   constructor(private http: HttpClient) {}
+// Al inicializar el componente, se cargan los reembolsos desde el backend.
 
   ngOnInit(): void {
     this.cargarReembolsos();
   }
-
+// Realiza una petición GET autenticada para obtener la lista de reembolsos.
+// Actualiza el array local y controla los estados de carga y error.
   cargarReembolsos() {
     this.cargando = true;
     const token = localStorage.getItem('token');
@@ -28,7 +31,7 @@ export class ReembolsoComponent implements OnInit {
       Authorization: `Token ${token}`
     });
 
-    this.http.get<any[]>('http://localhost:8000/api/v1/admin/reembolsos/', { headers }).subscribe({
+    this.http.get<any[]>(environment.apiUrl + 'admin/reembolsos/', { headers }).subscribe({
       next: (res) => {
         this.reembolsos = res;
         this.cargando = false;
@@ -39,12 +42,13 @@ export class ReembolsoComponent implements OnInit {
       }
     });
   }
-
+// Envía una petición PATCH al backend para actualizar el estado de un reembolso (aprobado, rechazado, parcial).
+// Recarga la lista tras la actualización o muestra un mensaje de error si falla.
   actualizarEstado(reembolsoId: number, nuevoEstado: string) {
     const token = localStorage.getItem('token');
     const headers = new HttpHeaders({ Authorization: `Token ${token}` });
   
-    this.http.patch(`http://localhost:8000/api/v1/admin/reembolsos/${reembolsoId}/estado/`, { estado: nuevoEstado }, { headers })
+    this.http.patch(environment.apiUrl + `admin/reembolsos/${reembolsoId}/estado/`, { estado: nuevoEstado }, { headers })
       .subscribe({
         next: () => this.cargarReembolsos(),
         error: () => alert('❌ Error al actualizar estado del reembolso')

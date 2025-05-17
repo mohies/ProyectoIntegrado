@@ -1,46 +1,58 @@
-<!-- TÍTULO DE CARRUSEL -->
-<div class="text-center my-5">
-  <h2 class="fw-bold text-primary"> Próximos Eventos 🎉</h2>
-</div>
-
-<!-- CARRUSEL CON PRÓXIMOS -->
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+<!-- HERO CAROUSEL VISUAL -->
+<div id="heroCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
   <div class="carousel-inner">
     @for (evento of proximos; track evento.id) {
       <div class="carousel-item" [class.active]="$index === 0">
-        <img 
-          [src]="evento.imagen" 
-          class="d-block w-100 object-fit-cover carousel-img" 
-          alt="Evento próximo"
-        />
-        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
-          <h5 class="text-light">{{ evento.titulo }}</h5>
+        <div class="container py-5" style="background-color: #f5f7ff">
+          <div class="row align-items-center">
+            <!-- TEXTO -->
+            <div class="col-md-6 text-center text-md-start">
+              <h2 class="fw-bold text-danger">Haz lo que</h2>
+              <h1 class="fw-bold display-4 mb-3">te apasiona</h1>
+              <p class="lead text-muted">{{ evento.titulo }}</p>
+            </div>
+            <!-- IMAGEN -->
+            <div class="col-md-6">
+              <div class="position-relative">
+                <img 
+                  [src]="evento.imagen"
+                  class="img-fluid rounded-4 carousel-img shadow-sm"
+                  alt="Imagen del evento"
+                />
+                <div class="position-absolute bottom-0 end-0 bg-dark bg-opacity-75 text-white small px-3 py-1 rounded-start">
+                  {{ evento.titulo }}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     }
   </div>
-  <button class="carousel-control-prev" data-bs-target="#heroCarousel" data-bs-slide="prev">
+
+  <!-- Controles -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </button>
-  <button class="carousel-control-next" data-bs-target="#heroCarousel" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
     <span class="carousel-control-next-icon"></span>
   </button>
 </div>
 
-<!-- SECCIÓN DE DESTACADOS -->
+<!-- SECCIÓN DESTACADOS -->
 <section class="container my-5">
   <h2 class="text-center mb-4 text-primary fw-bold">Eventos Destacados</h2>
   <div class="row g-4">
     @for (evento of destacados; track evento.id) {
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm border-0 evento-card">
-        <img [src]="evento.imagen" class="card-img-top" />
-        <div class="card-body text-center">
-          <h5 class="card-title">{{ evento.titulo }}</h5>
-          <a [routerLink]="['/evento', evento.id]" class="btn btn-primary">Ver más</a>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 evento-card">
+          <img [src]="evento.imagen" class="card-img-top" />
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ evento.titulo }}</h5>
+            <a [routerLink]="['/evento', evento.id]" class="btn btn-primary">Ver más</a>
+          </div>
         </div>
       </div>
-    </div>
     }
   </div>
 </section>

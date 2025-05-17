@@ -15,7 +15,8 @@ export class ChatbotComponent {
   abierto = false;
   mensaje = '';
   mensajes: { de: 'usuario' | 'bot', texto: string }[] = [];
-
+// Inicializa el chatbot con un mensaje de bienvenida del bot.
+// Se usa un array de mensajes con estructura para distinguir usuario y bot.
   constructor(private faqService: FaqService) {
     this.mensajes.push({
       de: 'bot',
@@ -29,7 +30,8 @@ Puedes preguntarme cosas como:
 📝 ¡Escríbeme tu duda y con gusto te ayudaré!`
     });
   }
-
+// Envía el mensaje del usuario, lo agrega al historial y responde usando el servicio de FAQ.
+// Si el mensaje está vacío, no hace nada.
   enviar() {
     const pregunta = this.mensaje.trim();
     if (!pregunta) return;

@@ -21,3 +21,7 @@ dj-rest-auth==5.0.1
 django-allauth==0.61.1
 python-dotenv==1.0.1
 Pillow
+gunicorn
+whitenoise
+reportlab
+coverage

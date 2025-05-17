@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-payouts',
@@ -16,11 +17,13 @@ export class PayoutsComponent implements OnInit {
   errorMsg: string | null = null;
 
   constructor(private http: HttpClient) {}
+// Al iniciar el componente, se cargan los payouts del servidor.
 
   ngOnInit(): void {
     this.cargarPayouts();
   }
-
+// Realiza una petición GET autenticada para obtener la lista de payouts.
+// Maneja el estado de carga y posibles errores.
   cargarPayouts() {
     this.loading = true;
     const token = localStorage.getItem('token');
@@ -28,7 +31,7 @@ export class PayoutsComponent implements OnInit {
       Authorization: `Token ${token}`
     });
 
-    this.http.get<any[]>('http://localhost:8000/api/v1/payouts/', { headers }).subscribe({
+    this.http.get<any[]>(environment.apiUrl + 'payouts/', { headers }).subscribe({
       next: (res) => {
         this.payouts = res;
         this.loading = false;
@@ -39,14 +42,16 @@ export class PayoutsComponent implements OnInit {
       }
     });
   }
-
+// Marca un payout como "pagado" mediante una petición PATCH.
+// Luego recarga la lista de payouts actualizada.
+// Muestra un mensaje de error si falla la actualización.
   marcarComoPagado(payoutId: number) {
     const token = localStorage.getItem('token');
     const headers = new HttpHeaders({
       Authorization: `Token ${token}`
     });
 
-    this.http.patch(`http://localhost:8000/api/v1/payouts/${payoutId}/`, { estado: 'pagado' }, { headers }).subscribe({
+    this.http.patch(environment.apiUrl + `payouts/${payoutId}/`, { estado: 'pagado' }, { headers }).subscribe({
       next: () => {
         this.cargarPayouts(); // Recarga lista
       },

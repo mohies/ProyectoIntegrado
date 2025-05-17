@@ -37,20 +37,25 @@ export class RegistroComponent {
       { validators: this.passwordsMatchValidator }
     );
   }
-
+// Valida que los campos 'password' y 'confirmPassword' coincidan.
+// Se usa como validador personalizado del formulario.
   passwordsMatchValidator(group: FormGroup): { [key: string]: any } | null {
     const pass = group.get('password')?.value;
     const confirm = group.get('confirmPassword')?.value;
     return pass === confirm ? null : { passwordsMismatch: true };
   }
-
+// Captura el archivo seleccionado por el usuario para subir una foto.
+// Almacena el archivo en la propiedad 'selectedFile' del componente.
   onFileChange(event: Event) {
     const file = (event.target as HTMLInputElement)?.files?.[0];
     if (file) {
       this.selectedFile = file;
     }
   }
-
+// Envía los datos del formulario al backend si es válido.
+// Utiliza FormData para incluir la imagen y otros campos.
+// Maneja respuestas exitosas y errores del backend, mostrando mensajes apropiados.
+// Redirige al inicio tras el registro exitoso.
   onSubmit() {
     this.backendErrors = {};
     this.errorMsg = null;

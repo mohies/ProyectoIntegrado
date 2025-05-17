@@ -5,7 +5,8 @@ Front/node_modules/
 # Ignorar entornos virtuales de Python en Back
 Back/myvenv/
 Back/mynewvenv/
-
+Back/staticfiles/
+staticfiles/
 # Ignorar archivos de Python generados
 Back/__pycache__/
 

@@ -13,7 +13,11 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-load_dotenv()
+
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(dotenv_path=BASE_DIR / '.env')  #  Carga explícita del .env
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,7 +33,7 @@ SECRET_KEY = 'django-insecure-b3pfn(rkn18i*#asttftf3%d@99d5m5p6%dwoqwi12r(y9q28a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['*']
 INTERNAL_IPS = ["localhost"]
 
 
@@ -45,7 +49,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'eventos',
     'django_seed',
-    'debug_toolbar',
     'django_bootstrap5',
     'django_bootstrap_icons',
     'rest_framework',
@@ -62,6 +65,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -69,13 +73,14 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware', 
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "corsheaders.middleware.CorsMiddleware",
+    
 
 
 ]
 
 ROOT_URLCONF = 'mysite.urls'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 TEMPLATES = [
     {
@@ -141,14 +146,22 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# - Se define un modelo de usuario personalizado (`AUTH_USER_MODEL`).
+
 AUTH_USER_MODEL = 'eventos.Usuario'
+
+# - Se configura Django REST Framework para usar autenticación por token y permisos por defecto.
+
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
@@ -168,6 +181,8 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
+
+# - Se habilita autenticación tradicional y social (Google) con django-allauth.
 SITE_ID = 1
 ACCOUNT_SIGNUP_FIELDS = ['email*', 'username*', 'password1*', 'password2*']
 ACCOUNT_LOGIN_METHODS = {'email', 'username'}
@@ -182,15 +197,28 @@ SOCIALACCOUNT_PROVIDERS = {
         'AUTH_PARAMS': {'access_type': 'online'},
     }
 }
+
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# - Se establecen políticas de CORS y CSRF para permitir el acceso desde dominios externos confiables.
+
 CORS_ALLOW_CREDENTIALS = True  
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",  
+    "http://localhost:4200",
+    "http://18.204.87.245",
+    "http://ec2-18-204-87-245.compute-1.amazonaws.com",
+
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:4200",
+    "http://18.204.87.245",
+    "http://ec2-18-204-87-245.compute-1.amazonaws.com",
+
+
 ]
 
 CORS_ALLOW_METHODS = [
@@ -203,8 +231,8 @@ CORS_ALLOW_METHODS = [
 ]
 
 
-# settings.py
 
+# - Se configura el backend de envío de correos mediante SMTP (Gmail) con variables de entorno seguras.
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587

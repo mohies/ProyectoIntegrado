@@ -40,8 +40,9 @@
     color: #ecf0f1;
   }
   .carousel-img {
-    height: 700px; /* o el alto que quieras */
+    height: 400px;
     object-fit: cover;
     object-position: center;
-    border-radius: 8px;
+    border-radius: 12px;
   }
+  
