@@ -84,6 +84,20 @@ Para poner en marcha el frontend:
    `ng serve`  
    Veremos una notificación en la terminal donde podemos aceptar (y) o rechazar (n).
 
+### Ejecución de tests en Angular
+
+Para poder ejecutar los tests del frontend, primero instalamos las dependencias necesarias:
+
+```bash
+npm install --save-dev karma karma-chrome-launcher karma-jasmine jasmine-core karma-jasmine-html-reporter @angular-devkit/build-angular --legacy-peer-deps
+```
+
+Luego, podemos lanzar los tests con:
+
+```bash
+ng test
+```
+
 ---
 
 ## 📝 Notas
@@ -94,3 +108,70 @@ Para poner en marcha el frontend:
 - El archivo `.env` es esencial para la configuración de autenticación y envío de correos. No lo tenemos que subir a GitHub.
 
 ---
+
+
+## 🚢 Despliegue en Docker y Producción
+
+Podemos desplegar Eventia fácilmente usando Docker, lo que nos permite ejecutar tanto el backend como el frontend de forma sencilla y segura en cualquier entorno.
+
+### 1. Requisitos Previos
+
+- Tener instalado [Docker](https://docs.docker.com/get-docker/) y [Docker Compose](https://docs.docker.com/compose/install/).
+- Configurar correctamente el archivo `.env` en la carpeta `Back` antes de construir los contenedores.
+
+### 2. Estructura de Archivos
+
+Debemos asegurarnos de tener la siguiente estructura mínima:
+
+```
+ProyectoIntegrado/
+│
+├── Back/           # Backend Django
+│   ├── .env        # Variables de entorno (no subir a GitHub)
+│   └── ...
+├── Front/          # Frontend Angular
+│   └── ...
+├── docker-compose.yml
+├── nginx.conf      # Configuración de Nginx para servir Angular
+└── ...
+```
+
+### 3. Construcción y Ejecución
+
+Desde la raíz del proyecto, ejecutamos:
+
+```bash
+docker compose up --build
+```
+
+Esto hará lo siguiente:
+- Construirá la imagen del backend (Django) y aplicará migraciones automáticamente.
+- Construirá la imagen del frontend (Angular) y lo servirá con Nginx.
+- Levantará ambos servicios en una red interna.
+
+### 4. Acceso a la Aplicación
+
+- **Frontend Angular:** [http://localhost:4200](http://localhost:4200)
+- **Backend Django:** [http://localhost:8000](http://localhost:8000)
+
+### 5. Notas de Producción
+
+- El frontend se sirve con Nginx para mayor rendimiento.
+- El backend ejecuta migraciones y recolecta archivos estáticos automáticamente.
+- Los archivos sensibles como `.env` **no debemos subirlos a GitHub**.
+- Podemos cargar datos iniciales manualmente si lo necesitamos:
+  ```bash
+  docker compose exec backend python manage.py loaddata data.json
+  ```
+- Para detener los servicios:
+  ```bash
+  docker compose down
+  ```
+
+### 6. Variables de Entorno
+
+Debemos rellenar correctamente el archivo `.env` en `Back/` antes de construir los contenedores, ya que contiene las credenciales necesarias para autenticación y envío de correos.
+
+---
+
+Con estos pasos, tendremos Eventia funcionando en producción de forma sencilla y segura usando Docker.

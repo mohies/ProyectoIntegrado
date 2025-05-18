@@ -231,7 +231,7 @@ CORS_ALLOW_METHODS = [
 ]
 
 
-
+3
 # - Se configura el backend de envío de correos mediante SMTP (Gmail) con variables de entorno seguras.
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

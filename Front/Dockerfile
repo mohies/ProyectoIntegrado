@@ -6,7 +6,8 @@ COPY . .
 RUN npm install -g @angular/cli && npm install
 
 # 🛠 Añadimos salida y detención para debug
-RUN ng build --configuration=production || (echo "❌ Build failed" && exit 1)
+#RUN ng build --configuration=production || (echo "❌ Build failed" && exit 1)
+RUN ng build --configuration=development || (echo "❌ Build failed" && exit 1)
 
 RUN echo "✅ Build success" && ls -la /app/dist && ls -la /app/dist/front-app
 
