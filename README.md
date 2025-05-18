@@ -98,6 +98,43 @@ Luego, podemos lanzar los tests con:
 ng test
 ```
 
+### 🌍 Configuración de entornos en Angular
+
+Angular utiliza archivos de entorno para diferenciar entre desarrollo y producción.  
+Estos archivos se encuentran en `src/environments/` y definen variables como la URL de la API y el Client ID de PayPal.
+
+- **environment.ts**  
+  Este archivo se usa por defecto en desarrollo.  
+  ```typescript
+  // Configuración del entorno de desarrollo.
+  // Utiliza la API local para pruebas y desarrollo con el mismo Client ID de PayPal.
+  // Esta configuración se carga automáticamente cuando Angular se ejecuta sin el flag de producción (--configuration=production).
+  export const environment = {
+    production: false,
+    apiUrl: 'http://localhost:8000/api/v1/',
+    paypalClientId: '...'
+  };
+  ```
+
+- **environment.prod.ts**  
+  Este archivo se usa automáticamente cuando ejecutamos Angular en modo producción.  
+  ```typescript
+  // Configuración del entorno de producción.
+  // Define la URL base de la API y el Client ID de PayPal que se usará en el entorno en vivo.
+  // Esta configuración se utiliza cuando Angular se ejecuta con el flag --configuration=production.
+  export const environment = {
+    production: true,
+    apiUrl: 'http://18.204.87.245:8000/api/v1/',
+    paypalClientId: '...'
+  };
+  ```
+
+**¿Cómo se selecciona el entorno?**
+
+- Si ejecutamos `ng serve` o `ng build`, Angular usa `environment.ts` (desarrollo).
+- Si ejecutamos `ng build --configuration=production`, Angular reemplaza automáticamente `environment.ts` por `environment.prod.ts` y usa la configuración de producción.
+
+Esto nos permite trabajar localmente con la API y, al desplegar, conectar automáticamente con la API real en el servidor.
 ---
 
 ## 📝 Notas
