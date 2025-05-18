@@ -17,6 +17,8 @@ RUN python manage.py migrate
 # Recolecta estáticos (repetido pero no pasa nada)
 RUN python manage.py collectstatic --noinput
 
+COPY datos_completos.json /app/datos_completos.json
+
 # Copia y da permisos al entrypoint
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh

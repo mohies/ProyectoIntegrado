@@ -108,7 +108,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$870000$OrEExX9LcwtPriMNnY7XcX$aWIty0vl6e57YxrnbETMpV0Tn0Nk8vbuUg4kZBqnUno=",
-    "last_login": "2025-05-04T12:42:42.098",
+    "last_login": "2025-05-04T22:02:13.723",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",
@@ -467,28 +467,6 @@
 },
 {
   "model": "eventos.usuario",
-  "pk": 32,
-  "fields": {
-    "password": "pbkdf2_sha256$870000$CXWxM05zB3M4UP9aJXw52S$8f64SD2EiVxJsyiMrKCmx6HFtodXcR5/pvGWwXmgk4I=",
-    "last_login": "2025-05-03T01:18:42.317",
-    "is_superuser": false,
-    "username": "pepiito",
-    "first_name": "",
-    "last_name": "",
-    "email": "elpepiito34@gmail.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-04-26T20:51:04.787",
-    "rol": 3,
-    "foto": "perfiles/default-user.png",
-    "groups": [
-      3
-    ],
-    "user_permissions": []
-  }
-},
-{
-  "model": "eventos.usuario",
   "pk": 33,
   "fields": {
     "password": "pbkdf2_sha256$870000$Nlk18SwVFvlUv8vg7D8TXM$wPeSCNrWDxhCi7kjH+poYrtBSjUeD8k/MXBf+vv8vYA=",
@@ -503,6 +481,72 @@
     "date_joined": "2025-05-04T13:21:02.110",
     "rol": 3,
     "foto": "perfiles/default-user.png",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 34,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$7hyMGQsNHm27LaDihYQits$XLghu4YA9evyo8d2QIJbKf4Ev7IySkPZ/KBGfWvfWKk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "lolazo",
+    "first_name": "",
+    "last_name": "",
+    "email": "lolazo@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-07T19:55:24.066",
+    "rol": 3,
+    "foto": "perfiles/default-user.png",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 35,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$kQfdmf1U6uVmPLD5fkpAV8$tFh/EemtZabkkleNygOd6R/Xkfn+JOficWQeM2wr2so=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "aya",
+    "first_name": "",
+    "last_name": "",
+    "email": "aya@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-17T21:35:54.511",
+    "rol": 3,
+    "foto": "perfiles/image.png",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 36,
+  "fields": {
+    "password": "",
+    "last_login": "2025-05-17T21:38:28.594",
+    "is_superuser": false,
+    "username": "asddas-dsadasdsa",
+    "first_name": "",
+    "last_name": "",
+    "email": "elpepiito34@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-17T21:37:05.230",
+    "rol": 3,
+    "foto": "perfiles/A-100752-1405652286-5625_4Ysx5fO.jpg",
     "groups": [
       3
     ],
@@ -564,7 +608,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/0e3/dae353c1-d877-4eb7-baf6-7ddf501310e3_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -580,7 +623,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/0e3/dae353c1-d877-4eb7-baf6-7ddf501310e3_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -596,7 +638,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/0e3/dae353c1-d877-4eb7-baf6-7ddf501310e3_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -612,7 +653,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/0e3/dae353c1-d877-4eb7-baf6-7ddf501310e3_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -628,7 +668,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/a10/5cc0d039-8f6f-4be2-aec2-f9d5ee849a10_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -644,7 +683,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/457/1f420b94-038f-4b88-8ced-60ec12878457_RETINA_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -660,7 +698,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -676,7 +713,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -692,7 +728,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -708,7 +743,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/457/1f420b94-038f-4b88-8ced-60ec12878457_RETINA_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -724,7 +758,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/679/04db144c-e379-4b16-8f82-86cd5a3b5679_TABLET_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -740,7 +773,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/fbc/5c5b2431-50bf-4651-aefc-9e5f29b38fbc_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -756,7 +788,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/585/9772c787-1d0f-43c3-97d0-1fab56bf0585_RETINA_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -772,7 +803,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/585/9772c787-1d0f-43c3-97d0-1fab56bf0585_RETINA_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -788,7 +818,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/585/9772c787-1d0f-43c3-97d0-1fab56bf0585_RETINA_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -804,7 +833,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -820,7 +848,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/585/9772c787-1d0f-43c3-97d0-1fab56bf0585_RETINA_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -836,7 +863,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/585/9772c787-1d0f-43c3-97d0-1fab56bf0585_RETINA_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -852,7 +878,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -868,7 +893,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/01a/918434c8-5624-44ab-afa2-eb9b8ddec01a_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -884,7 +908,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/dcc/ccca517d-d8be-417d-818d-1fea46973dcc_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -900,7 +923,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -916,7 +938,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -932,7 +953,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/620/8dff4b7c-408b-49a6-a455-50fc945e0620_RETINA_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -948,7 +968,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/314/2e871aa5-bff6-4266-8bd3-58cbf0347314_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -964,7 +983,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/314/2e871aa5-bff6-4266-8bd3-58cbf0347314_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -980,7 +998,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -996,7 +1013,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/620/8dff4b7c-408b-49a6-a455-50fc945e0620_RETINA_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1012,7 +1028,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/7f9/b26a4eee-dd5a-4706-afd1-903d323f97f9_TABLET_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1028,7 +1043,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/7f9/b26a4eee-dd5a-4706-afd1-903d323f97f9_TABLET_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1044,7 +1058,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/314/2e871aa5-bff6-4266-8bd3-58cbf0347314_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1060,7 +1073,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/314/2e871aa5-bff6-4266-8bd3-58cbf0347314_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1076,7 +1088,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1092,7 +1103,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8a5/9d39b5be-1612-4adb-9828-99183ce9e8a5_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1108,7 +1118,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8a5/9d39b5be-1612-4adb-9828-99183ce9e8a5_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1124,7 +1133,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/7f9/b26a4eee-dd5a-4706-afd1-903d323f97f9_TABLET_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1140,7 +1148,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/7f9/b26a4eee-dd5a-4706-afd1-903d323f97f9_TABLET_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1156,7 +1163,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8a5/9d39b5be-1612-4adb-9828-99183ce9e8a5_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1172,7 +1178,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8a5/9d39b5be-1612-4adb-9828-99183ce9e8a5_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1188,7 +1193,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1204,7 +1208,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1220,7 +1223,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/314/2e871aa5-bff6-4266-8bd3-58cbf0347314_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1236,7 +1238,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/dcc/ccca517d-d8be-417d-818d-1fea46973dcc_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1252,7 +1253,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/314/2e871aa5-bff6-4266-8bd3-58cbf0347314_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1268,7 +1268,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1284,7 +1283,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/528/24f15e59-ec51-4745-86d6-d2d6afbcb528_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1300,7 +1298,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/c/060/c5c08e7a-9912-456c-a060-2758be94e060_105881_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1316,7 +1313,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/528/24f15e59-ec51-4745-86d6-d2d6afbcb528_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1332,7 +1328,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1348,7 +1343,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1364,7 +1358,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1380,7 +1373,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1396,7 +1388,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1412,7 +1403,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/712/0f10ca27-7159-4c9c-bd5a-399cfb494712_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1428,7 +1418,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/0ca/e6d130d9-50f1-4e8d-9bb2-2c4ebf76a0ca_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1444,7 +1433,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/154/63ab28e5-7134-4287-a99e-c54ebdac3154_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1460,7 +1448,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/eef/4e3ea7f2-fdfd-4088-90e6-9ff7ed623eef_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1476,7 +1463,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/154/63ab28e5-7134-4287-a99e-c54ebdac3154_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1492,7 +1478,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/154/63ab28e5-7134-4287-a99e-c54ebdac3154_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1508,7 +1493,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/eef/4e3ea7f2-fdfd-4088-90e6-9ff7ed623eef_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1524,7 +1508,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/154/63ab28e5-7134-4287-a99e-c54ebdac3154_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1540,7 +1523,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/769/9c57ca80-cc48-41b3-8867-b5646bba0769_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1556,7 +1538,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/769/9c57ca80-cc48-41b3-8867-b5646bba0769_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1572,7 +1553,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1588,7 +1568,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/ab3/9cad932d-51d0-4f14-8c95-a091e973fab3_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1604,7 +1583,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1620,7 +1598,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1636,7 +1613,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/ab3/9cad932d-51d0-4f14-8c95-a091e973fab3_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1652,7 +1628,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1668,7 +1643,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/885/357ef920-d25c-4b9c-9d7e-96aaab958885_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1684,7 +1658,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1700,7 +1673,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1716,7 +1688,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/ab3/9cad932d-51d0-4f14-8c95-a091e973fab3_CUSTOM.jpg",
-    "destacado": true,
     "descuento": null
   }
 },
@@ -1732,7 +1703,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/ab3/9cad932d-51d0-4f14-8c95-a091e973fab3_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1748,7 +1718,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/885/357ef920-d25c-4b9c-9d7e-96aaab958885_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1764,7 +1733,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4de/c4160736-7e00-4394-99c5-79fa7bf524de_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1780,7 +1748,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1796,7 +1763,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1812,7 +1778,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/ed1/a587e834-1c5a-4b7c-9dbf-0683fc1b1ed1_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1828,7 +1793,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/099/20b93555-3fc8-417f-bd79-724fdf9ca099_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1844,7 +1808,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/abc/11952a79-901b-4fa8-8698-afef3c469abc_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1860,7 +1823,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1876,7 +1838,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/6bb/9990dcf9-146e-42cc-abe7-d3d4784736bb_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1892,7 +1853,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/099/20b93555-3fc8-417f-bd79-724fdf9ca099_ARTIST_PAGE_3_2.jpg",
-    "destacado": true,
     "descuento": "20.00"
   }
 },
@@ -1908,7 +1868,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/f35/f01e1007-7024-44d6-a2fb-bd0e1e1b6f35_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1924,7 +1883,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1940,7 +1898,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1956,7 +1913,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1972,7 +1928,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -1988,7 +1943,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2004,7 +1958,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2020,7 +1973,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2036,7 +1988,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/6bb/9990dcf9-146e-42cc-abe7-d3d4784736bb_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2052,7 +2003,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2068,7 +2018,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2084,7 +2033,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2100,7 +2048,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/c18/cd5e4b22-5706-4730-86c5-4422c93f6c18_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2116,7 +2063,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2132,7 +2078,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2148,7 +2093,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/c18/cd5e4b22-5706-4730-86c5-4422c93f6c18_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2164,7 +2108,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/973/fd9e5d80-e1ef-4c64-bea6-14fa05752973_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2180,7 +2123,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2196,7 +2138,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/ab0/1943940a-752c-4c96-ad5e-57b02f7dcab0_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2212,7 +2153,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2228,7 +2168,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/a72/bfdde761-6c9e-494a-8c7f-1fd858c9da72_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2244,7 +2183,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2260,7 +2198,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/a72/bfdde761-6c9e-494a-8c7f-1fd858c9da72_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2276,7 +2213,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8b3/f2aad0bc-c3f2-462f-841d-ece2d74f68b3_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2292,8 +2228,7 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/dcc/ccca517d-d8be-417d-818d-1fea46973dcc_SOURCE",
-    "destacado": false,
-    "descuento": null
+    "descuento": "30.00"
   }
 },
 {
@@ -2308,7 +2243,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/f21/f1c3ed13-448a-4920-b3f9-f00006663f21_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2324,7 +2258,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2340,7 +2273,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/d9b/c1a37be9-bcfd-4bdf-9aeb-70b2ca70bd9b_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2356,7 +2288,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2372,7 +2303,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2388,7 +2318,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2404,7 +2333,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/406/f47ba94f-f9d1-4a10-842b-30f4b6883406_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2420,7 +2348,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2436,7 +2363,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8c6/3ca9cf4d-6592-40f0-890a-56d13e24a8c6_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2452,7 +2378,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/406/f47ba94f-f9d1-4a10-842b-30f4b6883406_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2468,7 +2393,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/e79/3d23d630-0a28-4b3a-aa86-259f86a56e79_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2484,7 +2408,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/97a/ebe36202-b74e-496a-b552-9322d720f97a_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2500,7 +2423,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/e79/3d23d630-0a28-4b3a-aa86-259f86a56e79_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2516,7 +2438,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/b4e/2757cd79-08e8-4187-be1e-40d357cddb4e_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2532,7 +2453,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/fba/7a8e6ca8-4622-4fde-ae22-6503cb11bfba_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2548,7 +2468,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/b4e/2757cd79-08e8-4187-be1e-40d357cddb4e_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2564,7 +2483,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/fba/7a8e6ca8-4622-4fde-ae22-6503cb11bfba_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2580,7 +2498,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2596,7 +2513,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/bfd/eb96bfaa-e199-414e-9165-410e7beccbfd_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2612,7 +2528,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2628,7 +2543,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/bfd/eb96bfaa-e199-414e-9165-410e7beccbfd_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2644,7 +2558,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/7af/cd85d480-3bf5-4857-bf08-e56c7cb8e7af_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2660,7 +2573,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/f9a/89e09ace-ab1d-4333-b6a2-59a7b062bf9a_RETINA_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2676,7 +2588,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/f9a/89e09ace-ab1d-4333-b6a2-59a7b062bf9a_RETINA_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2692,7 +2603,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2708,7 +2618,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/33e/f2572649-e60f-45bb-961f-4df93aad933e_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2724,7 +2633,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/33e/f2572649-e60f-45bb-961f-4df93aad933e_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2740,7 +2648,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4a9/01789263-50d6-4cac-93eb-271390bf74a9_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2756,7 +2663,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4a9/01789263-50d6-4cac-93eb-271390bf74a9_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2772,7 +2678,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2788,7 +2693,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4a9/01789263-50d6-4cac-93eb-271390bf74a9_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2804,7 +2708,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2820,7 +2723,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4a9/01789263-50d6-4cac-93eb-271390bf74a9_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2836,7 +2738,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/bf7/38fae77e-3031-4d60-b470-fa931f34ebf7_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2852,7 +2753,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/bf7/38fae77e-3031-4d60-b470-fa931f34ebf7_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2868,7 +2768,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2884,7 +2783,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2900,7 +2798,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/78c/9e66e641-5e9a-4a7e-ad5b-06cb92cdb78c_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2916,7 +2813,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/78c/9e66e641-5e9a-4a7e-ad5b-06cb92cdb78c_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2932,7 +2828,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2948,7 +2843,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2964,7 +2858,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/048/e949a18f-1f21-40d6-b077-836c8e31b048_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2980,7 +2873,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/c44/43c00528-3e83-4a38-a54f-6fe42c386c44_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -2996,7 +2888,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3012,7 +2903,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/eaa/e59c0220-f6d9-4bb9-81ed-b6f9eb292eaa_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3028,7 +2918,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3044,7 +2933,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/392/5dae3ee9-e34a-4e69-83a9-d6c811cd0392_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3060,7 +2948,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/c44/43c00528-3e83-4a38-a54f-6fe42c386c44_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3076,7 +2963,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/e99/c9c22310-f17d-42e6-ac20-39685ba2de99_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3092,7 +2978,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/eaa/e59c0220-f6d9-4bb9-81ed-b6f9eb292eaa_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3108,7 +2993,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/572/e0d2396e-a082-4921-9da4-f21a8ed81572_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3124,7 +3008,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3140,7 +3023,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/84d/d9230c39-f4c7-4bb2-b23d-95223b43784d_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3156,7 +3038,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/797/e47e5261-48bf-4d59-8d95-23d63ca8f797_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3172,7 +3053,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/0b9/549bb46f-60af-46d0-a1bf-7a484b7cf0b9_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3188,7 +3068,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/eaa/e59c0220-f6d9-4bb9-81ed-b6f9eb292eaa_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3204,7 +3083,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3220,7 +3098,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3236,7 +3113,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3252,7 +3128,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/ef2/0941884e-7cb2-4046-9b1b-5903bef44ef2_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3268,7 +3143,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3284,7 +3158,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": true,
     "descuento": null
   }
 },
@@ -3300,7 +3173,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/118/c39e1b47-ddf2-434e-a621-29862e8fd118_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3316,7 +3188,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3332,7 +3203,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/6d3/f5e6ba7a-0b14-46bc-82b8-bf80e49656d3_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3348,7 +3218,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/08c/9e5ad49f-d643-4628-a9a0-3fdc3c77f08c_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3364,7 +3233,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/c4c/1a87aac4-8474-4d55-a56a-6c7db7d0ac4c_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3380,7 +3248,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/a69/922ec8ef-99d6-4a3d-9797-b1ae64951a69_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3396,7 +3263,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/9b2/dda47b49-c2d0-49a9-8a84-62bd3689d9b2_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3412,7 +3278,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/d81/a2f8758b-3d00-4dbc-93b8-ab1d64ce7d81_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3428,7 +3293,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/aad/75092028-7b55-4ee4-b877-2d58d0f6faad_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3444,7 +3308,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/1b5/13311803-e4c2-46a8-9db5-4d3ca0ae41b5_TABLET_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3460,7 +3323,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/1b5/13311803-e4c2-46a8-9db5-4d3ca0ae41b5_TABLET_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3476,7 +3338,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3492,7 +3353,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/9b2/dda47b49-c2d0-49a9-8a84-62bd3689d9b2_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3508,7 +3368,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3524,7 +3383,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/a25/1ed6296b-90cf-4957-9523-3938db372a25_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3540,7 +3398,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3556,7 +3413,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/5b0/350abd01-1ecd-4987-8801-975f86f605b0_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3572,7 +3428,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3588,7 +3443,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/1b5/13311803-e4c2-46a8-9db5-4d3ca0ae41b5_TABLET_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3604,7 +3458,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3620,7 +3473,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/1b5/13311803-e4c2-46a8-9db5-4d3ca0ae41b5_TABLET_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3636,7 +3488,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/be6/6ac54bf5-cc97-4f6d-b22c-4352a3ac6be6_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3652,7 +3503,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/185/4f1c288a-3215-4f5a-9bd8-e9a8a1684185_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3668,7 +3518,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/5b0/350abd01-1ecd-4987-8801-975f86f605b0_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3684,7 +3533,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/a9b/9c7fbe7d-df0d-487f-823d-f5849e3bfa9b_RETINA_LANDSCAPE_16_9.jpg",
-    "destacado": true,
     "descuento": null
   }
 },
@@ -3700,7 +3548,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3716,7 +3563,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4a9/01789263-50d6-4cac-93eb-271390bf74a9_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3732,7 +3578,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4a9/01789263-50d6-4cac-93eb-271390bf74a9_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3748,7 +3593,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/144/8cec2ae7-d743-46a7-ab3d-b15ef9bbb144_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3764,7 +3608,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/144/8cec2ae7-d743-46a7-ab3d-b15ef9bbb144_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3780,7 +3623,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/144/8cec2ae7-d743-46a7-ab3d-b15ef9bbb144_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3796,7 +3638,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/144/8cec2ae7-d743-46a7-ab3d-b15ef9bbb144_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3812,7 +3653,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3828,7 +3668,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/b81/f1520fe6-3e82-4fb4-952e-038d58e79b81_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3844,7 +3683,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/84d/74619327-6dbc-40f7-b4ea-9d61a81a584d_TABLET_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3860,7 +3698,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/ea0/f0c3f8b4-268c-4365-95b8-b816d791eea0_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3876,7 +3713,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/84d/74619327-6dbc-40f7-b4ea-9d61a81a584d_TABLET_LANDSCAPE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3892,7 +3728,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/d5e/42461c06-31dc-4cf6-9ef8-0dd8f5e69d5e_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3908,7 +3743,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/d5e/42461c06-31dc-4cf6-9ef8-0dd8f5e69d5e_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3924,7 +3758,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3940,7 +3773,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/d5e/42461c06-31dc-4cf6-9ef8-0dd8f5e69d5e_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3956,7 +3788,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/d5e/42461c06-31dc-4cf6-9ef8-0dd8f5e69d5e_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3972,7 +3803,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/5de/ded2e220-eb4c-417f-8588-ad90e4f445de_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -3988,7 +3818,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/d64/b23ec3fb-ce92-42f6-9eb9-1b00b001ad64_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4004,7 +3833,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4020,7 +3848,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/d64/b23ec3fb-ce92-42f6-9eb9-1b00b001ad64_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4036,7 +3863,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/5c2/f4163891-fc14-498c-9c32-42b49aa945c2_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4052,7 +3878,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4068,7 +3893,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4084,7 +3908,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4100,7 +3923,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4116,7 +3938,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/eae/45bddbcc-4635-4f4b-8947-af39feff9eae_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4132,7 +3953,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/ef6/6d8164b7-b7a4-43b1-8b2e-3e5857becef6_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4148,7 +3968,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/ef6/6d8164b7-b7a4-43b1-8b2e-3e5857becef6_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": true,
     "descuento": null
   }
 },
@@ -4164,7 +3983,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4180,7 +3998,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/bfb/decaea87-e268-4ef6-83d7-ca8c7b4c2bfb_1302951_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4196,7 +4013,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/bfb/decaea87-e268-4ef6-83d7-ca8c7b4c2bfb_1302951_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4212,7 +4028,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/bfb/decaea87-e268-4ef6-83d7-ca8c7b4c2bfb_1302951_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4228,7 +4043,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/bfb/decaea87-e268-4ef6-83d7-ca8c7b4c2bfb_1302951_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4244,7 +4058,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4260,7 +4073,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/f5d/ed7145b8-24ea-4898-ae47-a668f27d3f5d_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4276,7 +4088,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/f5d/ed7145b8-24ea-4898-ae47-a668f27d3f5d_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4292,7 +4103,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4308,7 +4118,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/2d3/62d3766d-3e10-4ea4-b88b-2b83016b42d3_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4324,7 +4133,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/2d3/62d3766d-3e10-4ea4-b88b-2b83016b42d3_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4340,7 +4148,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4356,7 +4163,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/557/131f90ab-38b2-4743-a159-b14122899557_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4372,7 +4178,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/1f4/7f4809bd-a940-41a5-8e20-95252f92d1f4_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4388,7 +4193,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/557/131f90ab-38b2-4743-a159-b14122899557_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": true,
     "descuento": "20.00"
   }
 },
@@ -4404,7 +4208,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/e3a/8008674e-9f0e-4f5c-b42b-2e0ca95c9e3a_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4420,7 +4223,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/e3a/8008674e-9f0e-4f5c-b42b-2e0ca95c9e3a_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4436,7 +4238,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/1f4/7f4809bd-a940-41a5-8e20-95252f92d1f4_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4452,7 +4253,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4468,7 +4268,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/957/d2bd3a65-3193-43c1-b323-11affa11c957_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4484,7 +4283,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/557/131f90ab-38b2-4743-a159-b14122899557_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4500,7 +4298,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/957/d2bd3a65-3193-43c1-b323-11affa11c957_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4516,7 +4313,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/557/131f90ab-38b2-4743-a159-b14122899557_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": true,
     "descuento": null
   }
 },
@@ -4532,7 +4328,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/557/131f90ab-38b2-4743-a159-b14122899557_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4548,7 +4343,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/68a/ef926035-fa82-48fc-b0b0-de5b619bc68a_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4564,7 +4358,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/68a/ef926035-fa82-48fc-b0b0-de5b619bc68a_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4580,7 +4373,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/68a/ef926035-fa82-48fc-b0b0-de5b619bc68a_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4596,7 +4388,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/68a/ef926035-fa82-48fc-b0b0-de5b619bc68a_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4612,7 +4403,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/557/131f90ab-38b2-4743-a159-b14122899557_TABLET_LANDSCAPE_3_2.jpg",
-    "destacado": true,
     "descuento": "5.00"
   }
 },
@@ -4628,7 +4418,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4644,7 +4433,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/1f4/7f4809bd-a940-41a5-8e20-95252f92d1f4_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4660,7 +4448,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/b64/25a63c7b-e094-479c-a20a-105d8b9bab64_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4676,7 +4463,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/b64/25a63c7b-e094-479c-a20a-105d8b9bab64_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4692,7 +4478,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4f6/d1ce9beb-1096-4bd7-9f95-50655f0a74f6_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4708,7 +4493,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/4f6/d1ce9beb-1096-4bd7-9f95-50655f0a74f6_RECOMENDATION_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4724,7 +4508,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/f6e/59ccf555-3d07-4f68-9669-c198b4820f6e_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4740,7 +4523,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/f6e/59ccf555-3d07-4f68-9669-c198b4820f6e_RETINA_PORTRAIT_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4756,7 +4538,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/d94/be39dcd5-8e78-4f8a-a351-68d4db8ead94_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4772,7 +4553,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/2eb/bfd88bd8-4315-468d-8bb2-1df532dbe2eb_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4788,7 +4568,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/377/bafc9f48-a6c5-4ff1-ac32-26923d0f0377_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4804,7 +4583,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/1f4/7f4809bd-a940-41a5-8e20-95252f92d1f4_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4820,7 +4598,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/2eb/bfd88bd8-4315-468d-8bb2-1df532dbe2eb_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4836,7 +4613,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/30f/242ec525-6641-4364-bb7e-59e539d7f30f_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4852,7 +4628,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/30f/242ec525-6641-4364-bb7e-59e539d7f30f_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4868,7 +4643,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/11e/830785d3-cbda-41f0-8d6c-b1483266911e_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4884,7 +4658,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/11e/830785d3-cbda-41f0-8d6c-b1483266911e_SOURCE",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4900,7 +4673,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/94c/cb2779dc-c30c-41da-8abb-e4aa010f494c_CUSTOM.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4916,7 +4688,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/1f4/7f4809bd-a940-41a5-8e20-95252f92d1f4_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4932,7 +4703,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/1f4/7f4809bd-a940-41a5-8e20-95252f92d1f4_EVENT_DETAIL_PAGE_16_9.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4948,7 +4718,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_ARTIST_PAGE_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4964,7 +4733,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/15c/c948a618-23a4-4975-8d66-55a61edb215c_RETINA_PORTRAIT_3_2.jpg",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4980,7 +4748,6 @@
     "cupo_maximo": 100,
     "organizador": 2,
     "imagen": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLPM-M-dD7X35tvyL5yS4GOc8RlRA9I8dnUBiMC45pRe4ik672HV3Zr9iB6XhtYoIv_TOFZKYF3TBO39RE3lo_vQ",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -4996,7 +4763,6 @@
     "cupo_maximo": 100,
     "organizador": 3,
     "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQpOAoWgPGznBCLIrf9jc3WrS1wCT_QHbG1bkn0TmofqlBGqUi_PF1nfP-MwgWjoMplweDiIIJ8Cs9mAFLlrmsMZw",
-    "destacado": false,
     "descuento": null
   }
 },
@@ -5012,7 +4778,6 @@
     "cupo_maximo": 100,
     "organizador": 3,
     "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQpOAoWgPGznBCLIrf9jc3WrS1wCT_QHbG1bkn0TmofqlBGqUi_PF1nfP-MwgWjoMplweDiIIJ8Cs9mAFLlrmsMZw",
-    "destacado": true,
     "descuento": "20.00"
   }
 },
@@ -5028,8 +4793,7 @@
     "cupo_maximo": 100,
     "organizador": 2,
     "imagen": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTa5lFnMx8z6c2-GGfPjIe07_Dyd-QYvcjhfKGXD_oPKwWS7tOKPYNuLhBp1CTF3pF4PtL7Om_rerwxO2s3R3GLLw",
-    "destacado": false,
-    "descuento": null
+    "descuento": "40.00"
   }
 },
 {
@@ -5041,55 +4805,10 @@
     "fecha_reserva": "2025-04-27T21:47:57.879",
     "estado": "activa",
     "motivo_cancelacion": null,
-    "fecha_cancelacion": null
-  }
-},
-{
-  "model": "eventos.reserva",
-  "pk": 15,
-  "fields": {
-    "usuario": 32,
-    "evento": 84,
-    "fecha_reserva": "2025-04-30T01:12:39.498",
-    "estado": "cancelada",
-    "motivo_cancelacion": "Debido a que no puedo acudir ",
-    "fecha_cancelacion": "2025-05-01T18:56:42.569"
-  }
-},
-{
-  "model": "eventos.reserva",
-  "pk": 16,
-  "fields": {
-    "usuario": 32,
-    "evento": 93,
-    "fecha_reserva": "2025-05-01T18:59:25.097",
-    "estado": "cancelada",
-    "motivo_cancelacion": "no puedo acudir",
-    "fecha_cancelacion": "2025-05-01T18:59:46.388"
-  }
-},
-{
-  "model": "eventos.reserva",
-  "pk": 17,
-  "fields": {
-    "usuario": 32,
-    "evento": 93,
-    "fecha_reserva": "2025-05-01T19:22:43.397",
-    "estado": "cancelada",
-    "motivo_cancelacion": "dasdsadsadsasda",
-    "fecha_cancelacion": "2025-05-01T19:22:48.716"
-  }
-},
-{
-  "model": "eventos.reserva",
-  "pk": 18,
-  "fields": {
-    "usuario": 32,
-    "evento": 280,
-    "fecha_reserva": "2025-05-03T01:19:26.953",
-    "estado": "activa",
-    "motivo_cancelacion": null,
-    "fecha_cancelacion": null
+    "fecha_cancelacion": null,
+    "direccion": null,
+    "ciudad": null,
+    "notas": null
   }
 },
 {
@@ -5101,7 +4820,10 @@
     "fecha_reserva": "2025-05-03T11:58:49.151",
     "estado": "cancelada",
     "motivo_cancelacion": "dsadsadsasda",
-    "fecha_cancelacion": "2025-05-03T12:06:27.543"
+    "fecha_cancelacion": "2025-05-03T12:06:27.543",
+    "direccion": null,
+    "ciudad": null,
+    "notas": null
   }
 },
 {
@@ -5113,7 +4835,40 @@
     "fecha_reserva": "2025-05-04T13:37:32.945",
     "estado": "cancelada",
     "motivo_cancelacion": "No puedo acudir",
-    "fecha_cancelacion": "2025-05-04T13:37:50.644"
+    "fecha_cancelacion": "2025-05-04T13:37:50.644",
+    "direccion": null,
+    "ciudad": null,
+    "notas": null
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 21,
+  "fields": {
+    "usuario": 33,
+    "evento": 101,
+    "fecha_reserva": "2025-05-04T22:02:59.289",
+    "estado": "cancelada",
+    "motivo_cancelacion": "No puedo",
+    "fecha_cancelacion": "2025-05-04T23:52:06.484",
+    "direccion": null,
+    "ciudad": null,
+    "notas": null
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 22,
+  "fields": {
+    "usuario": 1,
+    "evento": 103,
+    "fecha_reserva": "2025-05-07T19:38:39.882",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": null,
+    "ciudad": null,
+    "notas": null
   }
 },
 {
@@ -5123,50 +4878,6 @@
     "reserva": 14,
     "fecha_pago": "2025-04-27T21:47:57.883",
     "total_pago": "267.00",
-    "metodo_pago": "PayPal",
-    "estado": "completado"
-  }
-},
-{
-  "model": "eventos.pago",
-  "pk": 14,
-  "fields": {
-    "reserva": 15,
-    "fecha_pago": "2025-04-30T01:12:39.501",
-    "total_pago": "14.40",
-    "metodo_pago": "PayPal",
-    "estado": "reembolsado"
-  }
-},
-{
-  "model": "eventos.pago",
-  "pk": 15,
-  "fields": {
-    "reserva": 16,
-    "fecha_pago": "2025-05-01T18:59:25.099",
-    "total_pago": "41.00",
-    "metodo_pago": "PayPal",
-    "estado": "reembolsado"
-  }
-},
-{
-  "model": "eventos.pago",
-  "pk": 16,
-  "fields": {
-    "reserva": 17,
-    "fecha_pago": "2025-05-01T19:22:43.400",
-    "total_pago": "41.00",
-    "metodo_pago": "PayPal",
-    "estado": "reembolsado"
-  }
-},
-{
-  "model": "eventos.pago",
-  "pk": 17,
-  "fields": {
-    "reserva": 18,
-    "fecha_pago": "2025-05-03T01:19:26.955",
-    "total_pago": "1000.00",
     "metodo_pago": "PayPal",
     "estado": "completado"
   }
@@ -5191,6 +4902,28 @@
     "total_pago": "1000.00",
     "metodo_pago": "PayPal",
     "estado": "pendiente_reembolso"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 20,
+  "fields": {
+    "reserva": 21,
+    "fecha_pago": "2025-05-04T22:02:59.291",
+    "total_pago": "59.00",
+    "metodo_pago": "PayPal",
+    "estado": "pendiente_reembolso"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 21,
+  "fields": {
+    "reserva": 22,
+    "fecha_pago": "2025-05-07T19:38:39.891",
+    "total_pago": "45.50",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
   }
 },
 {
@@ -5235,17 +4968,6 @@
     "puntuacion": 5,
     "comentario": "asdsa",
     "fecha": "2025-04-12T00:58:08.985"
-  }
-},
-{
-  "model": "eventos.resena",
-  "pk": 11,
-  "fields": {
-    "usuario": 25,
-    "evento": 248,
-    "puntuacion": 3,
-    "comentario": "poco duki tio n ome gusta nada",
-    "fecha": "2025-04-12T01:00:52.952"
   }
 },
 {
@@ -5348,6 +5070,39 @@
   }
 },
 {
+  "model": "eventos.resena",
+  "pk": 24,
+  "fields": {
+    "usuario": 33,
+    "evento": 101,
+    "puntuacion": 5,
+    "comentario": "no",
+    "fecha": "2025-05-04T22:02:50.227"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 26,
+  "fields": {
+    "usuario": 35,
+    "evento": 123,
+    "puntuacion": 2,
+    "comentario": "vaya cosa mas fea",
+    "fecha": "2025-05-17T21:36:20.539"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 27,
+  "fields": {
+    "usuario": 36,
+    "evento": 123,
+    "puntuacion": 5,
+    "comentario": "sdadsa",
+    "fecha": "2025-05-17T21:38:35.425"
+  }
+},
+{
   "model": "eventos.payout",
   "pk": 4,
   "fields": {
@@ -5432,15 +5187,75 @@
   }
 },
 {
-  "model": "eventos.reembolso",
-  "pk": 1,
+  "model": "eventos.payout",
+  "pk": 11,
   "fields": {
-    "pago": 16,
-    "usuario": 32,
-    "cantidad": "41.00",
-    "fecha": "2025-05-01T19:22:48.724",
-    "motivo": "dasdsadsadsasda",
-    "estado": "rechazado"
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "53.10",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-04T22:02:59.291",
+    "nota": "Pago manual por evento wave to earth - 0.03 tour"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 12,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "40.95",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-07T19:38:39.892",
+    "nota": "Pago manual por evento AURORA - What Happened To The Earth? Part 5"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 13,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "31.50",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-12T23:09:47.125",
+    "nota": "Pago manual por evento The Brian Jonestown Massacre - UK/EU Tour 2025"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 14,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "27.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-13T18:30:00.404",
+    "nota": "Pago manual por evento Tedua - EURO TOUR"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 15,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "31.50",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-13T18:51:32.604",
+    "nota": "Pago manual por evento The Brian Jonestown Massacre - UK/EU Tour 2025"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 16,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "24.30",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-13T22:53:59.213",
+    "nota": "Pago manual por evento La Femme - Rock Machine Tour"
   }
 },
 {
@@ -5468,11 +5283,15 @@
   }
 },
 {
-  "model": "authtoken.token",
-  "pk": "03003aa5c43b97e8464aca01587ff11b3c73ffb3",
+  "model": "eventos.reembolso",
+  "pk": 4,
   "fields": {
-    "user": 32,
-    "created": "2025-04-26T20:51:05.153"
+    "pago": 20,
+    "usuario": 33,
+    "cantidad": "59.00",
+    "fecha": "2025-05-04T23:52:06.498",
+    "motivo": "No puedo",
+    "estado": "pendiente"
   }
 },
 {
@@ -5481,6 +5300,22 @@
   "fields": {
     "user": 24,
     "created": "2025-04-06T19:55:24.979"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "228f9908a29a413880bf7b9edf382ed725af30be",
+  "fields": {
+    "user": 34,
+    "created": "2025-05-07T19:55:24.461"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "2c241f961f5b594a94e821c88ecaec8325df7683",
+  "fields": {
+    "user": 35,
+    "created": "2025-05-17T21:35:54.905"
   }
 },
 {
@@ -5521,6 +5356,14 @@
   "fields": {
     "user": 12,
     "created": "2025-04-27T20:07:36.213"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "990ae559fdaf05222c0720c49b5aaca8ae4e969a",
+  "fields": {
+    "user": 36,
+    "created": "2025-05-17T21:37:05.246"
   }
 },
 {
