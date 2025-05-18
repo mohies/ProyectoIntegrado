@@ -33,7 +33,7 @@ router_privado.register(r'reservas', ReservaViewSet)
 router_privado.register(r'pagos', PagoViewSet)
 router_privado.register(r'resenas', ResenaViewSet)
 router_privado.register(r'usuarios', UsuarioViewSet)
-router_privado.register(r'payouts', PayoutViewSet, basename='payouts')  # 👈 registra payouts
+router_privado.register(r'payouts', PayoutViewSet, basename='payouts')  # registra payouts
 
 urlpatterns = [
     path('', include(router_publico.urls)),      # Público (ver eventos)
