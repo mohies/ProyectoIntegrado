@@ -110,6 +110,7 @@ ng test
 ---
 
 
+
 ## 🚢 Despliegue en Docker y Producción
 
 Podemos desplegar Eventia fácilmente usando Docker, lo que nos permite ejecutar tanto el backend como el frontend de forma sencilla y segura en cualquier entorno.
@@ -173,5 +174,48 @@ Esto hará lo siguiente:
 Debemos rellenar correctamente el archivo `.env` en `Back/` antes de construir los contenedores, ya que contiene las credenciales necesarias para autenticación y envío de correos.
 
 ---
+
+
+### 🐳 ¿Cómo funcionan los Dockerfile y el docker-compose?
+
+#### Frontend (Angular + Nginx)
+
+- **Construcción:**  
+  Usamos una imagen oficial de Node.js (`node:20-alpine`) para compilar la aplicación Angular.  
+  1. Copiamos todo el código fuente al contenedor.
+  2. Instalamos Angular CLI y las dependencias del proyecto.
+  3. Construimos la aplicación Angular en modo desarrollo (puedes cambiar a producción si lo prefieres).
+  4. Mostramos el resultado del build para depuración.
+
+- **Despliegue:**  
+  Después de compilar, usamos una imagen ligera de Nginx para servir los archivos estáticos generados por Angular.  
+  1. Copiamos la carpeta generada (`/app/dist/front-app/browser`) al directorio de Nginx.
+  2. Copiamos nuestro archivo de configuración `nginx.conf` para personalizar el servidor.
+  3. Exponemos el puerto 80 para acceder a la aplicación desde el navegador.
+
+#### Backend (Django)
+
+- **Construcción:**  
+  Usamos una imagen oficial de Python (`python:3.12`).  
+  1. Copiamos todo el código fuente del backend al contenedor.
+  2. Instalamos las dependencias de Python usando `requirements.txt`.
+  3. Ejecutamos las migraciones de la base de datos para preparar el entorno.
+  4. Recolectamos los archivos estáticos de Django.
+  5. Copiamos un script de entrada (`entrypoint.sh`) y le damos permisos de ejecución.
+  6. Exponemos el puerto 8000 para acceder a la API.
+
+- **Ejecución:**  
+  El contenedor arranca ejecutando el script `entrypoint.sh`, que normalmente lanza el servidor de Django.
+
+#### Orquestación con docker-compose
+
+- El archivo `docker-compose.yml` define ambos servicios:
+  - **backend:** Construye la imagen de Django, expone el puerto 8000 y monta los volúmenes necesarios para la base de datos y los archivos estáticos.
+  - **frontend:** Construye la imagen de Angular/Nginx y expone el puerto 4200.
+- Ambos servicios están en la misma red interna (`redapp`) para que puedan comunicarse.
+- Podemos levantar todo el entorno con un solo comando:  
+  ```bash
+  docker compose up --build
+  ```
 
 Con estos pasos, tendremos Eventia funcionando en producción de forma sencilla y segura usando Docker.
