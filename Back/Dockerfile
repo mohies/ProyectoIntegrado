@@ -12,10 +12,12 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 RUN python manage.py migrate
 
 # Carga datos iniciales (opcional pero útil si lo quieres hacer en build)
-# RUN python manage.py loaddata datos_completos.json   ❌ Evita esto aquí (mejor en runtime)
-
+# RUN python manage.py loaddata datos_completos.json  
 # Recolecta estáticos (repetido pero no pasa nada)
 RUN python manage.py collectstatic --noinput
+
+# Asegurar la imagen por defecto esté incluida
+COPY ./media/perfiles/default-user.png /app/media/perfiles/default-user.png
 
 COPY datos_completos.json /app/datos_completos.json
 
