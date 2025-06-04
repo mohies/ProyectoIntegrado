@@ -1,8 +1,9 @@
 import requests
 from datetime import datetime
 from .models import Evento, Organizador
-
-
+import os
+from django.core.files import File
+from django.conf import settings
 # Función para importar eventos desde la API pública de Ticketmaster.
 # Recorre las páginas de resultados, extrae los datos necesarios (título, fecha, imagen, precio, etc.)
 # y los guarda como nuevos objetos de modelo Evento asociados al primer organizador encontrado.
@@ -64,3 +65,10 @@ def importar_eventos_ticketmaster():
         print(f"✅ Página {page + 1} importada ({len(eventos)} eventos).")
         page += 1
 
+
+
+def asignar_foto_por_defecto(user):
+    ruta = os.path.join(settings.MEDIA_ROOT, 'perfiles', 'default-user.png')
+    if os.path.exists(ruta):
+        with open(ruta, 'rb') as f:
+            user.foto.save('default-user.png', File(f), save=True)

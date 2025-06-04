@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django_bootstrap5',
     'django_bootstrap_icons',
     'rest_framework',
+    'django_rest_passwordreset',
     'rest_framework.authtoken',
     'dj_rest_auth',
     'allauth',
@@ -242,3 +243,5 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # tu contraseña o 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
+#  URL base del frontend (se usa en emails de recuperación de contraseña)
+FRONTEND_BASE_URL = os.environ.get('FRONTEND_BASE_URL', 'http://localhost:4200')

@@ -1,35 +1,51 @@
 <!-- BOTÓN FLOTANTE PARA ABRIR EL CHAT -->
 <button class="chatbot-btn" (click)="toggleChat()">
-    <i class="bi bi-chat-dots-fill"></i>
-  </button>
-  
-  <!-- PANEL DEL CHAT -->
-  @if (abierto) {
-    <div class="chatbot-panel shadow">
-      <!-- CABECERA -->
-      <div class="chatbot-header bg-primary text-white p-2 d-flex justify-content-between align-items-center">
-        <span>Asistente EVENTIA</span>
-        <button class="btn-close btn-close-white btn-sm" (click)="toggleChat()"></button>
-      </div>
-  
-      <!-- MENSAJES (sin scroll) -->
-      <div class="chatbot-body p-2">
-        @for (msg of mensajes; track msg) {
-          <div class="mb-2" [class.text-end]="msg.de === 'usuario'">
-            <span class="badge rounded-pill" [class.bg-secondary]="msg.de === 'bot'" [class.bg-success]="msg.de === 'usuario'">
-              {{ msg.texto }}
-            </span>
-          </div>
-        }
-      </div>
-  
-      <!-- INPUT -->
-      <div class="chatbot-footer p-2 border-top">
-        <form (submit)="enviar(); $event.preventDefault()" class="d-flex">
-          <input type="text" class="form-control me-2" [(ngModel)]="mensaje" name="mensaje" placeholder="Escribe tu duda..." />
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-      </div>
+  <i class="bi bi-chat-dots-fill"></i>
+</button>
+
+<!-- PANEL DEL CHAT -->
+@if (abierto) {
+<div class="chatbot-panel shadow">
+  <!-- CABECERA -->
+  <div class="chatbot-header bg-primary text-white p-2 d-flex justify-content-between align-items-center">
+    <span>Asistente EVENTIA</span>
+    <button class="btn-close btn-close-white btn-sm" (click)="toggleChat()"></button>
+  </div>
+
+  <!-- CUERPO DEL CHAT -->
+  <div class="chatbot-body" #chatBody>
+    <!-- MENSAJES -->
+    @for (msg of mensajes; track msg) {
+    <div class="mb-2" [class.text-end]="msg.de === 'usuario'">
+      <span class="badge rounded-pill" [class.bg-secondary]="msg.de === 'bot'"
+        [class.bg-success]="msg.de === 'usuario'">
+        {{ msg.texto }}
+      </span>
     </div>
-  }
-  
+    }
+
+    <!-- OPCIONES SUGERIDAS -->
+    @if (mostrarSugerencias) {
+    <div class="mt-2">
+      @for (opcion of sugerencias; track opcion) {
+      <button class="btn btn-sm btn-outline-primary me-2 mb-2" (click)="usarSugerencia(opcion)">
+        {{ opcion }}
+      </button>
+      }
+    </div>
+    }
+
+    <!-- Ancla para scroll automático -->
+    <div #scrollAnchor></div>
+  </div>
+
+  <!-- INPUT DEL USUARIO -->
+  <div class="chatbot-footer p-2 border-top">
+    <form (submit)="enviar(); $event.preventDefault()" class="d-flex">
+      <input type="text" class="form-control me-2" [(ngModel)]="mensaje" name="mensaje"
+        placeholder="Escribe tu duda..." />
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</div>
+}

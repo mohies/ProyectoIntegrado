@@ -58,6 +58,7 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('token');
+    sessionStorage.clear(); // Limpia la sesión, incluida la bandera del modal
     this.usuarioSubject.next(null);
     this.router.navigate(['/']); // Redirige a la página de inicio
   }

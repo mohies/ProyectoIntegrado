@@ -256,3 +256,63 @@ Debemos rellenar correctamente el archivo `.env` en `Back/` antes de construir l
   ```
 
 Con estos pasos, tendremos Eventia funcionando en producción de forma sencilla y segura usando Docker.
+
+---
+
+## 🚀 Despliegue en Producción con Imágenes Docker en AWS
+
+Para desplegar Eventia en producción (por ejemplo, en AWS), podemos usar un archivo `docker-compose.yml` que utilice imágenes ya construidas y subidas a Docker Hub. Así simplificamos el despliegue y aceleramos el arranque de los servicios.
+
+### 1. Ejemplo de docker-compose.yml para producción
+
+Crea un archivo llamado `docker-compose.yml` con el siguiente contenido:
+
+```yaml
+version: '3.8'
+
+services:
+  backend:
+    image: mohies/proyectointegrado:backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./media:/app/media
+      - ./staticfiles:/app/staticfiles
+      - ./Back/.env:/app/.env  # Monta el .env en la raíz del backend
+    networks:
+      - redapp
+
+  frontend:
+    image: mohies/proyectointegrado:frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - redapp
+
+networks:
+  redapp:
+```
+
+### 2. Preparar el archivo .env para el backend
+
+Debemos crear una carpeta llamada `Back` en la raíz del proyecto y dentro de ella colocar el archivo `.env` con nuestras credenciales.  
+Puedes partir del archivo de plantilla `.env.plantilla` que ya está en el repositorio y rellenar los datos con tus credenciales de Google y correo.
+
+**Pasos:**
+1. Crea la carpeta si no existe:
+   ```bash
+   mkdir Back
+   ```
+2. Copia la plantilla y renómbrala:
+   ```bash
+   cp Back/.env.plantilla Back/.env
+   ```
+3. Edita `Back/.env` y pon tus credenciales reales.
+
+> ⚠️ **Importante:** El archivo `.env` nunca debe subirse a GitHub, ya que contiene información sensible.
+
+---
+
+Con este método, podemos desplegar Eventia en producción en AWS (o cualquier otro servidor) de forma rápida y segura, usando imágenes Docker ya preparadas y nuestro propio archivo de configuración.

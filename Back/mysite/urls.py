@@ -15,6 +15,8 @@ urlpatterns = [
     path('api/v1/', include('dj_rest_auth.urls')),
 
 
+
+
     #  Google login directo (sin prefijo)
     path('accounts/', include('allauth.urls')),
     

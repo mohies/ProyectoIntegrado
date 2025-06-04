@@ -1,25 +1,58 @@
 <table class="table">
-    <thead>
-      <tr>
-        <th>Usuario</th>
-        <th>Email</th>
-        <th>Rol</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for (u of usuarios; track u.id) {
-        <tr>
-          <td>{{ u.username }}</td>
-          <td>{{ u.email }}</td>
-          <td>{{ u.rol }}</td>
-          <td>
-            <button class="btn btn-danger btn-sm" (click)="eliminarUsuario(u.id)">
-              Eliminar
-            </button>
-          </td>
-        </tr>
-      }
-    </tbody>
-  </table>
-  
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Email</th>
+      <th>Rol</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (u of usuarios; track u.id) {
+    <tr>
+      <td>{{ u.username }}</td>
+      <td>{{ u.email }}</td>
+      <td>{{ u.rol }}</td>
+      <td>
+        <button class="btn btn-danger btn-sm" (click)="abrirModalEliminar(u)">
+          Eliminar
+        </button>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+<!-- Modal de confirmación para eliminar usuario -->
+@if (usuarioAEliminar) {
+<div class="modal" style="
+  position: fixed;
+  z-index: 1050;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto; 
+">
+  <div class="modal-dialog" style="
+         background: white;
+         padding: 20px;
+         border-radius: 8px;
+         max-width: 400px;
+         margin-left: auto;
+         margin-right: auto;
+         pointer-events: auto;
+         z-index: 2000;">
+    <h5>¿Confirmar eliminación?</h5>
+    <p>¿Seguro que deseas eliminar al usuario <strong>{{ usuarioAEliminar?.username }}</strong>?</p>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-secondary me-2" (click)="cerrarModal()">Cancelar</button>
+      <button class="btn btn-danger" (click)="confirmarEliminacion()">Eliminar</button>
+    </div>
+  </div>
+</div>
+}

@@ -63,7 +63,7 @@ urlpatterns = [
     path('reservas-por-evento/<int:evento_id>/', views.reservas_por_evento, name='reservas-por-evento'),
     path('organizador/resumen/', views.resumen_organizador, name='resumen-organizador'),
     path('organizador/payouts/', views.mis_payouts, name='mis-payouts'),
-    path('descargar-entrada/<int:reserva_id>/', views.generar_pdf_reserva)
-
+    path('descargar-entrada/<int:reserva_id>/', views.generar_pdf_reserva),
+    path('password-reset/', include('django_rest_passwordreset.urls', namespace='password_reset')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -2,71 +2,72 @@
   <h2 class="text-center mb-4">🎟️ Mis Reservas</h2>
 
   @if (mensaje()) {
-  <div class="alert alert-info text-center">{{ mensaje() }}</div>
+    <div class="alert alert-info text-center">{{ mensaje() }}</div>
   }
 
   @if (proximas().length > 0) {
-  <h4 class="mb-3 text-success">✅ Próximas Reservas</h4>
-  @for (r of proximas(); track r.id) {
-  <div class="card mb-3 shadow-sm">
-    <div class="card-body">
-      <h5 class="fw-bold">{{ r.evento?.titulo }}</h5>
-      <p>📍 {{ r.evento?.ubicacion }}</p>
-      <p>📅 {{ r.evento?.fecha | date:'fullDate' }} - {{ r.evento?.fecha | date:'shortTime' }}</p>
+    <h4 class="mb-3 text-success">✅ Próximas Reservas</h4>
+    @for (r of proximas(); track r.id) {
+      <div class="card mb-3 shadow-sm">
+        <div class="card-body">
+          <h5 class="fw-bold">{{ r.evento?.titulo }}</h5>
+          <p>📍 {{ r.evento?.ubicacion }}</p>
+          <p>📅 {{ r.evento?.fecha | date:'fullDate' }} - {{ r.evento?.fecha | date:'shortTime' }}</p>
 
-      <div class="d-flex flex-wrap gap-2 mt-3">
-        <button class="btn btn-outline-danger btn-sm" (click)="seleccionarReserva(r.id)">
-          ❌ Cancelar reserva
-        </button>
-        <button class="btn btn-outline-primary btn-sm" (click)="descargarEntradaPDF(r.id)">
-          🎟️ Descargar entrada
-        </button>
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            @if (!dentroDe24Horas(r.evento?.fecha)) {
+              <button class="btn btn-outline-danger btn-sm" (click)="seleccionarReserva(r.id)">
+                ❌ Cancelar reserva
+              </button>
+            }
+            <button class="btn btn-outline-primary btn-sm" (click)="descargarEntradaPDF(r.id)">
+              🎟️ Descargar entrada
+            </button>
+          </div>
 
+          @if (reservaSeleccionada() === r.id) {
+            <div class="mt-3">
+              <textarea [(ngModel)]="motivo" class="form-control" rows="2" placeholder="Motivo de cancelación..."></textarea>
+              <button class="btn btn-danger mt-2 btn-sm" (click)="cancelarReserva()">✅ Confirmar cancelación</button>
+            </div>
+          }
+        </div>
       </div>
-
-      @if (reservaSeleccionada() === r.id) {
-      <div class="mt-3">
-        <textarea [(ngModel)]="motivo" class="form-control" rows="2" placeholder="Motivo de cancelación..."></textarea>
-        <button class="btn btn-danger mt-2 btn-sm" (click)="cancelarReserva()">✅ Confirmar cancelación</button>
-      </div>
-      }
-    </div>
-  </div>
-  }
+    }
   }
 
   @if (historial().length > 0) {
-  <h4 class="mt-5 mb-3 text-muted">🕓 Historial de Reservas</h4>
-  @for (r of historial(); track r.id) {
-  <div class="card mb-3 border border-light-subtle">
-    <div class="card-body">
-      <h5 class="fw-bold">{{ r.evento?.titulo }}</h5>
-      <p>📍 {{ r.evento?.ubicacion }}</p>
-      <p>📅 {{ r.evento?.fecha | date:'fullDate' }} - {{ r.evento?.fecha | date:'shortTime' }}</p>
-      <p [ngClass]="{
-            'text-muted': eventoPasado(r.evento?.fecha),
-            'text-danger': r.estado === 'cancelada'
-          }">
-        Estado:
-        @if (r.estado === 'cancelada') {
-        Cancelada
-        } @else {
-        Evento pasado
-        }
-      </p>
+    <h4 class="mt-5 mb-3 text-muted">🕓 Historial de Reservas</h4>
+    @for (r of historial(); track r.id) {
+      <div class="card mb-3 border border-light-subtle">
+        <div class="card-body">
+          <h5 class="fw-bold">{{ r.evento?.titulo }}</h5>
+          <p>📍 {{ r.evento?.ubicacion }}</p>
+          <p>📅 {{ r.evento?.fecha | date:'fullDate' }} - {{ r.evento?.fecha | date:'shortTime' }}</p>
+          <p [ngClass]="{
+                'text-muted': eventoPasado(r.evento?.fecha),
+                'text-danger': r.estado === 'cancelada'
+              }">
+            Estado:
+            @if (r.estado === 'cancelada') {
+              Cancelada
+            } @else {
+              Evento pasado
+            }
+          </p>
 
-      @if (r.estado === 'cancelada') {
-      <p class="text-muted">
-        💸 Reembolso:
-        @if (r.reembolso_estado) {
-        <strong>{{ r.reembolso_estado }}</strong> — {{ r.reembolso_cantidad }} €
-        } @else {
-        <em>No registrado aún</em>
-        }
-      </p>
-      }
-    </div>
-  </div>
-  }
+          @if (r.estado === 'cancelada') {
+            <p class="text-muted">
+              💸 Reembolso:
+              @if (r.reembolso_estado) {
+                <strong>{{ r.reembolso_estado }}</strong> — {{ r.reembolso_cantidad }} €
+              } @else {
+                <em>No registrado aún</em>
+              }
+            </p>
+          }
+        </div>
+      </div>
+    }
   }
 </section>

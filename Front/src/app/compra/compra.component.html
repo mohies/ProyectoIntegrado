@@ -8,9 +8,9 @@
     </div>
   }
 
-  <div class="row g-4">
+  <div class="row g-4 flex-column-reverse flex-md-row">
     <!-- FORMULARIO -->
-    <div class="col-md-6">
+    <div class="col-12 col-md-6">
       <form [formGroup]="form">
         <div class="mb-3">
           <label class="form-label">Correo electrónico</label>
@@ -42,15 +42,24 @@
         </div>
       </form>
 
+      <!-- AVISO DE POLÍTICA DE CANCELACIÓN -->
+      <div class="alert alert-info mt-4">
+        <strong>📢 Aviso:</strong> Todas las compras realizadas tienen un periodo de <strong>24 horas</strong> para ser canceladas desde el momento de la reserva.
+        <br />
+        La solicitud de cancelación deberá incluir una justificación. Según esta, se evaluará si procede un <strong>reembolso completo</strong>, <strong>parcial</strong> o si es <strong>rechazado</strong>.
+      </div>
+
       <!-- PAYPAL BUTTON RENDER TARGET -->
       <div id="paypal-button-container" class="mt-4"></div>
+
+      <!-- BOTÓN DE SIMULACIÓN PARA DEV -->
+      <button class="btn btn-outline-success w-100 mt-3" (click)="simularCompra()">
+        🧪 Simular Compra (dev)
+      </button>
     </div>
-    <button class="btn btn-outline-success w-100 mt-3" (click)="simularCompra()">
-      🧪 Simular Compra (dev)
-    </button>
 
     <!-- RESUMEN DEL PEDIDO -->
-    <div class="col-md-6">
+    <div class="col-12 col-md-6">
       <div class="card p-3 shadow-sm">
         <h5 class="text-center fw-bold mb-3">Resumen del pedido</h5>
 

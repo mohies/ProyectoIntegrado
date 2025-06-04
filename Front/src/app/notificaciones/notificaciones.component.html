@@ -1,0 +1,32 @@
+<div class="notificaciones-wrapper p-3 border bg-light rounded shadow-sm">
+    <h5 class="mb-3">🔔 Notificaciones</h5>
+
+    @if (notificaciones().length === 0) {
+    <p class="text-muted">No hay notificaciones aún.</p>
+    }
+
+    <ul class="list-group">
+        @for (n of notificaciones(); track n; let i = $index) {
+        <li class="list-group-item d-flex justify-content-between align-items-start"
+            [class.bg-warning-subtle]="!n.leido">
+            <div class="me-3">
+                <div>
+                    <strong>{{ n.tipo | titlecase }}</strong>
+                    <span class="text-muted small ms-2">{{ n.fecha | date:'short' }}</span>
+                </div>
+                <div>{{ n.mensaje }}</div>
+            </div>
+
+            @if (!n.leido) {
+            <button class="btn btn-sm btn-outline-primary" (click)="marcarLeido(i)">Marcar leído</button>
+            }
+        </li>
+        }
+
+    </ul>
+
+
+    <div class="text-end mt-3">
+        <button class="btn btn-sm btn-danger" (click)="limpiarTodo()">🗑️ Limpiar todas</button>
+    </div>
+</div>

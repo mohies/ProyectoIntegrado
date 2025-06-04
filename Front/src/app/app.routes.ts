@@ -16,7 +16,6 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { UsuariosAdminComponent } from './admin/usuarios/usuarios.component';
 import { EventosAdminComponent } from './admin/eventos/eventos.component';
 import { ResenasAdminComponent } from './admin/resenas/resenas.component';
-import { PagosAdminComponent } from './admin/pagos/pagos.component';
 import { PayoutsComponent } from './admin/payouts/payouts.component';
 import { MisreservasComponent } from './misreservas/misreservas.component';
 import { ReembolsoComponent } from './admin/reembolso/reembolso.component';
@@ -24,6 +23,10 @@ import { MisEventosComponent } from './organizador/mis-eventos/mis-eventos.compo
 import { VerReservasComponent } from './organizador/ver-reservas/ver-reservas.component';
 import { ResumenOrganizadorComponent } from './organizador/resumen-organizador/resumen-organizador.component';
 import { MisPayoutsComponent } from './organizador/mis-payouts/mis-payouts.component';
+import { CalendarioEventosComponent } from './calendarioeventos/calendarioeventos.component';
+import { RecuperarPasswordComponent } from './login/recuperar-password.component';
+import { ResetearPasswordComponent } from './login/resetear-password.component';
+
 
 
 export const routes: Routes = [
@@ -43,7 +46,6 @@ export const routes: Routes = [
   { path: 'admin/usuarios', component: UsuariosAdminComponent },
   { path: 'admin/eventos', component: EventosAdminComponent },
   { path: 'admin/resenas', component: ResenasAdminComponent },
-  { path: 'admin/pagos', component: PagosAdminComponent },
   { path: 'admin/payouts', component: PayoutsComponent },
   { path: 'admin/reembolsos', component: ReembolsoComponent },
   { path: 'mis-reservas', component: MisreservasComponent },
@@ -51,6 +53,10 @@ export const routes: Routes = [
   { path: 'organizador/reservas/:id', component: VerReservasComponent },
   { path: 'organizador/resumen', component: ResumenOrganizadorComponent },
   { path: 'organizador/pagos', component: MisPayoutsComponent },
+  { path: 'calendario', component: CalendarioEventosComponent },
+  { path: 'recuperar-password', component: RecuperarPasswordComponent },
+  { path: 'resetear-password', component: ResetearPasswordComponent },
+
   { path: '**', redirectTo: '' },
 
 ];

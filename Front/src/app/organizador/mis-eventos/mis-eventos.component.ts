@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';  // Necesario para ngModel
+import { FormsModule } from '@angular/forms';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -18,14 +18,15 @@ export class MisEventosComponent implements OnInit {
   editarId: number | null = null;
   nuevoDescuento: number | null = null;
 
+  mensaje: string = '';
+  tipoMensaje: 'success' | 'error' | '' = '';
+
   constructor(private http: HttpClient) {}
-    // Se ejecuta al iniciar el componente. Llama a cargarEventos para obtener los eventos del organizador.
 
   ngOnInit(): void {
     this.cargarEventos();
   }
-    // Realiza una petición GET autenticada para obtener los eventos del usuario actual.
-    // Almacena la respuesta en el array 'eventos' y gestiona el estado de carga.
+
   cargarEventos() {
     this.cargando = true;
     const token = localStorage.getItem('token');
@@ -37,38 +38,56 @@ export class MisEventosComponent implements OnInit {
         this.cargando = false;
       },
       error: () => {
-        alert('❌ Error al cargar tus eventos');
+        this.mostrarMensaje('❌ Error al cargar tus eventos', 'error');
         this.cargando = false;
       }
     });
   }
-    // Activa el modo edición para un evento específico, asignando el ID y el valor actual del descuento.
 
   activarEdicion(id: number, actual: number | null) {
     this.editarId = id;
     this.nuevoDescuento = actual ?? null;
   }
- // Valida el nuevo descuento (debe ser entre 0 y 100).
-    // Si es válido, realiza una petición PATCH autenticada para actualizar el descuento del evento.
-    // Luego recarga la lista de eventos.
-  guardarDescuento(eventoId: number) {
+
+  guardarEdicion(evento: any) {
     if (this.nuevoDescuento === null || this.nuevoDescuento < 0 || this.nuevoDescuento > 100) {
-      alert('⚠️ Descuento inválido (0-100)');
+      this.mostrarMensaje('⚠️ Descuento inválido (0-100)', 'error');
       return;
     }
 
     const token = localStorage.getItem('token');
     const headers = new HttpHeaders({ Authorization: `Token ${token}` });
 
-    this.http.patch(environment.apiUrl + `gestion-eventos/${eventoId}/`, {
-      descuento: this.nuevoDescuento
-    }, { headers }).subscribe({
+    const payload = {
+      titulo: evento.titulo,
+      descripcion: evento.descripcion,
+      fecha: evento.fecha,
+      ubicacion: evento.ubicacion,
+      cupo_maximo: evento.cupo_maximo,
+      descuento: this.nuevoDescuento,
+      imagen: evento.imagen
+    };
+
+    this.http.patch(environment.apiUrl + `gestion-eventos/${evento.id}/`, payload, { headers }).subscribe({
       next: () => {
-        alert('✅ Descuento actualizado');
+        this.mostrarMensaje('✅ Evento actualizado correctamente', 'success');
         this.editarId = null;
         this.cargarEventos();
       },
-      error: () => alert('❌ Error al actualizar el descuento')
+      error: () => this.mostrarMensaje('❌ Error al actualizar el evento', 'error')
     });
+  }
+
+  esFuturo(fecha: string): boolean {
+    return new Date(fecha) > new Date();
+  }
+
+  mostrarMensaje(texto: string, tipo: 'success' | 'error') {
+    this.mensaje = texto;
+    this.tipoMensaje = tipo;
+    setTimeout(() => {
+      this.mensaje = '';
+      this.tipoMensaje = '';
+    }, 4000);
   }
 }

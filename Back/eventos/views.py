@@ -1,6 +1,8 @@
 from datetime import datetime
 from django.shortcuts import render
 from rest_framework import viewsets
+
+from eventos.utils import asignar_foto_por_defecto
 from .models import Evento, Reembolso, Reserva, Pago, Resena,Payout
 from .serializers import EventoSerializer, PayoutSerializer, ReservaSerializer, PagoSerializer, ResenaSerializer
 from .permissions import EsOrganizador, EsUsuario,EsAdministrador,EsOrganizadorOAdministrador
@@ -16,7 +18,19 @@ def index(request):
 class EventoPrivadoViewSet(viewsets.ModelViewSet):
     queryset = Evento.objects.all()
     serializer_class = EventoSerializer
-    permission_classes = [IsAuthenticated, EsOrganizador]
+    permission_classes = [IsAuthenticated, EsOrganizadorOAdministrador]
+
+    def partial_update(self, request, *args, **kwargs):
+        evento = self.get_object()
+        if evento.fecha < timezone.now():
+            return Response({'error': 'No se puede editar un evento que ya ocurrió.'}, status=status.HTTP_400_BAD_REQUEST)
+        return super().partial_update(request, *args, **kwargs)
+    def destroy(self, request, *args, **kwargs):
+        if not request.user.is_staff:
+            return Response({'error': 'Solo un administrador puede eliminar eventos.'},
+                            status=status.HTTP_403_FORBIDDEN)
+        return super().destroy(request, *args, **kwargs)
+
 # Vista pública para listar eventos accesibles sin autenticación; solo permite lectura de eventos futuros.
 class EventoPublicoViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Evento.objects.all()
@@ -280,6 +294,9 @@ class GoogleLoginAPIView(APIView):
                     'rol': None
                 }
             )
+            if created:
+                asignar_foto_por_defecto(user)
+
 
             user.backend = 'django.contrib.auth.backends.ModelBackend'
             user.save()
@@ -365,6 +382,11 @@ class UsuarioViewSet(viewsets.ModelViewSet):
                 grupo = None
                 if str(nuevo_rol) == '2':
                     grupo = Group.objects.get(name="Organizadores")
+
+                    #  Crear objeto Organizador si no existe
+                    from eventos.models import Organizador
+                    Organizador.objects.get_or_create(usuario=instance)
+
                 elif str(nuevo_rol) == '3':
                     grupo = Group.objects.get(name="Usuarios")
 
@@ -377,6 +399,7 @@ class UsuarioViewSet(viewsets.ModelViewSet):
                 print(f"⚠️ Grupo no encontrado para rol: {nuevo_rol}")
 
         return Response(serializer.data)
+
 
 
 from django.contrib.auth import authenticate
@@ -521,9 +544,9 @@ def procesar_compra(request):
         return Response({'error': 'Compra inválida. Debes incluir eventos y total mayor a 0.'}, status=status.HTTP_400_BAD_REQUEST)
 
     try:
-        with transaction.atomic():  #  Transacción segura
+        with transaction.atomic():
             for item in items:
-                evento = Evento.objects.select_for_update().get(pk=item['evento_id'])  #  bloquea evento evitando que se vendan por ejemplo si quedan 2 entradas y se compran a la vez desde usuario A y B pues que no haya un problema de concurrencia
+                evento = Evento.objects.select_for_update().get(pk=item['evento_id'])
                 cantidad = int(item.get('cantidad', 1))
 
                 reservas_activas = Reserva.objects.filter(evento=evento, estado='activa').count()
@@ -535,39 +558,43 @@ def procesar_compra(request):
                         status=status.HTTP_400_BAD_REQUEST
                     )
 
-                # Crear reserva
-                reserva = Reserva.objects.create(
-                usuario=usuario,
-                evento=evento,
-                estado='activa',
-                fecha_reserva=timezone.now(),
-                direccion=direccion,
-                ciudad=ciudad,
-                notas=notas
-                )
-
-                # Precio con descuento si aplica
                 precio_unitario = evento.precio_con_descuento if evento.oferta_activa else evento.precio
-                total_pago = precio_unitario * Decimal(cantidad)
 
-                Pago.objects.create(
-                    reserva=reserva,
-                    total_pago=total_pago,
-                    metodo_pago=metodo,
-                    estado='completado'
-                )
+                total_pago_evento = Decimal(0)
 
-                # Crear payout (pendiente)
+                for _ in range(cantidad):
+                    reserva = Reserva.objects.create(
+                        usuario=usuario,
+                        evento=evento,
+                        estado='activa',
+                        fecha_reserva=timezone.now(),
+                        direccion=direccion,
+                        ciudad=ciudad,
+                        notas=notas
+                    )
+
+                    total_pago = precio_unitario
+                    total_pago_evento += total_pago
+
+                    Pago.objects.create(
+                        reserva=reserva,
+                        total_pago=total_pago,
+                        metodo_pago=metodo,
+                        estado='completado'
+                    )
+
+                #  Solo un payout consolidado por evento
                 porcentaje_organizador = Decimal('0.90')
-                cantidad_organizador = total_pago * porcentaje_organizador
+                cantidad_organizador = total_pago_evento * porcentaje_organizador
 
                 Payout.objects.create(
                     organizador=evento.organizador,
                     email=evento.organizador.usuario.email,
                     cantidad=cantidad_organizador,
                     estado='pendiente',
-                    nota=f"Pago manual por evento {evento.titulo}"
+                    nota=f"Pago por evento {evento.titulo} (x{cantidad} entradas)"
                 )
+
 
         return Response({'mensaje': 'Compra y payouts registrados correctamente ✅'}, status=status.HTTP_201_CREATED)
 
@@ -624,7 +651,7 @@ def cancelar_reserva(request, reserva_id):
         # Marcar pago como pendiente de reembolso
         try:
             pago = reserva.pago
-            pago.estado = 'pendiente_reembolso'
+ 
             pago.save()
 
             # Registrar solicitud de reembolso
@@ -655,34 +682,66 @@ def listar_reembolsos(request):
             'cantidad': str(r.cantidad),
             'fecha': r.fecha,
             'motivo': r.motivo,
-            'pago_id': r.pago.id if r.pago else None
+            'pago_id': r.pago.id if r.pago else None,
+            'estado': r.estado  
         } for r in reembolsos
     ]
     return Response(data)
-
 
 # Permite al administrador actualizar el estado de un reembolso a aprobado, rechazado o parcial.
 @api_view(['PATCH'])
 @permission_classes([IsAuthenticated, EsAdministrador])
 def actualizar_estado_reembolso(request, reembolso_id):
     try:
-        reembolso = Reembolso.objects.get(pk=reembolso_id)
+        reembolso = Reembolso.objects.select_related('pago', 'pago__reserva', 'pago__reserva__evento', 'usuario').get(pk=reembolso_id)
         nuevo_estado = request.data.get('estado')
 
         if nuevo_estado not in ['aprobado', 'rechazado', 'parcial']:
             return Response({'error': 'Estado inválido'}, status=400)
 
+        if reembolso.estado in ['aprobado', 'parcial']:
+            return Response({'error': 'Este reembolso ya fue procesado'}, status=400)
+
+        # Guardamos el nuevo estado
         reembolso.estado = nuevo_estado
 
+        pago = reembolso.pago
+        evento = pago.reserva.evento
+        cantidad_original = reembolso.cantidad
+
         if nuevo_estado == 'parcial':
-            reembolso.cantidad = reembolso.cantidad / 2  # 50%
-        
+            reembolso.cantidad = cantidad_original / 2  # Resta la mitad
+
         reembolso.save()
-        return Response({'mensaje': f"Reembolso actualizado a {nuevo_estado}"})
+
+        # Ajustar payout solo si aún está pendiente
+        try:
+            payout = Payout.objects.filter(
+                organizador=evento.organizador,
+                estado='pendiente',
+                nota__icontains=evento.titulo
+            ).latest('fecha_creacion')
+
+            if nuevo_estado in ['aprobado', 'parcial']:
+                payout.cantidad -= reembolso.cantidad
+                payout.cantidad = max(payout.cantidad, 0)
+                payout.nota = f"Pago por evento {evento.titulo} (ajustado por reembolso {nuevo_estado})"
+                payout.save()
+
+        except Payout.DoesNotExist:
+            print("⚠️ No se encontró payout pendiente para este evento.")
+
+        return Response({
+            'id': reembolso.id,
+            'usuario': reembolso.usuario.username,
+            'cantidad': str(reembolso.cantidad),
+            'estado': reembolso.estado,
+            'motivo': reembolso.motivo,
+            'fecha': reembolso.fecha,
+        })
 
     except Reembolso.DoesNotExist:
         return Response({'error': 'Reembolso no encontrado'}, status=404)
-
 
 # Devuelve todos los eventos creados por el organizador autenticado.
 @api_view(['GET'])
@@ -726,9 +785,20 @@ def reservas_por_evento(request, evento_id):
     except Organizador.DoesNotExist:
         return Response({'error': 'No eres organizador'}, status=403)
     
-from django.db.models import Sum
-
+from datetime import timedelta
+from django.db.models import F, Q, Sum
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from eventos.models import Organizador, Evento, Reserva, Pago
 # Devuelve estadísticas resumidas del organizador: eventos totales, reservas, cancelaciones e ingresos.    
+from datetime import timedelta
+from django.db.models import F, Q, Sum
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from eventos.models import Organizador, Evento, Reserva, Pago
+
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def resumen_organizador(request):
@@ -738,18 +808,32 @@ def resumen_organizador(request):
         reservas = Reserva.objects.filter(evento__in=eventos)
         canceladas = reservas.filter(estado='cancelada').count()
 
-        ingresos = Payout.objects.filter(organizador=organizador).aggregate(
-            total=Sum('cantidad')
-        )['total'] or 0
+        # 1. Suma todos los pagos completados
+        pagos_totales = Pago.objects.filter(
+            reserva__evento__in=eventos,
+            estado='completado'
+        ).aggregate(total=Sum('total_pago'))['total'] or 0
+
+        # 2. Suma todos los reembolsos aprobados o parciales
+        reembolsos_aprobados = Reembolso.objects.filter(
+            pago__reserva__evento__in=eventos,
+            estado__in=['aprobado', 'parcial']
+        ).aggregate(total=Sum('cantidad'))['total'] or 0
+
+        # 3. Total neto
+        ingresos_netos = pagos_totales - reembolsos_aprobados
 
         return Response({
             'total_eventos': eventos.count(),
             'total_reservas': reservas.count(),
             'canceladas': canceladas,
-            'ingresos_totales': float(ingresos)
+            'ingresos_totales': float(ingresos_netos)
         })
+
     except Organizador.DoesNotExist:
         return Response({'error': 'No eres un organizador válido'}, status=403)
+
+
     
 
 # Lista todos los payouts generados para el organizador autenticado.

@@ -1,5 +1,15 @@
 <section class="container my-5">
   <h2 class="text-center fw-bold text-contacto mb-4">Formulario de Contacto</h2>
+<!-- Mensaje visual -->
+@if (mensaje && tipoMensaje === 'success') {
+  <div class="alert alert-success text-center">
+    {{ mensaje }}
+  </div>
+} @else if (mensaje && tipoMensaje === 'danger') {
+  <div class="alert alert-danger text-center">
+    {{ mensaje }}
+  </div>
+}
 
   <form [formGroup]="contactoForm" (ngSubmit)="enviar()">
     <!-- EMAIL -->

@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EventosService } from '../services/eventbrite.service';
 import { RouterModule } from '@angular/router';
+import { CalendarioEventosComponent } from '../calendarioeventos/calendarioeventos.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule,CalendarioEventosComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

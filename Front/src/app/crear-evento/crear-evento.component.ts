@@ -14,8 +14,11 @@ import { environment } from '../../environments/environment';
 })
 export class CrearEventoComponent {
   eventoForm: FormGroup;
-// Inicializa el formulario de creación de evento con validaciones básicas.
-// Incluye campos como título, descripción, fecha, ubicación, precio, imagen y cupo máximo.
+  mensaje: string | null = null;
+  tipoMensaje: 'success' | 'danger' | null = null;
+
+  // Inicializa el formulario de creación de evento con validaciones básicas.
+  // Incluye campos como título, descripción, fecha, ubicación, precio, imagen y cupo máximo.
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
@@ -31,9 +34,10 @@ export class CrearEventoComponent {
       cupo_maximo: [100, Validators.required]
     });
   }
-// Envía los datos del formulario al backend mediante una petición POST autenticada.
-// Si la creación es exitosa, muestra un mensaje y redirige al listado de eventos.
-// Si ocurre un error, lo muestra en consola y alerta al usuario.
+
+  // Envía los datos del formulario al backend mediante una petición POST autenticada.
+  // Si la creación es exitosa, redirige al listado de eventos con mensaje.
+  // Si ocurre un error, muestra un mensaje visual arriba.
   crearEvento() {
     const token = localStorage.getItem('token');
     if (!token) return;
@@ -45,12 +49,19 @@ export class CrearEventoComponent {
 
     this.http.post(environment.apiUrl + 'gestion-eventos/', this.eventoForm.value, { headers }).subscribe({
       next: () => {
-        alert('✅ Evento creado con éxito');
-        this.router.navigate(['/eventos']);
+        this.router.navigate(['/eventos'], {
+          queryParams: { creado: '1' }
+        });
       },
       error: (err) => {
         console.error('❌ Error al crear evento:', err);
-        alert('❌ Ocurrió un error al crear el evento');
+        this.mensaje = '❌ Error al crear evento.';
+        this.tipoMensaje = 'danger';
+
+        setTimeout(() => {
+          this.mensaje = null;
+          this.tipoMensaje = null;
+        }, 4000);
       }
     });
   }

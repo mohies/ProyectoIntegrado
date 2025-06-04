@@ -1,3 +1,4 @@
+<!-- NAVBAR CON BÚSQUEDA Y USUARIO -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" routerLink="/">
@@ -9,81 +10,119 @@
     </button>
 
     <form class="d-flex" role="search" (submit)="buscar(); $event.preventDefault()">
-      <input class="form-control form-control-sm" type="search" [(ngModel)]="terminoBusqueda" name="busqueda"
-        placeholder="Buscar..." />
+      <input
+        class="form-control form-control-sm"
+        type="search"
+        [(ngModel)]="terminoBusqueda"
+        name="busqueda"
+        placeholder="Buscar..."
+      />
     </form>
-
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarMain">
       <ul class="navbar-nav me-3">
         @for (link of [
-        { path: '/home', label: 'Inicio' },
-        { path: '/eventos', label: 'Eventos' },
-        { path: '/contacto', label: 'Contacto' },
-        { path: '/carrito', label: 'Cesta' }
+          { path: '/home', label: 'Inicio' },
+          { path: '/eventos', label: 'Eventos' },
+          { path: '/contacto', label: 'Contacto' },
+          { path: '/carrito', label: 'Cesta' }
         ]; track link.label) {
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="link.path" routerLinkActive="active">{{ link.label }}</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="link.path" routerLinkActive="active">{{ link.label }}</a>
+          </li>
         }
       </ul>
 
       @if (usuario$ | async; as usuario) {
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
-            data-bs-toggle="dropdown">
-            <img [src]="usuario.foto || 'assets/default-user.png'" class="rounded-circle me-2" height="30" />
-            {{ usuario.username }}
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" routerLink="/perfil">Mi perfil</a></li>
-
-            @if (usuario.rol === 'Usuario') {
-              <li><a class="dropdown-item" routerLink="/mis-reservas">Mis reservas</a></li>
+        <!-- 🔔 Campana de notificaciones -->
+        <div class="nav-item position-relative me-3">
+          <button class="btn btn-outline-light position-relative" (click)="toggleNotificaciones()">
+            <i class="bi bi-bell-fill"></i>
+            @if ((sinLeer() || []).length > 0) {
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{ sinLeer().length }}
+              </span>
             }
-            
-            @if (usuario.rol === 'Organizador') {
-              <li><a class="dropdown-item" routerLink="/crear-evento">Crear Evento</a></li>
-              <li><a class="dropdown-item" routerLink="/organizador/mis-eventos">Mis Eventos</a></li>
-              <li><a class="dropdown-item" routerLink="/organizador/resumen">Resumen</a></li>
-              <li><a class="dropdown-item" routerLink="/organizador/pagos">Mis pagos</a></li>
+          </button>
 
+          @if (desplegarNotificaciones) {
+            <div
+              class="dropdown-menu show p-2"
+              style="min-width: 300px; position: absolute; top: 100%; right: 0; z-index: 9999;"
+            >
+              <h6 class="dropdown-header">🔔 Notificaciones</h6>
+              <ul class="list-unstyled mb-2">
+                @for (n of sinLeer(); track n.fecha; let i = $index) {
+                  <li class="mb-2 border-bottom pb-1">
+                    <div class="small text-muted">{{ n.fecha | date: 'short' }}</div>
+                    <div>{{ n.mensaje }}</div>
+                    <button class="btn btn-sm btn-link p-0 mt-1" (click)="marcarLeido(i)">Marcar como leído</button>
+                  </li>
+                }
+                @if (sinLeer().length === 0) {
+                  <li class="text-muted small text-center">Sin notificaciones nuevas</li>
+                }
+              </ul>
+              <button class="btn btn-sm btn-outline-secondary w-100" (click)="limpiarNotificaciones()">Limpiar todo</button>
+            </div>
+          }
+        </div>
 
-            }
-
-            @if (usuario.rol === 'Administrador') {
-            <li><a class="dropdown-item" routerLink="/admin">Panel de Admin</a></li>
-            }
-
-            <li><button class="dropdown-item" (click)="auth.logout()">Cerrar sesión</button></li>
-          </ul>
-
-        </li>
-      </ul>
+        <!-- USUARIO LOGUEADO -->
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+              <img [src]="usuario.foto || 'assets/default-user.png'" class="rounded-circle me-2" height="30" />
+              {{ usuario.username }}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" routerLink="/perfil">Mi perfil</a></li>
+              @if (usuario.rol === 'Usuario') {
+                <li><a class="dropdown-item" routerLink="/mis-reservas">Mis reservas</a></li>
+              }
+              @if (usuario.rol === 'Organizador') {
+                <li><a class="dropdown-item" routerLink="/crear-evento">Crear Evento</a></li>
+                <li><a class="dropdown-item" routerLink="/organizador/mis-eventos">Mis Eventos</a></li>
+                <li><a class="dropdown-item" routerLink="/organizador/resumen">Resumen</a></li>
+                <li><a class="dropdown-item" routerLink="/organizador/pagos">Mis pagos</a></li>
+              }
+              @if (usuario.rol === 'Administrador') {
+                <li><a class="dropdown-item" routerLink="/admin">Panel de Admin</a></li>
+              }
+              <li><button class="dropdown-item" (click)="auth.logout()">Cerrar sesión</button></li>
+            </ul>
+          </li>
+        </ul>
       } @else {
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" routerLink="/login">Login</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/registro">Registrarse</a></li>
-      </ul>
+        <!-- USUARIO NO LOGUEADO -->
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" routerLink="/login">Login</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/registro">Registrarse</a></li>
+        </ul>
       }
     </div>
   </div>
 </nav>
 
-
-
-@if (mostrarOferta && eventosOferta.length > 0) {
-  <div class="alert alert-info text-center fw-semibold m-3">
-    🎉 ¡Hay ofertas disponibles en {{ eventosOferta.length }} evento(s)! Aprovecha antes de que acaben.
+<!-- OFERTA DISPONIBLE -->
+@if (alertaOfertasMostrada && eventosEnOferta.length > 0) {
+  <div class="alert alert-info alert-dismissible fade show text-center fw-semibold m-3" role="alert">
+    Hay ofertas disponibles en {{ eventosEnOferta.length }} evento(s). Aprovecha antes de que acaben.
+    <button type="button" class="btn-close" aria-label="Close" (click)="alertaOfertasMostrada = false"></button>
   </div>
 }
+
+
+
+
+<!-- MENSAJE DE ÉXITO DE COMPRA -->
 @if (mensajeExito) {
   <div class="alert alert-success text-center m-3" role="alert">
     {{ mensajeExito }}
   </div>
 }
-<!-- MODAL OFERTA -->
+
+<!-- MODAL DE EVENTOS EN OFERTA -->
 <div class="modal fade show d-block" tabindex="-1" *ngIf="mostrarModalOfertas" style="background-color: rgba(0,0,0,0.5)">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content border-success">
@@ -107,15 +146,17 @@
   </div>
 </div>
 
+<!-- CONTENIDO PRINCIPAL -->
 <main class="container mt-4 flex-grow-1">
   <router-outlet></router-outlet>
 </main>
 
+<!-- CHATBOT -->
 <app-chatbot />
 
+<!-- FOOTER -->
 <footer class="bg-dark text-light py-4 mt-5">
-  <div
-    class="container d-flex justify-content-between align-items-center flex-column flex-md-row text-center text-md-start">
+  <div class="container d-flex justify-content-between align-items-center flex-column flex-md-row text-center text-md-start">
     <img src="logo.png" height="90" alt="Logo" />
     <small>&copy; 2025 MiEventos - Todos los derechos reservados.</small>
   </div>

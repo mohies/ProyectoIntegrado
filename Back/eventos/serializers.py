@@ -18,7 +18,7 @@ class ReembolsoSerializer(serializers.ModelSerializer):
 # --- Serializers de modelos principales ---
 class EventoSerializer(serializers.ModelSerializer):
     organizador = OrganizadorMiniSerializer(read_only=True)
-    cupo = serializers.SerializerMethodField()
+    cupo_disponible = serializers.SerializerMethodField()
     oferta_activa = serializers.SerializerMethodField()
     precio_final = serializers.SerializerMethodField()
 
@@ -39,7 +39,7 @@ class EventoSerializer(serializers.ModelSerializer):
         validated_data['organizador'] = organizador
         return super().create(validated_data)
 
-    def get_cupo(self, obj):
+    def get_cupo_disponible(self, obj):
         reservas_activas = Reserva.objects.filter(evento=obj, estado='activa').count()
         return max(obj.cupo_maximo - reservas_activas, 0)
 

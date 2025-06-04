@@ -108,7 +108,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$870000$OrEExX9LcwtPriMNnY7XcX$aWIty0vl6e57YxrnbETMpV0Tn0Nk8vbuUg4kZBqnUno=",
-    "last_login": "2025-05-04T22:02:13.723",
+    "last_login": "2025-06-03T18:45:55.993",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",
@@ -370,7 +370,7 @@
     "is_active": true,
     "date_joined": "2025-04-06T19:55:24.604",
     "rol": 2,
-    "foto": "perfiles/A-100752-1405652286-5625_Z9eADja.jpg",
+    "foto": "perfiles/Captura_de_pantalla_2025-05-20_235432.png",
     "groups": [
       1
     ],
@@ -535,10 +535,10 @@
   "model": "eventos.usuario",
   "pk": 36,
   "fields": {
-    "password": "",
+    "password": "pbkdf2_sha256$870000$oPUReRRVrQja5pKtJ5mtEL$mwMwGPqE4jsZ4J+PpWSpnK2tJBUfizIEjZ/ZuKUaoHY=",
     "last_login": "2025-05-17T21:38:28.594",
     "is_superuser": false,
-    "username": "asddas-dsadasdsa",
+    "username": "pepazo",
     "first_name": "",
     "last_name": "",
     "email": "elpepiito34@gmail.com",
@@ -547,6 +547,50 @@
     "date_joined": "2025-05-17T21:37:05.230",
     "rol": 3,
     "foto": "perfiles/A-100752-1405652286-5625_4Ysx5fO.jpg",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 37,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$gu8DjNszbRA5CXnLTTY7F1$xLXMRwjeLGnTXeng+uCwc5vvU13zxjsdiwn5SMaSb4Y=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "nuevo_usuario",
+    "first_name": "",
+    "last_name": "",
+    "email": "nuevo@correo.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-30T22:22:46.122",
+    "rol": 3,
+    "foto": "perfiles/default-user.png",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "eventos.usuario",
+  "pk": 38,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$dj2vetwBU2pozyEkevVAQU$piHVCuxMjrKWxMqRk1SZONmlhq5ZoXOHiygfSb8rLE0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "usuarionormal",
+    "first_name": "",
+    "last_name": "",
+    "email": "usuarionormal@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-03T18:06:32.922",
+    "rol": 3,
+    "foto": "perfiles/favicon.ico",
     "groups": [
       3
     ],
@@ -594,51 +638,6 @@
   "pk": 1,
   "fields": {
     "usuario": 1
-  }
-},
-{
-  "model": "eventos.evento",
-  "pk": 1,
-  "fields": {
-    "titulo": "Imagine Dragons: LOOM World Tour | VIP Packages",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-06-28T21:30:00",
-    "ubicacion": "Estadio Riyadh Air Metropolitano - Madrid",
-    "precio": "297.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/0e3/dae353c1-d877-4eb7-baf6-7ddf501310e3_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
-  "pk": 2,
-  "fields": {
-    "titulo": "Imagine Dragons: LOOM World Tour",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-06-28T21:30:00",
-    "ubicacion": "Estadio Riyadh Air Metropolitano - Madrid",
-    "precio": "65.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/0e3/dae353c1-d877-4eb7-baf6-7ddf501310e3_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
-  "pk": 3,
-  "fields": {
-    "titulo": "Imagine Dragons: LOOM World Tour | VIP Packages",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-07-01T21:30:00",
-    "ubicacion": "Estadi Olímpic Lluis Companys - Barcelona",
-    "precio": "297.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/0e3/dae353c1-d877-4eb7-baf6-7ddf501310e3_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "descuento": null
   }
 },
 {
@@ -2698,21 +2697,6 @@
 },
 {
   "model": "eventos.evento",
-  "pk": 141,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-06-07T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
   "pk": 142,
   "fields": {
     "titulo": "Erreway - Juntos Otra Vez Tour 2025 | Paquetes VIP",
@@ -2768,21 +2752,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/26d/dc464785-d1f1-4679-93ef-abfd4132c26d_EVENT_DETAIL_PAGE_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
-  "pk": 146,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-06-14T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
     "descuento": null
   }
 },
@@ -2998,21 +2967,6 @@
 },
 {
   "model": "eventos.evento",
-  "pk": 161,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-06-28T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
   "pk": 162,
   "fields": {
     "titulo": "The Corrs - Festival alma Occident Barcelona 25",
@@ -3083,21 +3037,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/8ed/33a8af71-5f86-4e72-b555-c3b2741ab8ed_RETINA_PORTRAIT_3_2.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
-  "pk": 167,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-07-05T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
     "descuento": null
   }
 },
@@ -3388,21 +3327,6 @@
 },
 {
   "model": "eventos.evento",
-  "pk": 187,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-07-12T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
   "pk": 188,
   "fields": {
     "titulo": "AC/DC - Power Up Tour 2025",
@@ -3533,21 +3457,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/a9b/9c7fbe7d-df0d-487f-823d-f5849e3bfa9b_RETINA_LANDSCAPE_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
-  "pk": 197,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-07-19T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
     "descuento": null
   }
 },
@@ -3748,21 +3657,6 @@
 },
 {
   "model": "eventos.evento",
-  "pk": 211,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-08-02T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
   "pk": 212,
   "fields": {
     "titulo": "Lionel Richie - Say Hello To The Hits",
@@ -3823,21 +3717,6 @@
 },
 {
   "model": "eventos.evento",
-  "pk": 216,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-08-09T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
   "pk": 217,
   "fields": {
     "titulo": "BLACKPINK 2025 World Tour | VIP Packages",
@@ -3863,66 +3742,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/5c2/f4163891-fc14-498c-9c32-42b49aa945c2_RECOMENDATION_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
-  "pk": 219,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-08-16T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
-  "pk": 220,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-08-23T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
-  "pk": 221,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-08-30T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
-  "pk": 222,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-09-06T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
     "descuento": null
   }
 },
@@ -3968,21 +3787,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/ef6/6d8164b7-b7a4-43b1-8b2e-3e5857becef6_TABLET_LANDSCAPE_LARGE_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
-  "pk": 226,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-09-13T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
     "descuento": null
   }
 },
@@ -4048,21 +3852,6 @@
 },
 {
   "model": "eventos.evento",
-  "pk": 231,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-09-20T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
   "pk": 232,
   "fields": {
     "titulo": "Tamino",
@@ -4093,21 +3882,6 @@
 },
 {
   "model": "eventos.evento",
-  "pk": 234,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-09-27T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
   "pk": 235,
   "fields": {
     "titulo": "The Midnight",
@@ -4133,21 +3907,6 @@
     "cupo_maximo": 100,
     "organizador": 1,
     "imagen": "https://s1.ticketm.net/dam/a/2d3/62d3766d-3e10-4ea4-b88b-2b83016b42d3_SOURCE",
-    "descuento": null
-  }
-},
-{
-  "model": "eventos.evento",
-  "pk": 237,
-  "fields": {
-    "titulo": "Elrow Ibiza",
-    "descripcion": "Sin descripción",
-    "fecha": "2025-10-04T23:30:00",
-    "ubicacion": "[UNVRS] - San Rafael, Ibiza",
-    "precio": "80.00",
-    "cupo_maximo": 100,
-    "organizador": 1,
-    "imagen": "https://s1.ticketm.net/dam/a/4ed/c9fccbd2-664d-4236-8606-8dab51ff74ed_RETINA_PORTRAIT_16_9.jpg",
     "descuento": null
   }
 },
@@ -4797,6 +4556,171 @@
   }
 },
 {
+  "model": "eventos.evento",
+  "pk": 281,
+  "fields": {
+    "titulo": "evento",
+    "descripcion": "descripcion aletaroia",
+    "fecha": "2025-05-19T18:07:00",
+    "ubicacion": "SEVILLA",
+    "precio": "100.00",
+    "cupo_maximo": 100,
+    "organizador": 2,
+    "imagen": "https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg",
+    "descuento": "20.00"
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 282,
+  "fields": {
+    "titulo": "evento",
+    "descripcion": "evento",
+    "fecha": "2025-05-21T18:09:00",
+    "ubicacion": "SEVILLA",
+    "precio": "100.00",
+    "cupo_maximo": 100,
+    "organizador": 2,
+    "imagen": "https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg",
+    "descuento": "20.00"
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 283,
+  "fields": {
+    "titulo": "EVENTO 2",
+    "descripcion": "EVENTO 2",
+    "fecha": "2025-05-20T18:16:00",
+    "ubicacion": "madrid",
+    "precio": "100.00",
+    "cupo_maximo": 100,
+    "organizador": 2,
+    "imagen": "https://i.pinimg.com/236x/d0/06/51/d0065164280b22a286f2e38d5ad2eb0d.jpg",
+    "descuento": "20.00"
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 284,
+  "fields": {
+    "titulo": "JUEGO",
+    "descripcion": "JUEGOS",
+    "fecha": "2025-05-20T18:22:00",
+    "ubicacion": "MADRID",
+    "precio": "100.00",
+    "cupo_maximo": 100,
+    "organizador": 2,
+    "imagen": "https://grandluxormice.com/es/wp-content/uploads/sites/3/2022/07/Evento-corporativo-e1661944165280-1900x1069.jpg",
+    "descuento": "20.00"
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 285,
+  "fields": {
+    "titulo": "asdasdasdasd",
+    "descripcion": "asdasdasdasdasd",
+    "fecha": "2025-05-23T00:23:00",
+    "ubicacion": "asdasdasd",
+    "precio": "100.00",
+    "cupo_maximo": 100,
+    "organizador": 2,
+    "imagen": "https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg",
+    "descuento": "20.00"
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 286,
+  "fields": {
+    "titulo": "asdsdaasd",
+    "descripcion": "asdasdasdasd",
+    "fecha": "2025-05-23T00:35:00",
+    "ubicacion": "asdasdasdasd",
+    "precio": "200.00",
+    "cupo_maximo": 100,
+    "organizador": 2,
+    "imagen": "https://pbs.twimg.com/media/GrgOt7FboAIJ8MG?format=jpg&name=medium",
+    "descuento": "20.00"
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 287,
+  "fields": {
+    "titulo": "sdaasdasdasd",
+    "descripcion": "asdasdasdasd",
+    "fecha": "2025-05-25T23:30:00",
+    "ubicacion": "SEVILLA",
+    "precio": "100.00",
+    "cupo_maximo": 100,
+    "organizador": 2,
+    "imagen": "https://plus.unsplash.com/premium_photo-1695405363183-e55554168063?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2VuJTIwZGlnaXRhbHxlbnwwfHwwfHx8MA%3D%3D",
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 288,
+  "fields": {
+    "titulo": "dasasdasd",
+    "descripcion": "asdasdasdasd",
+    "fecha": "2025-05-25T23:45:00",
+    "ubicacion": "dasasdasd",
+    "precio": "100.00",
+    "cupo_maximo": 100,
+    "organizador": 2,
+    "imagen": "https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?fit=960%2C720",
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 289,
+  "fields": {
+    "titulo": "asdasdasdasd",
+    "descripcion": "asdasdasd",
+    "fecha": "2025-05-25T23:50:00",
+    "ubicacion": "asdasdasd",
+    "precio": "23.00",
+    "cupo_maximo": 100,
+    "organizador": 2,
+    "imagen": "https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?fit=960%2C720",
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 290,
+  "fields": {
+    "titulo": "asdasdasd",
+    "descripcion": "asdasd",
+    "fecha": "2025-05-26T23:56:00",
+    "ubicacion": "sdaasdasd",
+    "precio": "34.00",
+    "cupo_maximo": 100,
+    "organizador": 2,
+    "imagen": "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/9db5/live/48fd9010-c1c1-11ee-9519-97453607d43e.jpg.webp",
+    "descuento": null
+  }
+},
+{
+  "model": "eventos.evento",
+  "pk": 292,
+  "fields": {
+    "titulo": "asdasdasdasd",
+    "descripcion": "asdasdasdasdasd",
+    "fecha": "2025-06-03T23:35:00",
+    "ubicacion": "SEVILA",
+    "precio": "100.00",
+    "cupo_maximo": 100,
+    "organizador": 2,
+    "imagen": "https://s1.significados.com/foto/url6-og.jpg",
+    "descuento": "5.00"
+  }
+},
+{
   "model": "eventos.reserva",
   "pk": 14,
   "fields": {
@@ -4872,6 +4796,1206 @@
   }
 },
 {
+  "model": "eventos.reserva",
+  "pk": 23,
+  "fields": {
+    "usuario": 25,
+    "evento": 283,
+    "fecha_reserva": "2025-05-19T18:18:08.708",
+    "estado": "cancelada",
+    "motivo_cancelacion": "NO PUEDO ACUDIR",
+    "fecha_cancelacion": "2025-05-19T18:18:30.257",
+    "direccion": "sdaasdasdasdasd",
+    "ciudad": "asdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 24,
+  "fields": {
+    "usuario": 25,
+    "evento": 284,
+    "fecha_reserva": "2025-05-19T18:24:19.218",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": "asdasdasdasd"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 25,
+  "fields": {
+    "usuario": 25,
+    "evento": 283,
+    "fecha_reserva": "2025-05-19T18:25:16.545",
+    "estado": "cancelada",
+    "motivo_cancelacion": "sdadsdasd",
+    "fecha_cancelacion": "2025-05-19T18:41:26.148",
+    "direccion": "sdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": "sdaasdasdasdasd"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 26,
+  "fields": {
+    "usuario": 25,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:32:35.832",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 27,
+  "fields": {
+    "usuario": 25,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:39:55.257",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 28,
+  "fields": {
+    "usuario": 25,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:39:55.260",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 29,
+  "fields": {
+    "usuario": 25,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:39:55.260",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 30,
+  "fields": {
+    "usuario": 25,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:39:55.261",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 31,
+  "fields": {
+    "usuario": 25,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:39:55.261",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 32,
+  "fields": {
+    "usuario": 25,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:39:55.262",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 33,
+  "fields": {
+    "usuario": 25,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:39:55.262",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 34,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.000",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 35,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.003",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 36,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.003",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 37,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.004",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 38,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.004",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 39,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.004",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 40,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.005",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 41,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.006",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 42,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.006",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 43,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.006",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 44,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.007",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 45,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.007",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 46,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.008",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 47,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.008",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 48,
+  "fields": {
+    "usuario": 24,
+    "evento": 282,
+    "fecha_reserva": "2025-05-19T18:48:34.009",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 49,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.536",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 50,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.537",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 51,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.538",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 52,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.538",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 53,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.538",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 54,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.538",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 55,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.539",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 56,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.539",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 57,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.539",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 58,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.539",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 59,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.540",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 60,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.540",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 61,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.540",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 62,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:52:41.540",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 63,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:53:11.024",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 64,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:53:11.026",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 65,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:53:11.026",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 66,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:53:11.027",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 67,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:53:11.027",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 68,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:53:11.027",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 69,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:53:11.028",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 70,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:53:11.028",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 71,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:53:11.028",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 72,
+  "fields": {
+    "usuario": 1,
+    "evento": 124,
+    "fecha_reserva": "2025-05-19T18:53:11.028",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasd",
+    "ciudad": "asdasdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 74,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-01T20:06:09.148",
+    "estado": "cancelada",
+    "motivo_cancelacion": "dasasdasdasd",
+    "fecha_cancelacion": "2025-06-01T20:25:53.049",
+    "direccion": "asdasdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": "asdasdasdasdasd"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 75,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-01T20:06:09.149",
+    "estado": "cancelada",
+    "motivo_cancelacion": "No tengo dinero",
+    "fecha_cancelacion": "2025-06-01T20:07:26.479",
+    "direccion": "asdasdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": "asdasdasdasdasd"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 76,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-01T20:06:09.149",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": "asdasdasdasdasd"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 77,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-01T20:06:09.149",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": "asdasdasdasdasd"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 78,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-01T20:06:09.149",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": "asdasdasdasdasd"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 79,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-01T20:06:09.149",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": "asdasdasdasdasd"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 80,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-01T20:06:09.149",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": "asdasdasdasdasd"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 81,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-01T20:06:09.149",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": "asdasdasdasdasd"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 82,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-01T20:06:09.149",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": "asdasdasdasdasd"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 83,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-01T20:06:09.149",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdasdasd",
+    "ciudad": "asdasdasdasd",
+    "notas": "asdasdasdasdasd"
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 84,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.589",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 85,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.591",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 86,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.591",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 87,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.591",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 88,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.591",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 89,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.593",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 90,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.593",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 91,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.593",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 92,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.594",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 93,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.594",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 94,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.594",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 95,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.594",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 96,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.594",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 97,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.595",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 98,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.595",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 99,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.595",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 100,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.596",
+    "estado": "cancelada",
+    "motivo_cancelacion": "no puedo acudir",
+    "fecha_cancelacion": "2025-06-02T00:03:17.788",
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 101,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.596",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 102,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.596",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
+  "model": "eventos.reserva",
+  "pk": 103,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "fecha_reserva": "2025-06-02T00:02:17.596",
+    "estado": "activa",
+    "motivo_cancelacion": null,
+    "fecha_cancelacion": null,
+    "direccion": "asdasdasdsda",
+    "ciudad": "asdasdasdasd",
+    "notas": ""
+  }
+},
+{
   "model": "eventos.pago",
   "pk": 13,
   "fields": {
@@ -4922,6 +6046,886 @@
     "reserva": 22,
     "fecha_pago": "2025-05-07T19:38:39.891",
     "total_pago": "45.50",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 22,
+  "fields": {
+    "reserva": 23,
+    "fecha_pago": "2025-05-19T18:18:08.710",
+    "total_pago": "800.00",
+    "metodo_pago": "PayPal",
+    "estado": "pendiente_reembolso"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 23,
+  "fields": {
+    "reserva": 24,
+    "fecha_pago": "2025-05-19T18:24:19.220",
+    "total_pago": "560.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 24,
+  "fields": {
+    "reserva": 25,
+    "fecha_pago": "2025-05-19T18:25:16.546",
+    "total_pago": "1040.00",
+    "metodo_pago": "PayPal",
+    "estado": "pendiente_reembolso"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 25,
+  "fields": {
+    "reserva": 26,
+    "fecha_pago": "2025-05-19T18:32:35.834",
+    "total_pago": "918.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 26,
+  "fields": {
+    "reserva": 27,
+    "fecha_pago": "2025-05-19T18:39:55.258",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 27,
+  "fields": {
+    "reserva": 28,
+    "fecha_pago": "2025-05-19T18:39:55.260",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 28,
+  "fields": {
+    "reserva": 29,
+    "fecha_pago": "2025-05-19T18:39:55.261",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 29,
+  "fields": {
+    "reserva": 30,
+    "fecha_pago": "2025-05-19T18:39:55.261",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 30,
+  "fields": {
+    "reserva": 31,
+    "fecha_pago": "2025-05-19T18:39:55.261",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 31,
+  "fields": {
+    "reserva": 32,
+    "fecha_pago": "2025-05-19T18:39:55.262",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 32,
+  "fields": {
+    "reserva": 33,
+    "fecha_pago": "2025-05-19T18:39:55.262",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 33,
+  "fields": {
+    "reserva": 34,
+    "fecha_pago": "2025-05-19T18:48:34.001",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 34,
+  "fields": {
+    "reserva": 35,
+    "fecha_pago": "2025-05-19T18:48:34.003",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 35,
+  "fields": {
+    "reserva": 36,
+    "fecha_pago": "2025-05-19T18:48:34.003",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 36,
+  "fields": {
+    "reserva": 37,
+    "fecha_pago": "2025-05-19T18:48:34.004",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 37,
+  "fields": {
+    "reserva": 38,
+    "fecha_pago": "2025-05-19T18:48:34.004",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 38,
+  "fields": {
+    "reserva": 39,
+    "fecha_pago": "2025-05-19T18:48:34.004",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 39,
+  "fields": {
+    "reserva": 40,
+    "fecha_pago": "2025-05-19T18:48:34.005",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 40,
+  "fields": {
+    "reserva": 41,
+    "fecha_pago": "2025-05-19T18:48:34.006",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 41,
+  "fields": {
+    "reserva": 42,
+    "fecha_pago": "2025-05-19T18:48:34.006",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 42,
+  "fields": {
+    "reserva": 43,
+    "fecha_pago": "2025-05-19T18:48:34.007",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 43,
+  "fields": {
+    "reserva": 44,
+    "fecha_pago": "2025-05-19T18:48:34.007",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 44,
+  "fields": {
+    "reserva": 45,
+    "fecha_pago": "2025-05-19T18:48:34.008",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 45,
+  "fields": {
+    "reserva": 46,
+    "fecha_pago": "2025-05-19T18:48:34.008",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 46,
+  "fields": {
+    "reserva": 47,
+    "fecha_pago": "2025-05-19T18:48:34.008",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 47,
+  "fields": {
+    "reserva": 48,
+    "fecha_pago": "2025-05-19T18:48:34.009",
+    "total_pago": "80.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 48,
+  "fields": {
+    "reserva": 49,
+    "fecha_pago": "2025-05-19T18:52:41.537",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 49,
+  "fields": {
+    "reserva": 50,
+    "fecha_pago": "2025-05-19T18:52:41.537",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 50,
+  "fields": {
+    "reserva": 51,
+    "fecha_pago": "2025-05-19T18:52:41.538",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 51,
+  "fields": {
+    "reserva": 52,
+    "fecha_pago": "2025-05-19T18:52:41.538",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 52,
+  "fields": {
+    "reserva": 53,
+    "fecha_pago": "2025-05-19T18:52:41.538",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 53,
+  "fields": {
+    "reserva": 54,
+    "fecha_pago": "2025-05-19T18:52:41.539",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 54,
+  "fields": {
+    "reserva": 55,
+    "fecha_pago": "2025-05-19T18:52:41.539",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 55,
+  "fields": {
+    "reserva": 56,
+    "fecha_pago": "2025-05-19T18:52:41.539",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 56,
+  "fields": {
+    "reserva": 57,
+    "fecha_pago": "2025-05-19T18:52:41.539",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 57,
+  "fields": {
+    "reserva": 58,
+    "fecha_pago": "2025-05-19T18:52:41.540",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 58,
+  "fields": {
+    "reserva": 59,
+    "fecha_pago": "2025-05-19T18:52:41.540",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 59,
+  "fields": {
+    "reserva": 60,
+    "fecha_pago": "2025-05-19T18:52:41.540",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 60,
+  "fields": {
+    "reserva": 61,
+    "fecha_pago": "2025-05-19T18:52:41.540",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 61,
+  "fields": {
+    "reserva": 62,
+    "fecha_pago": "2025-05-19T18:52:41.541",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 62,
+  "fields": {
+    "reserva": 63,
+    "fecha_pago": "2025-05-19T18:53:11.026",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 63,
+  "fields": {
+    "reserva": 64,
+    "fecha_pago": "2025-05-19T18:53:11.026",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 64,
+  "fields": {
+    "reserva": 65,
+    "fecha_pago": "2025-05-19T18:53:11.027",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 65,
+  "fields": {
+    "reserva": 66,
+    "fecha_pago": "2025-05-19T18:53:11.027",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 66,
+  "fields": {
+    "reserva": 67,
+    "fecha_pago": "2025-05-19T18:53:11.027",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 67,
+  "fields": {
+    "reserva": 68,
+    "fecha_pago": "2025-05-19T18:53:11.028",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 68,
+  "fields": {
+    "reserva": 69,
+    "fecha_pago": "2025-05-19T18:53:11.028",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 69,
+  "fields": {
+    "reserva": 70,
+    "fecha_pago": "2025-05-19T18:53:11.028",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 70,
+  "fields": {
+    "reserva": 71,
+    "fecha_pago": "2025-05-19T18:53:11.028",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 71,
+  "fields": {
+    "reserva": 72,
+    "fecha_pago": "2025-05-19T18:53:11.029",
+    "total_pago": "27.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 73,
+  "fields": {
+    "reserva": 74,
+    "fecha_pago": "2025-06-01T20:06:09.149",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "pendiente_reembolso"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 74,
+  "fields": {
+    "reserva": 75,
+    "fecha_pago": "2025-06-01T20:06:09.149",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "pendiente_reembolso"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 75,
+  "fields": {
+    "reserva": 76,
+    "fecha_pago": "2025-06-01T20:06:09.149",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 76,
+  "fields": {
+    "reserva": 77,
+    "fecha_pago": "2025-06-01T20:06:09.149",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 77,
+  "fields": {
+    "reserva": 78,
+    "fecha_pago": "2025-06-01T20:06:09.149",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 78,
+  "fields": {
+    "reserva": 79,
+    "fecha_pago": "2025-06-01T20:06:09.149",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 79,
+  "fields": {
+    "reserva": 80,
+    "fecha_pago": "2025-06-01T20:06:09.149",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 80,
+  "fields": {
+    "reserva": 81,
+    "fecha_pago": "2025-06-01T20:06:09.149",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 81,
+  "fields": {
+    "reserva": 82,
+    "fecha_pago": "2025-06-01T20:06:09.149",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 82,
+  "fields": {
+    "reserva": 83,
+    "fecha_pago": "2025-06-01T20:06:09.149",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 83,
+  "fields": {
+    "reserva": 84,
+    "fecha_pago": "2025-06-02T00:02:17.591",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 84,
+  "fields": {
+    "reserva": 85,
+    "fecha_pago": "2025-06-02T00:02:17.591",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 85,
+  "fields": {
+    "reserva": 86,
+    "fecha_pago": "2025-06-02T00:02:17.591",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 86,
+  "fields": {
+    "reserva": 87,
+    "fecha_pago": "2025-06-02T00:02:17.591",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 87,
+  "fields": {
+    "reserva": 88,
+    "fecha_pago": "2025-06-02T00:02:17.593",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 88,
+  "fields": {
+    "reserva": 89,
+    "fecha_pago": "2025-06-02T00:02:17.593",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 89,
+  "fields": {
+    "reserva": 90,
+    "fecha_pago": "2025-06-02T00:02:17.593",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 90,
+  "fields": {
+    "reserva": 91,
+    "fecha_pago": "2025-06-02T00:02:17.593",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 91,
+  "fields": {
+    "reserva": 92,
+    "fecha_pago": "2025-06-02T00:02:17.594",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 92,
+  "fields": {
+    "reserva": 93,
+    "fecha_pago": "2025-06-02T00:02:17.594",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 93,
+  "fields": {
+    "reserva": 94,
+    "fecha_pago": "2025-06-02T00:02:17.594",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 94,
+  "fields": {
+    "reserva": 95,
+    "fecha_pago": "2025-06-02T00:02:17.594",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 95,
+  "fields": {
+    "reserva": 96,
+    "fecha_pago": "2025-06-02T00:02:17.595",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 96,
+  "fields": {
+    "reserva": 97,
+    "fecha_pago": "2025-06-02T00:02:17.595",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 97,
+  "fields": {
+    "reserva": 98,
+    "fecha_pago": "2025-06-02T00:02:17.595",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 98,
+  "fields": {
+    "reserva": 99,
+    "fecha_pago": "2025-06-02T00:02:17.595",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 99,
+  "fields": {
+    "reserva": 100,
+    "fecha_pago": "2025-06-02T00:02:17.596",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "pendiente_reembolso"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 100,
+  "fields": {
+    "reserva": 101,
+    "fecha_pago": "2025-06-02T00:02:17.596",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 101,
+  "fields": {
+    "reserva": 102,
+    "fecha_pago": "2025-06-02T00:02:17.596",
+    "total_pago": "95.00",
+    "metodo_pago": "PayPal",
+    "estado": "completado"
+  }
+},
+{
+  "model": "eventos.pago",
+  "pk": 102,
+  "fields": {
+    "reserva": 103,
+    "fecha_pago": "2025-06-02T00:02:17.596",
+    "total_pago": "95.00",
     "metodo_pago": "PayPal",
     "estado": "completado"
   }
@@ -5103,6 +7107,50 @@
   }
 },
 {
+  "model": "eventos.resena",
+  "pk": 28,
+  "fields": {
+    "usuario": 25,
+    "evento": 282,
+    "puntuacion": 5,
+    "comentario": "ME GUSTA",
+    "fecha": "2025-05-19T18:10:52.269"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 29,
+  "fields": {
+    "usuario": 25,
+    "evento": 283,
+    "puntuacion": 5,
+    "comentario": "ME GUSTA",
+    "fecha": "2025-05-19T18:17:23.705"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 31,
+  "fields": {
+    "usuario": 25,
+    "evento": 292,
+    "puntuacion": 5,
+    "comentario": "Me encanta",
+    "fecha": "2025-06-01T20:05:45.012"
+  }
+},
+{
+  "model": "eventos.resena",
+  "pk": 32,
+  "fields": {
+    "usuario": 25,
+    "evento": 137,
+    "puntuacion": 3,
+    "comentario": "No me gusta mucho",
+    "fecha": "2025-06-03T18:05:24.054"
+  }
+},
+{
   "model": "eventos.payout",
   "pk": 4,
   "fields": {
@@ -5168,10 +7216,10 @@
   "fields": {
     "organizador": 1,
     "email": "org1@email.com",
-    "cantidad": "31.50",
+    "cantidad": "0.00",
     "estado": "pendiente",
     "fecha_creacion": "2025-05-03T11:58:49.155",
-    "nota": "Pago manual por evento Cirque du Soleil: Corteo"
+    "nota": "Pago por evento Cirque du Soleil: Corteo (ajustado por reembolsos)"
   }
 },
 {
@@ -5180,10 +7228,10 @@
   "fields": {
     "organizador": 2,
     "email": "yassine@gmail.com",
-    "cantidad": "900.00",
+    "cantidad": "0.00",
     "estado": "pendiente",
     "fecha_creacion": "2025-05-04T13:37:32.954",
-    "nota": "Pago manual por evento sdkfdsjasddsadshhasd"
+    "nota": "Pago por evento sdkfdsjasddsadshhasd (ajustado por reembolsos)"
   }
 },
 {
@@ -5192,10 +7240,10 @@
   "fields": {
     "organizador": 1,
     "email": "org1@email.com",
-    "cantidad": "53.10",
+    "cantidad": "0.00",
     "estado": "pendiente",
     "fecha_creacion": "2025-05-04T22:02:59.291",
-    "nota": "Pago manual por evento wave to earth - 0.03 tour"
+    "nota": "Pago por evento wave to earth - 0.03 tour (ajustado por reembolsos)"
   }
 },
 {
@@ -5259,6 +7307,378 @@
   }
 },
 {
+  "model": "eventos.payout",
+  "pk": 17,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "720.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:18:08.712",
+    "nota": "Pago manual por evento EVENTO 2"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 18,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "504.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:24:19.221",
+    "nota": "Pago manual por evento JUEGO"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 19,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "0.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:25:16.547",
+    "nota": "Pago por evento EVENTO 2 (ajustado por reembolsos)"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 20,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "826.20",
+    "estado": "pagado",
+    "fecha_creacion": "2025-05-19T18:32:35.836",
+    "nota": "Pago manual por evento La Femme - Rock Machine Tour"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 21,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "24.30",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:39:55.260",
+    "nota": "Pago manual por evento La Femme - Rock Machine Tour"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 22,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "24.30",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:39:55.260",
+    "nota": "Pago manual por evento La Femme - Rock Machine Tour"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 23,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "24.30",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:39:55.261",
+    "nota": "Pago manual por evento La Femme - Rock Machine Tour"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 24,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "24.30",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:39:55.261",
+    "nota": "Pago manual por evento La Femme - Rock Machine Tour"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 25,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "24.30",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:39:55.262",
+    "nota": "Pago manual por evento La Femme - Rock Machine Tour"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 26,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "24.30",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:39:55.262",
+    "nota": "Pago manual por evento La Femme - Rock Machine Tour"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 27,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "24.30",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:39:55.262",
+    "nota": "Pago manual por evento La Femme - Rock Machine Tour"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 28,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.002",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 29,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.003",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 30,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.003",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 31,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.004",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 32,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.004",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 33,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.005",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 34,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.005",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 35,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.006",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 36,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.006",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 37,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.007",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 38,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.007",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 39,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.008",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 40,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.008",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 41,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.008",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 42,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "72.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:48:34.009",
+    "nota": "Pago manual por evento evento"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 43,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "340.20",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:52:41.542",
+    "nota": "Pago por evento La Femme - Rock Machine Tour (x14 entradas)"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 44,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "243.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-19T18:53:11.029",
+    "nota": "Pago por evento La Femme - Rock Machine Tour (x10 entradas)"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 45,
+  "fields": {
+    "organizador": 1,
+    "email": "org1@email.com",
+    "cantidad": "267.30",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-05-30T22:33:22.905",
+    "nota": "Pago por evento Imagine Dragons: LOOM World Tour | VIP Packages (x1 entradas)"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 46,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "285.00",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-06-01T20:06:09.149",
+    "nota": "Pago por evento asdasdasdasd (ajustado por reembolsos)"
+  }
+},
+{
+  "model": "eventos.payout",
+  "pk": 47,
+  "fields": {
+    "organizador": 2,
+    "email": "yassine@gmail.com",
+    "cantidad": "1662.50",
+    "estado": "pendiente",
+    "fecha_creacion": "2025-06-02T00:02:17.597",
+    "nota": "Pago por evento asdasdasdasd (ajustado por reembolsos)"
+  }
+},
+{
   "model": "eventos.reembolso",
   "pk": 2,
   "fields": {
@@ -5267,7 +7687,7 @@
     "cantidad": "35.00",
     "fecha": "2025-05-03T12:06:27.551",
     "motivo": "dsadsadsasda",
-    "estado": "rechazado"
+    "estado": "aprobado"
   }
 },
 {
@@ -5279,7 +7699,7 @@
     "cantidad": "1000.00",
     "fecha": "2025-05-04T13:37:50.665",
     "motivo": "No puedo acudir",
-    "estado": "rechazado"
+    "estado": "aprobado"
   }
 },
 {
@@ -5291,127 +7711,78 @@
     "cantidad": "59.00",
     "fecha": "2025-05-04T23:52:06.498",
     "motivo": "No puedo",
-    "estado": "pendiente"
+    "estado": "aprobado"
   }
 },
 {
-  "model": "authtoken.token",
-  "pk": "161574ccea4d6b6d619723b04ee6228bbae1a40a",
+  "model": "eventos.reembolso",
+  "pk": 5,
   "fields": {
-    "user": 24,
-    "created": "2025-04-06T19:55:24.979"
+    "pago": 22,
+    "usuario": 25,
+    "cantidad": "800.00",
+    "fecha": "2025-05-19T18:18:30.267",
+    "motivo": "NO PUEDO ACUDIR",
+    "estado": "aprobado"
   }
 },
 {
-  "model": "authtoken.token",
-  "pk": "228f9908a29a413880bf7b9edf382ed725af30be",
+  "model": "eventos.reembolso",
+  "pk": 6,
   "fields": {
-    "user": 34,
-    "created": "2025-05-07T19:55:24.461"
+    "pago": 24,
+    "usuario": 25,
+    "cantidad": "1040.00",
+    "fecha": "2025-05-19T18:41:26.163",
+    "motivo": "sdadsdasd",
+    "estado": "aprobado"
   }
 },
 {
-  "model": "authtoken.token",
-  "pk": "2c241f961f5b594a94e821c88ecaec8325df7683",
+  "model": "eventos.reembolso",
+  "pk": 7,
   "fields": {
-    "user": 35,
-    "created": "2025-05-17T21:35:54.905"
+    "pago": 74,
+    "usuario": 25,
+    "cantidad": "95.00",
+    "fecha": "2025-06-01T20:07:26.489",
+    "motivo": "No tengo dinero",
+    "estado": "aprobado"
   }
 },
 {
-  "model": "authtoken.token",
-  "pk": "37b4ec6b3182c2fbba50274307a5b77d9a432fc0",
+  "model": "eventos.reembolso",
+  "pk": 8,
   "fields": {
-    "user": 28,
-    "created": "2025-04-21T01:07:52.218"
+    "pago": 73,
+    "usuario": 25,
+    "cantidad": "95.00",
+    "fecha": "2025-06-01T20:25:53.057",
+    "motivo": "dasasdasdasd",
+    "estado": "rechazado"
   }
 },
 {
-  "model": "authtoken.token",
-  "pk": "4090ed8aec41b521883a3013dff350bf71de604d",
+  "model": "eventos.reembolso",
+  "pk": 9,
   "fields": {
-    "user": 23,
-    "created": "2025-04-06T19:46:59.623"
+    "pago": 99,
+    "usuario": 25,
+    "cantidad": "47.50",
+    "fecha": "2025-06-02T00:03:17.797",
+    "motivo": "no puedo acudir",
+    "estado": "parcial"
   }
 },
 {
-  "model": "authtoken.token",
-  "pk": "55253172de1e24a39f3c35e14c326f69930dcf97",
+  "model": "django_rest_passwordreset.resetpasswordtoken",
+  "pk": 1,
   "fields": {
-    "user": 14,
-    "created": "2025-04-03T22:11:53.230"
-  }
-},
-{
-  "model": "authtoken.token",
-  "pk": "6e68ead7cfa15486a6fe5225cc606bc4d3a991dc",
-  "fields": {
-    "user": 30,
-    "created": "2025-04-21T23:14:47.316"
-  }
-},
-{
-  "model": "authtoken.token",
-  "pk": "77640f9691f2b6c5c4a50f7a32b383f5ffb49462",
-  "fields": {
-    "user": 12,
-    "created": "2025-04-27T20:07:36.213"
-  }
-},
-{
-  "model": "authtoken.token",
-  "pk": "990ae559fdaf05222c0720c49b5aaca8ae4e969a",
-  "fields": {
-    "user": 36,
-    "created": "2025-05-17T21:37:05.246"
-  }
-},
-{
-  "model": "authtoken.token",
-  "pk": "9b972b593ee2641a6b40cf2d2e1a8633b10f7478",
-  "fields": {
-    "user": 25,
-    "created": "2025-04-12T00:36:11.853"
-  }
-},
-{
-  "model": "authtoken.token",
-  "pk": "b197b30bc6ad86c5a9913866953b2508b611132e",
-  "fields": {
-    "user": 33,
-    "created": "2025-05-04T13:21:02.363"
-  }
-},
-{
-  "model": "authtoken.token",
-  "pk": "ba435cad1cdb66c70e9121525c7ec97f727067f4",
-  "fields": {
-    "user": 15,
-    "created": "2025-04-03T21:37:33.048"
-  }
-},
-{
-  "model": "authtoken.token",
-  "pk": "ce2a636a62ca7793340db2ec56a2ce2c183fae27",
-  "fields": {
-    "user": 1,
-    "created": "2025-04-03T22:18:57.160"
-  }
-},
-{
-  "model": "authtoken.token",
-  "pk": "e3ea21793b42693840c3fe4dde10c9078355e714",
-  "fields": {
-    "user": 16,
-    "created": "2025-04-03T22:12:51.934"
-  }
-},
-{
-  "model": "authtoken.token",
-  "pk": "f92b1c1a90ad99eb1cd80a688c7289e896f024be",
-  "fields": {
-    "user": 27,
-    "created": "2025-04-21T00:53:02.317"
+    "user": 38,
+    "created_at": "2025-06-03T18:30:09.177",
+    "key": "4c7c1b4f07c09ab2f",
+    "ip_address": "127.0.0.1",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
   }
 },
 {

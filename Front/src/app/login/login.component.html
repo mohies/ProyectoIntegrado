@@ -5,41 +5,38 @@
     <form [formGroup]="loginForm" (ngSubmit)="login()">
       <!-- USERNAME -->
       <div class="mb-4">
-        <input
-          type="text"
-          formControlName="username"
-          class="form-control"
-          placeholder="USERNAME"
-        />
+        <input type="text" formControlName="username" class="form-control" placeholder="USERNAME" />
         @if (loginForm.get('username')!.touched && loginForm.get('username')!.invalid) {
-          <p class="text-danger mt-1">El usuario es obligatorio</p>
+        <p class="text-danger mt-1">El usuario es obligatorio</p>
         }
       </div>
 
       <!-- PASSWORD -->
       <div class="mb-4">
-        <input
-          type="password"
-          formControlName="password"
-          class="form-control"
-          placeholder="PASSWORD"
-        />
+        <input type="password" formControlName="password" class="form-control" placeholder="PASSWORD" />
         @if (loginForm.get('password')!.touched && loginForm.get('password')!.invalid) {
-          <p class="text-danger mt-1">La contraseña es obligatoria</p>
+        <p class="text-danger mt-1">La contraseña es obligatoria</p>
         }
       </div>
 
       <!--  MOSTRAR ERROR DEL BACKEND -->
       @if (errorMsg) {
-        <div class="alert alert-danger text-center" role="alert">
-          {{ errorMsg }}
-        </div>
+      <div class="alert alert-danger text-center" role="alert">
+        {{ errorMsg }}
+      </div>
       }
 
       <!-- SUBMIT -->
       <button class="btn btn-login w-100" [disabled]="loginForm.invalid">
         Iniciar sesión
       </button>
+
+      <div class="mt-4 text-center">
+        <a class="text-decoration-underline text-primary" routerLink="/recuperar-password">
+          ¿Olvidaste tu contraseña?
+        </a>
+      </div>
+
     </form>
 
     <div class="mt-5 d-flex justify-content-center">

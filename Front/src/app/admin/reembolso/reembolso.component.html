@@ -1,41 +1,54 @@
 <section class="container my-5">
-    <h2 class="text-center mb-4">💸 Reembolsos Registrados</h2>
-  
-    @if (cargando) {
-      <p class="text-center">Cargando...</p>
-    } @else if (error) {
-      <div class="alert alert-danger text-center">{{ error }}</div>
-    } @else if (reembolsos.length === 0) {
-      <div class="alert alert-info text-center">No hay reembolsos registrados.</div>
-    } @else {
-      <table class="table table-bordered table-striped align-middle">
-        <thead class="table-dark">
+  <h2 class="text-center mb-4">💸 Reembolsos Registrados</h2>
+
+  @if (mensaje) {
+    <div class="alert alert-success text-center">{{ mensaje }}</div>
+  }
+
+  @if (cargando) {
+    <p class="text-center">Cargando...</p>
+  } @else if (error) {
+    <div class="alert alert-danger text-center">{{ error }}</div>
+  } @else if (reembolsos.length === 0) {
+    <div class="alert alert-info text-center">No hay reembolsos registrados.</div>
+  } @else {
+    <table class="table table-bordered table-striped align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Usuario</th>
+          <th>Cantidad</th>
+          <th>Motivo</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (r of reembolsos; track r.id) {
           <tr>
-            <th>ID</th>
-            <th>Usuario</th>
-            <th>Cantidad</th>
-            <th>Motivo</th>
-            <th>Fecha</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          @for (r of reembolsos; track r.id) {
-            <tr>
-              <td>{{ r.id }}</td>
-              <td>{{ r.usuario }}</td>
-              <td>{{ r.cantidad }} €</td>
-              <td>{{ r.motivo || '—' }}</td>
-              <td>{{ r.fecha | date: 'short' }}</td>
-              <td>
+            <td>{{ r.id }}</td>
+            <td>{{ r.usuario }}</td>
+            <td>{{ r.cantidad }} €</td>
+            <td>{{ r.motivo || '—' }}</td>
+            <td>{{ r.fecha | date: 'short' }}</td>
+            <td>
+              @if (!r.estado || r.estado === 'pendiente') {
                 <button class="btn btn-success btn-sm me-1" (click)="actualizarEstado(r.id, 'aprobado')">Aprobar</button>
                 <button class="btn btn-warning btn-sm me-1" (click)="actualizarEstado(r.id, 'parcial')">Parcial</button>
                 <button class="btn btn-danger btn-sm" (click)="actualizarEstado(r.id, 'rechazado')">Rechazar</button>
-              </td>
-            </tr>
-          }
-        </tbody>
-      </table>
-    }
-  </section>
-  
+              } @else {
+                <span [ngClass]="{
+                  'badge bg-success': r.estado === 'aprobado',
+                  'badge bg-warning text-dark': r.estado === 'parcial',
+                  'badge bg-danger': r.estado === 'rechazado'
+                }">
+                  {{ r.estado }}
+                </span>
+              }
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</section>

@@ -1,33 +1,67 @@
 <section class="container my-5">
-    <h2 class="text-center mb-4">⭐ Reseñas</h2>
-  
-    <table class="table table-hover">
-      <thead>
+  <h2 class="text-center mb-4">⭐ Reseñas</h2>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Usuario</th>
+        <th>Evento</th>
+        <th>Puntuación</th>
+        <th>Comentario</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (r of resenas; track r.id) {
         <tr>
-          <th>ID</th>
-          <th>Usuario</th>
-          <th>Evento</th>
-          <th>Puntuación</th>
-          <th>Comentario</th>
-          <th>Acciones</th>
+          <td>{{ r.id }}</td>
+          <td>{{ r.usuario?.username || 'Desconocido' }}</td>
+          <td>{{ r.evento?.titulo || 'Evento no disponible' }}</td>
+          <td>{{ r.puntuacion }}/5</td>
+          <td>{{ r.comentario }}</td>
+          <td>
+            <button class="btn btn-sm btn-outline-danger" (click)="abrirModalEliminar(r)">
+              <i class="bi bi-trash"></i> Eliminar
+            </button>
+          </td>
         </tr>
-      </thead>
-      <tbody>
-        @for (r of resenas; track r.id) {
-          <tr>
-            <td>{{ r.id }}</td>
-            <td>{{ r.usuario?.username || 'Desconocido' }}</td>
-            <td>{{ r.evento?.titulo || 'Evento no disponible' }}</td>
-            <td>{{ r.puntuacion }}/5</td>
-            <td>{{ r.comentario }}</td>
-            <td>
-              <button class="btn btn-sm btn-outline-danger" (click)="eliminarResena(r.id)">
-                <i class="bi bi-trash"></i> Eliminar
-              </button>
-            </td>
-          </tr>
-        }
-      </tbody>
-    </table>
-  </section>
-  
+      }
+    </tbody>
+  </table>
+</section>
+
+<!-- Modal de confirmación para eliminar reseña -->
+@if (resenaAEliminar) {
+<div class="modal" style="
+  position: fixed;
+  z-index: 1050;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto; 
+">
+  <div class="modal-dialog"
+       style="
+         background: white;
+         padding: 20px;
+         border-radius: 8px;
+         max-width: 400px;
+         margin-left: auto;
+         margin-right: auto;
+         pointer-events: auto;
+         z-index: 2000;">
+    <h5>¿Confirmar eliminación?</h5>
+    <p>¿Seguro que deseas eliminar la reseña con ID <strong>{{ resenaAEliminar?.id }}</strong>?</p>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-secondary me-2" (click)="cerrarModal()">Cancelar</button>
+      <button class="btn btn-danger" (click)="confirmarEliminacion()">Eliminar</button>
+    </div>
+  </div>
+</div>
+}

@@ -25,3 +25,4 @@ gunicorn
 whitenoise
 reportlab
 coverage
+django-rest-passwordreset

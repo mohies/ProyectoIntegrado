@@ -1,29 +1,68 @@
 <section class="container my-5">
-    <h2 class="mb-4 text-center">📋 Gestión de Eventos</h2>
-  
-    <table class="table table-bordered table-striped">
-      <thead class="table-dark">
-        <tr>
-          <th>ID</th>
-          <th>Título</th>
-          <th>Fecha</th>
-          <th>Organizador</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        @for (evento of eventos; track evento.id) {
-          <tr>
-            <td>{{ evento.id }}</td>
-            <td>{{ evento.titulo }}</td>
-            <td>{{ evento.fecha | date: 'short' }}</td>
-            <td>{{ evento.organizador?.usuario }}</td>
-            <td>
-              <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-            </td>
-          </tr>
-        }
-      </tbody>
-    </table>
-  </section>
-  
+  <h2 class="mb-4 text-center">📋 Gestión de Eventos</h2>
+
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Fecha</th>
+        <th>Organizador</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (evento of eventos; track evento.id) {
+      <tr>
+        <td>{{ evento.id }}</td>
+        <td>{{ evento.titulo }}</td>
+        <td>{{ evento.fecha | date: 'short' }}</td>
+        <td>{{ evento.organizador?.usuario }}</td>
+        <td>
+          <button class="btn btn-sm btn-outline-danger" (click)="abrirModalEliminar(evento)">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</section>
+
+<!-- Modal de confirmación para eliminar evento -->
+@if (eventoAEliminar) {
+<div class="modal" style="
+  position: fixed;
+  z-index: 1050;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto; 
+">
+
+ <div class="modal-dialog"
+     style="
+       background: white;
+       padding: 20px;
+       border-radius: 8px;
+       max-width: 400px;
+       margin-left: auto;
+       margin-right: auto;
+       pointer-events: auto;
+       z-index: 2000;">
+
+    <h5>¿Confirmar eliminación?</h5>
+    <p>¿Seguro que deseas eliminar el evento <strong>{{ eventoAEliminar?.titulo }}</strong>?</p>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-secondary me-2" (click)="cerrarModal()">Cancelar</button>
+      <button class="btn btn-danger" (click)="confirmarEliminacion()">Eliminar</button>
+
+    </div>
+  </div>
+</div>
+}

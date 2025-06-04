@@ -1,9 +1,8 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms'; // 👈 Necesario para usar @model
+import { RouterModule, ActivatedRoute } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { EventosService } from '../services/eventbrite.service';
-import { ActivatedRoute } from '@angular/router';
 
 interface Evento {
   id: number;
@@ -14,8 +13,7 @@ interface Evento {
   ubicacion: string;
   precio: number;
   tipo?: string;
-  cupo?: number; 
-
+  cupo_disponible?: number;
 }
 
 @Component({
@@ -27,24 +25,30 @@ interface Evento {
 })
 export class EventosComponent implements OnInit {
   eventos: Evento[] = [];
-
   filtroNombre: string = '';
   orden: string = '';
-  
+  mensaje: string | null = null;
 
-  constructor(private eventosService: EventosService,   private route: ActivatedRoute) {}
-// Al iniciar el componente:
-// 1. Obtiene todos los eventos desde el servicio.
-// 2. Luego lee el parámetro de búsqueda "q" desde la URL (si existe) para aplicarlo como filtro.
+  constructor(
+    private eventosService: EventosService,
+    private route: ActivatedRoute
+  ) {}
+
+  // Al iniciar el componente:
+  // 1. Obtiene todos los eventos desde el servicio.
+  // 2. Luego lee el parámetro de búsqueda "q" desde la URL (si existe) para aplicarlo como filtro.
   ngOnInit(): void {
-    // Cargar eventos
     this.eventosService.getEventos().subscribe({
       next: (res: Evento[]) => {
         this.eventos = res;
-  
+
         // Leer query param después de cargar los eventos
         this.route.queryParams.subscribe(params => {
           this.filtroNombre = params['q'] || '';
+          if (params['creado'] === '1') {
+            this.mensaje = '✅ Evento creado correctamente.';
+            setTimeout(() => this.mensaje = null, 4000);
+          }
         });
       },
       error: err => {
@@ -52,14 +56,12 @@ export class EventosComponent implements OnInit {
       }
     });
   }
-  // Devuelve la lista de eventos filtrados por nombre (si hay búsqueda activa)
-// y ordenados por fecha o título, según lo que se haya seleccionado en `orden`.
 
+  // Devuelve la lista de eventos filtrados por nombre (si hay búsqueda activa)
+  // y ordenados por fecha o título, según lo que se haya seleccionado en `orden`.
   eventosFiltrados() {
     return this.eventos
-      .filter(e => 
-        !this.filtroNombre || e.titulo.toLowerCase().includes(this.filtroNombre.toLowerCase())
-      )
+      .filter(e => !this.filtroNombre || e.titulo.toLowerCase().includes(this.filtroNombre.toLowerCase()))
       .sort((a, b) => {
         if (this.orden === 'fecha') {
           return new Date(a.fecha).getTime() - new Date(b.fecha).getTime();
