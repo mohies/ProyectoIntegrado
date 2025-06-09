@@ -1,11 +1,17 @@
 <section class="container my-5">
+
   <h2 class="text-center fw-bold mb-4 text-contacto">Finalizar Compra</h2>
+  @if (mensajeError) {
+  <div class="alert alert-danger text-center fw-semibold mt-3">
+    {{ mensajeError }}
+  </div>
+  }
 
   <!-- Cuenta atrás -->
   @if (tiempoRestante > 0) {
-    <div class="alert alert-warning text-center fw-semibold">
-      ⏳ Tienes {{ tiempoRestante * 1000 | date:'mm:ss':'UTC' }} minutos para finalizar la compra
-    </div>
+  <div class="alert alert-warning text-center fw-semibold">
+    ⏳ Tienes {{ tiempoRestante * 1000 | date:'mm:ss':'UTC' }} minutos para finalizar la compra
+  </div>
   }
 
   <div class="row g-4 flex-column-reverse flex-md-row">
@@ -16,7 +22,7 @@
           <label class="form-label">Correo electrónico</label>
           <input type="email" class="form-control" formControlName="email" placeholder="ejemplo@email.com" />
           @if (form.get('email')?.touched && form.get('email')?.invalid) {
-            <small class="text-danger">Introduce un email válido</small>
+          <small class="text-danger">Introduce un email válido</small>
           }
         </div>
 
@@ -24,7 +30,7 @@
           <label class="form-label">Dirección</label>
           <input type="text" class="form-control" formControlName="direccion" placeholder="Calle, número..." />
           @if (form.get('direccion')?.touched && form.get('direccion')?.invalid) {
-            <small class="text-danger">La dirección es obligatoria</small>
+          <small class="text-danger">La dirección es obligatoria</small>
           }
         </div>
 
@@ -32,7 +38,7 @@
           <label class="form-label">Ciudad</label>
           <input type="text" class="form-control" formControlName="ciudad" placeholder="Ciudad" />
           @if (form.get('ciudad')?.touched && form.get('ciudad')?.invalid) {
-            <small class="text-danger">La ciudad es obligatoria</small>
+          <small class="text-danger">La ciudad es obligatoria</small>
           }
         </div>
 
@@ -44,9 +50,11 @@
 
       <!-- AVISO DE POLÍTICA DE CANCELACIÓN -->
       <div class="alert alert-info mt-4">
-        <strong>📢 Aviso:</strong> Todas las compras realizadas tienen un periodo de <strong>24 horas</strong> para ser canceladas desde el momento de la reserva.
+        <strong>📢 Aviso:</strong> Todas las compras realizadas tienen un periodo de <strong>24 horas</strong> para ser
+        canceladas desde el momento de la reserva.
         <br />
-        La solicitud de cancelación deberá incluir una justificación. Según esta, se evaluará si procede un <strong>reembolso completo</strong>, <strong>parcial</strong> o si es <strong>rechazado</strong>.
+        La solicitud de cancelación deberá incluir una justificación. Según esta, se evaluará si procede un
+        <strong>reembolso completo</strong>, <strong>parcial</strong> o si es <strong>rechazado</strong>.
       </div>
 
       <!-- PAYPAL BUTTON RENDER TARGET -->
@@ -64,13 +72,13 @@
         <h5 class="text-center fw-bold mb-3">Resumen del pedido</h5>
 
         @for (item of carrito; track item.id) {
-          <div class="d-flex align-items-center mb-3">
-            <img [src]="item.imagen" width="50" height="50" class="rounded me-3" />
-            <div>
-              <div class="fw-semibold">{{ item.titulo }}</div>
-              <small class="text-muted">x{{ item.cantidad || 1 }} — {{ item.precio }} €</small>
-            </div>
+        <div class="d-flex align-items-center mb-3">
+          <img [src]="item.imagen" width="50" height="50" class="rounded me-3" />
+          <div>
+            <div class="fw-semibold">{{ item.titulo }}</div>
+            <small class="text-muted">x{{ item.cantidad || 1 }} — {{ item.precio }} €</small>
           </div>
+        </div>
         }
 
         <div class="mt-3 border-top pt-3 text-end fw-bold fs-5">

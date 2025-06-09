@@ -25,9 +25,9 @@ export class PerfilComponent implements OnInit {
     private fb: FormBuilder,
     private http: HttpClient,
     private auth: AuthService
-  ) {}
-// Se ejecuta al iniciar el componente.
-// Inicializa el formulario de perfil y carga los datos del usuario actual en los campos del formulario.
+  ) { }
+  // Se ejecuta al iniciar el componente.
+  // Inicializa el formulario de perfil y carga los datos del usuario actual en los campos del formulario.
   ngOnInit(): void {
     this.perfilForm = this.fb.group({
       username: ['', Validators.required],
@@ -42,16 +42,16 @@ export class PerfilComponent implements OnInit {
           email: user.email
         });
         this.imagenPreview = user.foto;
-    
-        this.usuarioActual = user; 
+
+        this.usuarioActual = user;
       }
     });
-    
+
 
     this.auth.cargarUsuario();
   }
-// Maneja el cambio de archivo en el input de imagen.
-// Lee la imagen seleccionada y genera una vista previa en base64.
+  // Maneja el cambio de archivo en el input de imagen.
+  // Lee la imagen seleccionada y genera una vista previa en base64.
   onFileChange(event: Event) {
     const file = (event.target as HTMLInputElement)?.files?.[0];
     if (file) {
@@ -63,9 +63,9 @@ export class PerfilComponent implements OnInit {
       reader.readAsDataURL(file);
     }
   }
-// Envía los datos del formulario (nombre de usuario y foto) al backend para actualizar el perfil del usuario.
-// Usa un FormData para enviar también el archivo de imagen si ha sido seleccionado.
-// Muestra mensajes de éxito o errores dependiendo de la respuesta del servidor.
+  // Envía los datos del formulario (nombre de usuario y foto) al backend para actualizar el perfil del usuario.
+  // Usa un FormData para enviar también el archivo de imagen si ha sido seleccionado.
+  // Muestra mensajes de éxito o errores dependiendo de la respuesta del servidor.
   guardarCambios() {
     this.successMsg = null;
     this.backendErrors = [];
@@ -89,7 +89,7 @@ export class PerfilComponent implements OnInit {
     this.http.patch<Usuario>(environment.apiUrl + 'usuarios/' + userId + '/', formData, { headers }).subscribe({
       next: (usuarioActualizado) => {
         this.successMsg = '✅ Perfil actualizado correctamente.';
-        this.auth.setUsuario(usuarioActualizado); // Actualiza observable
+        this.auth.cargarUsuario(); // vuelve a traer toda la info con el rol incluido
       },
       error: (err) => {
         const errores = err?.error;

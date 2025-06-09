@@ -19,6 +19,7 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
   tiempoRestante: number = 300;
   private timerInterval: any;
   private compraFinalizada = false;
+  mensajeError: string | null = null;
 
   constructor(
     private fb: FormBuilder,
@@ -33,7 +34,8 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
       notas: ['']
     });
   }
-// Inicializa el formulario, escucha los productos del carrito y arranca el temporizador de expiración.
+
+  // Inicializa el formulario, escucha los productos del carrito y arranca el temporizador de expiración.
   ngOnInit(): void {
     this.carritoService.eventos$.subscribe((items) => {
       this.carrito = items;
@@ -41,27 +43,21 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
 
     this.iniciarTemporizador();
   }
-// Carga el script de PayPal dinámicamente después de que la vista esté renderizada.
+
+  // Carga el script de PayPal dinámicamente después de que la vista esté renderizada.
   ngAfterViewInit(): void {
     this.cargarScriptPaypal();
   }
 
-  cargarScriptPaypal() {
-    const script = document.createElement('script');
-    script.src = `https://www.paypal.com/sdk/js?client-id=${environment.paypalClientId}&currency=EUR`;
-    script.onload = () => this.renderizarBotonPayPal();
-    document.body.appendChild(script);
-  }
-// Limpia el intervalo del temporizador y vacía el carrito si no se completó la compra.
-
+  // Limpia el intervalo del temporizador y vacía el carrito si no se completó la compra.
   ngOnDestroy(): void {
     clearInterval(this.timerInterval);
     if (!this.compraFinalizada) {
       this.carritoService.vaciar();
     }
   }
-// Inicia un temporizador de 5 minutos. Si se agota, vacía el carrito y redirige al inicio.
 
+  // Inicia un temporizador de 5 minutos. Si se agota, vacía el carrito y redirige al inicio.
   iniciarTemporizador() {
     this.timerInterval = setInterval(() => {
       this.tiempoRestante--;
@@ -75,8 +71,16 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
       }
     }, 1000);
   }
-// Valida el formulario y estructura los datos necesarios para enviar la compra al backend.
 
+  // Carga el script de PayPal desde la CDN y llama a renderizar el botón cuando esté listo.
+  cargarScriptPaypal() {
+    const script = document.createElement('script');
+    script.src = `https://www.paypal.com/sdk/js?client-id=${environment.paypalClientId}&currency=EUR`;
+    script.onload = () => this.renderizarBotonPayPal();
+    document.body.appendChild(script);
+  }
+
+  // Valida el formulario y estructura los datos necesarios para enviar la compra al backend.
   getDatosCompra(): any | null {
     if (this.form.valid) {
       const datosFormulario = this.form.value;
@@ -97,13 +101,13 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
       return null;
     }
   }
-// Calcula el total del carrito sumando precio × cantidad de cada producto.
 
+  // Calcula el total del carrito sumando precio × cantidad de cada producto.
   calcularTotal(): number {
     return this.carrito.reduce((acc, item) => acc + item.precio * (item.cantidad || 1), 0);
   }
-// Renderiza el botón de PayPal y configura su comportamiento (orden, aprobación, errores).
 
+  // Renderiza el botón de PayPal y configura su comportamiento (orden, aprobación, errores).
   renderizarBotonPayPal() {
     const total = this.calcularTotal();
     const paypal = (window as any).paypal;
@@ -122,6 +126,7 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
           });
         },
         onApprove: async (data: any, actions: any) => {
+          this.mensajeError = null;
           const detalles = await actions.order.capture();
           console.log('✅ Pago completado:', detalles);
           const compra = this.getDatosCompra();
@@ -148,33 +153,37 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
               },
               error: (err) => {
                 console.error('❌ Error al registrar compra en backend:', err);
+                this.mensajeError = err.error?.error || '❌ Error inesperado al registrar la compra.';
               }
             });
           }
-
         },
         onError: (err: any) => {
           console.error('❌ Error en PayPal:', err);
+          this.mensajeError = '❌ Ocurrió un error en el pago con PayPal.';
         }
       }).render('#paypal-button-container');
     } else {
       console.warn('⚠️ No se encontró el contenedor o PayPal no está disponible');
     }
   }
-// Simula una compra sin usar PayPal, útil para pruebas manuales.
-// Valida el carrito, construye el payload y hace POST al backend para registrar la compra.
+
+  // Simula una compra sin usar PayPal, útil para pruebas manuales.
+  // Valida el carrito, construye el payload y hace POST al backend para registrar la compra.
   simularCompra() {
+    this.mensajeError = null;
+
     const compra = this.getDatosCompra();
     console.log('🧾 Datos de compra:', compra);
 
     if (!compra || !compra.items || compra.items.length === 0) {
-      console.warn('⚠️ Carrito vacío, no se puede simular compra');
+      this.mensajeError = '⚠️ Campos Vacios o carrito vacío. Por favor, completa el formulario y agrega productos al carrito.';
       return;
     }
 
     const total = this.calcularTotal();
     if (total <= 0) {
-      console.warn('⚠️ Total debe ser mayor a 0 para simular compra');
+      this.mensajeError = '⚠️ Total debe ser mayor a 0 para simular compra';
       return;
     }
 
@@ -200,7 +209,7 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
       },
       error: (err) => {
         console.error('❌ Error simulando compra:', err);
-        console.log('📩 Respuesta completa del error:', err.error);
+        this.mensajeError = err.error?.error || '❌ Error inesperado al procesar la compra.';
       }
     });
   }
