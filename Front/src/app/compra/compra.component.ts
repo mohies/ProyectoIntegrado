@@ -116,6 +116,12 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
     if (paypal && total > 0 && contenedor) {
       paypal.Buttons({
         createOrder: (data: any, actions: any) => {
+          if (!this.form.valid) {
+            this.mensajeError = '⚠️ Por favor, completa todos los campos obligatorios antes de continuar con el pago.';
+            this.form.markAllAsTouched();
+            return actions.reject();
+          }
+
           return actions.order.create({
             purchase_units: [{
               amount: {
@@ -166,51 +172,5 @@ export class CompraComponent implements OnInit, OnDestroy, AfterViewInit {
     } else {
       console.warn('⚠️ No se encontró el contenedor o PayPal no está disponible');
     }
-  }
-
-  // Simula una compra sin usar PayPal, útil para pruebas manuales.
-  // Valida el carrito, construye el payload y hace POST al backend para registrar la compra.
-  simularCompra() {
-    this.mensajeError = null;
-
-    const compra = this.getDatosCompra();
-    console.log('🧾 Datos de compra:', compra);
-
-    if (!compra || !compra.items || compra.items.length === 0) {
-      this.mensajeError = '⚠️ Campos Vacios o carrito vacío. Por favor, completa el formulario y agrega productos al carrito.';
-      return;
-    }
-
-    const total = this.calcularTotal();
-    if (total <= 0) {
-      this.mensajeError = '⚠️ Total debe ser mayor a 0 para simular compra';
-      return;
-    }
-
-    const token = localStorage.getItem('token');
-    const headers = new HttpHeaders({
-      Authorization: `Token ${token}`,
-      'Content-Type': 'application/json'
-    });
-
-    const payload = {
-      ...compra,
-      metodo_pago: 'PayPal',
-      total_pago: total
-    };
-
-    this.http.post(environment.apiUrl + 'procesar-compra/', payload, { headers }).subscribe({
-      next: (res) => {
-        console.log('🧪 Compra simulada registrada en backend:', res);
-        this.compraFinalizada = true;
-        this.carritoService.vaciar();
-        clearInterval(this.timerInterval);
-        this.router.navigate(['/'], { queryParams: { pago: 'simulado' } });
-      },
-      error: (err) => {
-        console.error('❌ Error simulando compra:', err);
-        this.mensajeError = err.error?.error || '❌ Error inesperado al procesar la compra.';
-      }
-    });
   }
 }

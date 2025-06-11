@@ -1,28 +1,28 @@
 services:
   backend:
-    build: ./Back
+    build: ./Back                # Construye la imagen del backend usando el Dockerfile en la carpeta Back
     ports:
-      - "8000:8000"
+      - "8000:8000"              # Expone el puerto 8000 del contenedor al puerto 8000 del host
     volumes:
-      - ./Back:/app
-      - ./Back/db.sqlite3:/app/db.sqlite3
-      - ./staticfiles:/app/staticfiles
-      - ./Back/media:/app/media
+      - ./Back:/app              # Sincroniza la carpeta Back local con /app en el contenedor (útil para desarrollo)
+      - ./Back/db.sqlite3:/app/db.sqlite3   # Monta la base de datos SQLite como volumen persistente
+      - ./staticfiles:/app/staticfiles      # Monta la carpeta de archivos estáticos de Django
+      - ./Back/media:/app/media             # Monta la carpeta de archivos multimedia (subidas de usuarios)
     env_file:
-      - ./Back/.env
+      - ./Back/.env              # Carga las variables de entorno desde el archivo .env (credenciales, claves, etc.)
     networks:
-      - redapp
+      - redapp                   # Conecta el backend a la red interna llamada redapp
 
   frontend:
-    build: ./Front
+    build: ./Front               # Construye la imagen del frontend usando el Dockerfile en la carpeta Front
     ports:
-    - "4200:80"
+    - "4200:80"                  # Expone el puerto 80 del contenedor (Nginx) al puerto 4200 del host
     depends_on:
-      - backend
+      - backend                  # Espera a que el backend esté listo antes de iniciar el frontend
     extra_hosts:
-      - "localhost:host-gateway"
+      - "localhost:host-gateway" # Permite que el frontend resuelva "localhost" como la puerta de enlace del host (útil para desarrollo)
     networks:
-      - redapp
+      - redapp                   # Conecta el frontend a la red interna llamada redapp
 
 networks:
-  redapp:
+  redapp:                        # Define una red interna para que los servicios se comuniquen entre sí
